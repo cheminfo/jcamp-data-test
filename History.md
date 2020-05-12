@@ -1,3 +1,7 @@
+## 0.0.2 (2020-05-12)
+
+
+
 ## [0.1.1](https://github.com/cheminfo/jeol-data-test/compare/v0.1.0...v0.1.1) (2020-05-08)
 
 
