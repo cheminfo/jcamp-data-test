@@ -18,5 +18,21 @@
   {
     "filename": "Rutin_3080ug200uL_DMSOd6_qHNMR_400MHz_JDX.jdx",
     "url": "./data/Rutin_3080ug200uL_DMSOd6_qHNMR_400MHz_JDX.jdx"
+  },
+  {
+    "filename": "aspirin-1h.dx",
+    "url": "./data/aspirin-1h.dx"
+  },
+  {
+    "filename": "aspirin-1h.fid.dx",
+    "url": "./data/aspirin-1h.fid.dx"
+  },
+  {
+    "filename": "naphtoicAcid-1h.dx",
+    "url": "./data/naphtoicAcid-1h.dx"
+  },
+  {
+    "filename": "naphtoicAcid-1h.fid.dx",
+    "url": "./data/naphtoicAcid-1h.fid.dx"
   }
 ]

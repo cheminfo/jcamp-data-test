@@ -1,0 +1,2486 @@
+##TITLE=1H BBI in Aceton
+##JCAMPDX= 6.0         $$ Bruker NMR JCAMP-DX V2.0
+##DATA TYPE= NMR FID
+##DATA CLASS= NTUPLES
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nes
+##LONG DATE= 2005/10/21 09:03:47+0000
+$$ 1.90.2.2 TopSpin 3.5.b.101 pl 8
+$$ 2020-02-07 15:29:10.881 +0100  nes@nmr-nesnotebook
+$$ Compression mode = diff/dup
+##.OBSERVE FREQUENCY= 500.13750195
+##.OBSERVE NUCLEUS= ^1H
+##.DELAY= (6, 6)
+##.ACQUISITION MODE= SIMULTANEOUS (DQD)
+##.ACQUISITION SCHEME= undefined
+##.AVERAGES= 64
+##.DIGITISER RES= 17
+##SPECTROMETER/DATA SYSTEM= spect
+##.PULSE SEQUENCE= zg30
+##.SOLVENT NAME= Acetone
+##.SHIFT REFERENCE= INTERNAL, Acetone, 1, 32.47797
+##AUDIT TRAIL= $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+$$ ##TITLE= Audit trail, XWIN-NMR		Version 3.5
+$$ ##JCAMPDX= 5.01
+$$ ##ORIGIN= Bruker BioSpin GmbH
+$$ ##OWNER= nes
+$$ $$ /u/data/nes/nmr/nesEX12/1/audita.txt
+$$ ##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, WHAT)
+(   1,<2005-10-21 11:03:47.56 +0200>,<nes>,<r115>,
+      <created by zg, POWCHK disabled, PULCHK disabled
+       configuration hash MD5:
+       57 1F AC 41 BC B6 80 DB 04 9E 6F 2E A1 F9 44 1D
+       data hash MD5: 16K
+       E9 F7 1C 2F DE 49 DC 06 8A 67 44 6F 46 03 09 4D>)
+$$ ##END=
+$$ 
+$$ $$ hash MD5
+$$ $$ C9 F1 33 C9 C2 3F BD E0 CC 2E EF AC 23 C7 67 9A
+##$RELAX= 
+##$BRUKER FILE EXP=format.temp
+$$ EDIT_PAR COMMAND FILE
+$$ 
+$$ DI_MODE         LONG
+$$ ED_ENTRY        ACQU
+$$ ORDER           FILE
+$$ 
+$$ 
+$$ HEADER		"F2 - Acquisition Parameters"
+$$ T_NAME		Date_
+$$ 		TYPE	R64
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 50000000
+$$ 		REL	"Date_=itodate(DATE)"
+$$ 		INV_REL	"DATE=datetoi(Date_,DATE)"
+$$ 		FORMAT	"%14.0f"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		Time
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1000000
+$$ 		REL	"Time=itotime(DATE)"
+$$ 		INV_REL	"DATE=timetoi(Time,DATE)"
+$$ 		FORMAT	"%14.2f"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		INSTRUM
+$$ 		TEXT	" "
+$$ END
+$$ NAME		PROBHD
+$$ 		FORMAT	"%14.14s"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		PULPROG
+$$ 		TEXT	" "
+$$ END
+$$ NAME		TD
+$$ 		TEXT	" "
+$$ END
+$$ NAME		SOLVENT
+$$ 		TEXT	" "
+$$ END
+$$ NAME		NS
+$$ 		TEXT	" "
+$$ END
+$$ NAME		DS
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		SWH
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1e8
+$$ 		REL	"SWH=SW*SFO1"
+$$ 		INV_REL "SW=SWH/SFO1"
+$$ 		UNIT	"Hz"
+$$ 		FORMAT	"%14.3f Hz"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME          FIDRES
+$$                 TYPE    R32
+$$                 CLASS   ACQU
+$$                 SUBRANGE 0.0 100000
+$$                 REL     "FIDRES=SW*SFO1/TD"
+$$                 INV_REL "TD = nextpow(SW*SFO1/FIDRES)"
+$$ 		UNIT	"Hz"
+$$ 		FORMAT	"%14.6f Hz"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME          AQ
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1000
+$$ 		REL	"AQ=aqcalc(SW,SFO1,TD,DIGTYP)"
+$$ 		INV_REL	"TD=tdcalc(SW,SFO1,1.0e6*AQ,DIGTYP)"
+$$ 		UNIT	"sec"
+$$ 		FORMAT	"%14.7f sec"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		RG
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME          DW
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1000000
+$$ 		REL	"DW=1/(2*SW*SFO1)"
+$$ 		INV_REL	"SW=1000000/(2*(0.005+DW)*SFO1)"
+$$ 		UNIT	"usec"
+$$ 		FORMAT	"%14.3lf usec"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		DE
+$$ 		FORMAT	"%14.2f usec"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		TE
+$$ 		FORMAT	"%14.1f K"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		D1
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1000000
+$$ 		REL	"D1=D[1]"
+$$ 		INV_REL	"D[1]=D1"
+$$ 		UNIT	"sec"
+$$ 		FORMAT	"%14.8f sec"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		MCREST 
+$$ 		TYPE	R32
+$$ 		SUBRANGE 0.0 1e8
+$$ 		CLASS	ACQU
+$$ 		REL	"MCREST = 30m - 30m"
+$$ 		INV_REL	"D[0]=MCREST "
+$$ 		UNIT	"sec"
+$$ 		TEXT	" "
+$$ 		FORMAT	"%14.8f sec"
+$$ 		NONEDIT
+$$ END
+$$ T_NAME		MCWRK 
+$$ 		TYPE	R32
+$$ 		SUBRANGE 0.0 1e8
+$$ 		CLASS	ACQU
+$$ 		REL	"MCWRK = 0.500000*30m"
+$$ 		INV_REL	"D[0]=MCWRK "
+$$ 		UNIT	"sec"
+$$ 		TEXT	" "
+$$ 		FORMAT	"%14.8f sec"
+$$ 		NONEDIT
+$$ END
+$$ HEADER		"======== CHANNEL f1 ========"
+$$ NAME		NUC1
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		P1
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1.0e10
+$$ 		REL	"P1=P[1]"
+$$ 		INV_REL	"P[1]=P1"
+$$ 		UNIT	"usec"
+$$ 		FORMAT	"%14.2f usec"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		PL1
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE -6.0 120
+$$ 		REL	"PL1=PL[1]"
+$$ 		INV_REL	"PL[1]=PL1"
+$$ 		UNIT	"dB"
+$$ 		FORMAT	"%14.2f dB"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		SFO1
+$$ 		FORMAT	"%14.7f MHz"
+$$ 		TEXT	" "
+$$ END
+##$RELAX= 
+##$BRUKER FILE EXP=scon
+$$ ##TITLE= Parameter file, XWIN-NMR		Version 3.5
+$$ ##JCAMPDX= 5.0
+$$ ##DATATYPE= Parameter Values
+$$ ##ORIGIN= Bruker BioSpin GmbH
+$$ ##OWNER= nes
+$$ $$ Fri Oct 21 10:59:59 2005 MDT (UT+2h)  nes@r115
+$$ $$ /u/data/nes/nmr/nesEX12/1/scon
+$$ ##$BLKPA= (0..15)
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+$$ ##$BLKTR= (0..15)
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+$$ ##$DE1= 2
+$$ ##$DE2= 2
+$$ ##$DEADC= 4
+$$ ##$DEPA= 2
+$$ ##$DERX= 3
+$$ ##$PHASP4= (0..15)
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 
+$$ ##$PHASPR= (0..15)
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+$$ ##$SHAPPR= (0..15)
+1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 
+$$ ##END=
+##$RELAX= 
+##$BRUKER FILE EXP=pulseprogram
+$$ # 1 "/u/exp/stan/nmr/lists/pp/zg30"
+$$ ;zg30
+$$ ;avance-version (02/05/31)
+$$ ;1D sequence
+$$ ;using 30 degree flip angle
+$$ 
+$$ 
+$$ # 1 "/u/exp/stan/nmr/lists/pp/Avance.incl" 1
+$$ ;Avance.incl
+$$ ;
+$$ ;avance-version (03/02/17)
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ 
+$$ ;$Id: Avance1.incl,v 1.7.2.3 2003/02/25 14:48:47 ber Exp $
+$$ # 7 "/u/exp/stan/nmr/lists/pp/zg30" 2
+$$ 
+$$ 
+$$ 
+$$ # 1 "mc_line 10 file /u/exp/stan/nmr/lists/pp/zg30 expanding definition part of mc command before ze"
+$$ define delay MCWRK
+$$ define delay MCREST
+$$ "MCWRK = 0.500000*30m"
+$$ "MCREST = 30m - 30m"
+$$ # 10 "/u/exp/stan/nmr/lists/pp/zg30"
+$$ 1 ze
+$$ # 1 "mc_line 10 file /u/exp/stan/nmr/lists/pp/zg30 expanding definition of mc command after ze"
+$$ # 11 "/u/exp/stan/nmr/lists/pp/zg30"
+$$ # 1 "mc_line 11 file /u/exp/stan/nmr/lists/pp/zg30 expanding start label for mc command"
+$$ 2 MCWRK  * 2
+$$ LBLF0, MCREST
+$$ # 12 "/u/exp/stan/nmr/lists/pp/zg30"
+$$   d1
+$$   p1*0.33 ph1
+$$   go=2 ph31
+$$ # 1 "mc_line 15 file /u/exp/stan/nmr/lists/pp/zg30 expanding mc command in line"
+$$   MCWRK wr #0
+$$   MCWRK zd 
+$$   lo to LBLF0 times td0
+$$ 
+$$ # 16 "/u/exp/stan/nmr/lists/pp/zg30"
+$$ exit
+$$ 
+$$ 
+$$ ph1=0 2 2 0 1 3 3 1
+$$ ph31=0 2 2 0 1 3 3 1
+$$ 
+$$ 
+$$ ;pl1 : f1 channel - power level for pulse (default)
+$$ ;p1 : f1 channel -  90 degree high power pulse
+$$ ;d1 : relaxation delay; 1-5 * T1
+$$ ;NS: 1 * n, total number of scans: NS * TD0
+$$ 
+$$ 
+$$ 
+$$ ;$Id: zg30,v 1.7 2002/06/12 09:05:20 ber Exp $
+##$RELAX= 
+##$BRUKER FILE EXP=uxnmr.par
+$$ ##TITLE= Parameter file, XWIN-NMR		Version 3.5
+$$ ##JCAMPDX= 5.0
+$$ ##DATATYPE= Parameter Values
+$$ ##ORIGIN= Bruker BioSpin GmbH
+$$ ##OWNER= nes
+$$ $$ Mon Sep 26 10:04:10 2005 MDT (UT+2h)  nes@r115
+$$ $$ /u/conf/instr/spect/uxnmr.par
+$$ ##$ACB= 1
+$$ ##$ACBTAT= (0..15)
+0 88 72 72 72 88 88 0 0 0 0 0 0 0 0 0 
+$$ ##$ACBTBA= (0..15)
+0 30 60 80 70 150 180 0 0 0 0 0 0 0 0 0 
+$$ ##$ACBTCTL= (0..15)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+$$ ##$ACBTDI= (0..15)
+0 70 71 71 71 74 75 0 0 0 0 0 0 0 0 0 
+$$ ##$ACBTDM= (0..15)
+0 10 25 0 0 10 10 0 0 0 0 0 0 0 0 0 
+$$ ##$ACBTFHI= (0..15)
+0 325 600 600 600 0 0 0 0 0 0 0 0 0 0 0 
+$$ ##$ACBTFL= (0..15)
+0 249 249 26 123 249 249 0 0 0 0 0 0 0 0 0 
+$$ ##$ACBTFLO= (0..15)
+0 6 470 470 470 0 0 0 0 0 0 0 0 0 0 0 
+$$ ##$ACBTOUT= (0..15)
+0 1 1 1 2 0 0 0 0 0 0 0 0 0 0 0 
+$$ ##$ACBTPO= (0..15)
+0 300000 100000 1000 10000 300000 300000 0 0 0 0 0 0 0 0 0 
+$$ ##$ACBTPW= (0..15)
+0 200 5000 0 0 200 200 0 0 0 0 0 0 0 0 0 
+$$ ##$ACBTSB= (0..15)
+0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 
+$$ ##$ACBTY= <04>
+$$ ##$AQSBDHW= (0..31)
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+$$ ##$AQSBDID= (0..31)
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+$$ ##$AQSBDNO= (0..31)
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+$$ ##$AQSBDTY= (0..31)
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+$$ ##$AQSBUAD= (0..31)
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+$$ ##$AQSECL= (0..31)
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+$$ ##$AQSECLS= (0..31)
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+$$ ##$ATT19F= (0..1)
+-1 -1 
+$$ ##$ATT1H= (0..1)
+-1 -1 
+$$ ##$ATT3H= (0..1)
+-1 -1 
+$$ ##$ATTX= (0..1)
+-1 -1 
+$$ ##$ATTY= (0..1)
+-1 -1 
+$$ ##$ATTZ= (0..1)
+-1 -1 
+$$ ##$BACSTY= <no>
+$$ ##$BARPTY= <no>
+$$ ##$BFREQ= 500.13
+$$ ##$BIRDS= no
+$$ ##$BMPC= 0
+$$ ##$BMPCTY= <no>
+$$ ##$BPSUTY= <no>
+$$ ##$BSMS= 1
+$$ ##$BSMSTY= <02>
+$$ ##$CFASMOD= (0..7)
+2 2 2 2 0 0 0 0 
+$$ ##$CFASMUL= (0..7)
+1 1 1 1 0 0 0 0 
+$$ ##$CNFTXDR= (0..7)
+3 3 4 4 0 0 0 0 
+$$ ##$COMDIG2= 0
+$$ ##$CPDBTY= <no>
+$$ ##$CRCOTY= <no>
+$$ ##$DIGI140= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$DIGIB12= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$DIGIB16= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$DIGIFA= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$DIGIHA= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$DIGIHAF= (0..7)
+1 0 0 0 0 0 0 0 
+$$ ##$DIGIHRD= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$DIGIIA= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$DIGIO16= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$DIGISA= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$DIGISAF= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$DIGISL= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$DIGITYI= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$DIGITYP= (0..7)
+2 0 0 0 0 0 0 0 
+$$ ##$DIGITZ= 0
+$$ ##$FCUMEM= (0..7)
+258048 258048 258048 258048 0 0 0 0 
+$$ ##$FCUPAL= (0..7)
+3 3 3 3 0 0 0 0 
+$$ ##$FQMIX= 0
+$$ ##$FUNCMOD= <>
+$$ ##$GCUTYPE= 1
+$$ ##$HFAC= 3
+$$ ##$HPCU= 0
+$$ ##$HPCUTY= <no>
+$$ ##$HPTXLP= (0..3)
+-1 -1 -1 -1 
+$$ ##$HPTXPI= (0..3)
+0 0 0 0 
+$$ ##$HPTXPO= (0..3)
+0 0 0 0 
+$$ ##$HPTXTY= (0..3)
+0 0 0 0 
+$$ ##$IF451= 0
+$$ ##$IFREQ= 1
+$$ ##$INTFPR= 0
+$$ ##$LOCKTY= <03>
+$$ ##$LOCSWID= 0
+$$ ##$M2FAC= 0
+$$ ##$MASTY= <07>
+$$ ##$MEMPRM= 0
+$$ ##$MHFAC= 0
+$$ ##$MXFAC= 0
+$$ ##$NAMPD1= <2H>
+$$ ##$NAMPD10= <>
+$$ ##$NAMPD11= <>
+$$ ##$NAMPD12= <>
+$$ ##$NAMPD13= <>
+$$ ##$NAMPD14= <>
+$$ ##$NAMPD15= <>
+$$ ##$NAMPD16= <>
+$$ ##$NAMPD2= <1H>
+$$ ##$NAMPD3= <X-BB19F_2HS>
+$$ ##$NAMPD4= <19F-Sel.>
+$$ ##$NAMPD5= <>
+$$ ##$NAMPD6= <>
+$$ ##$NAMPD7= <>
+$$ ##$NAMPD8= <>
+$$ ##$NAMPD9= <>
+$$ ##$NFCU= 4
+$$ ##$NMRCH= 0
+$$ ##$NMRMEM= 0
+$$ ##$NRCU= 1
+$$ ##$NROUT= 2
+$$ ##$PAMPF1= (0..15)
+75 99 0 27 2 43 0 246 16 12 158 200 16 12 100 242 
+$$ ##$PAMPF2= (0..15)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+$$ ##$PAMPF3= (0..15)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+$$ ##$PAMPF4= (0..15)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+$$ ##$PAMPF5= (0..15)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+$$ ##$PAMPF6= (0..15)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+$$ ##$PAMPF7= (0..15)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+$$ ##$PAMPF8= (0..15)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+$$ ##$PH4= 0
+$$ ##$PHF4TY= <no>
+$$ ##$POWCHK= no
+$$ ##$PRAMD1= (0..7)
+0 1048576 0 0 0 1048576 0 0 
+$$ ##$PRAMD10= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$PRAMD11= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$PRAMD12= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$PRAMD13= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$PRAMD14= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$PRAMD15= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$PRAMD16= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$PRAMD2= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$PRAMD3= (0..7)
+2 0 0 0 2 0 0 0 
+$$ ##$PRAMD4= (0..7)
+2147483644 2146435071 2147483647 134217727 2147483644 2146435071 2147483647 
+134217727 
+$$ ##$PRAMD5= (0..7)
+4 0 0 0 4 0 0 0 
+$$ ##$PRAMD6= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$PRAMD7= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$PRAMD8= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$PRAMD9= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$PRAMLED= (0..1)
+15 15 
+$$ ##$PRAMP1= <tty01>
+$$ ##$PRAMP2= <no>
+$$ ##$PRAMP3= <no>
+$$ ##$PRAMP4= <no>
+$$ ##$PRAMP5= <no>
+$$ ##$PRAMP6= <no>
+$$ ##$PRAMP7= <no>
+$$ ##$PRAMP8= <no>
+$$ ##$PRAMPTP= 0
+$$ ##$PREPTY= <06>
+$$ ##$PRESHLD= 1
+$$ ##$PTS160= -1
+$$ ##$PTSA2X= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$PTSF2X= (0..7)
+500 500 500 309 0 0 0 0 
+$$ ##$PTSFMX= (0..7)
+1000 1000 1000 620 0 0 0 0 
+$$ ##$PULCHK= no
+$$ ##$RCUCDS= (0..7)
+4194304 0 0 0 0 0 0 0 
+$$ ##$RCUCFS= (0..7)
+4096 0 0 0 0 0 0 0 
+$$ ##$RCUCSS= (0..7)
+262144 0 0 0 0 0 0 0 
+$$ ##$RCUI2C1= (0..7)
+78 66 0 0 0 0 0 0 
+$$ ##$RCUI2C2= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$RCUI2C3= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$RCUI2C4= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$RCUI2C5= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$RCUI2C6= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$RCUI2C7= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$RCUI2C8= (0..7)
+0 0 0 0 0 0 0 0 
+$$ ##$RDCU= 0
+$$ ##$RGTYPE= (0..7)
+5 0 0 0 0 0 0 0 
+$$ ##$RG_max= (0..7)
+46341 0 0 0 0 0 0 0 
+$$ ##$RG_min= (0..7)
+1 0 0 0 0 0 0 0 
+$$ ##$ROUTER= 2
+$$ ##$RX22TY= <10>
+$$ ##$SCMTY= <no>
+$$ ##$SPECTR= 5
+$$ ##$SY2FLAG= 0
+$$ ##$TFXNUM= 0
+$$ ##$TRIPLO2= 0
+$$ ##$VTUTY= <05>
+$$ ##$WBREFAM= (0..15)
+100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 
+$$ ##$WBREFPH= (0..15)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+$$ ##$XFAC= 2
+$$ ##END=
+##$RELAX= 
+##$BRUKER FILE PROC=integrals.txt
+$$    Current data set:
+$$    NAME =	Displayer_86-55-5	EXPNO =	1	PROCNO = 1
+$$    DU   =	D:/SciPrograms/Bruker/TopSpin3.5.b.91pl7/data/nes/nmr
+$$ 
+$$    Number   Integrated Region     Integral
+$$      1      9.143      9.048         1.00000
+$$      2      8.386      8.304         1.00795
+$$      3      8.231      8.153         1.02131
+$$      4      8.077      8.002         1.04016
+$$      5      7.716      7.660         1.04458
+$$      6      7.660      7.592         2.04576
+##$RELAX= 
+##$BRUKER FILE PROC=intrng
+$$ A 1.0 #regions in PPM
+$$ # low field   high field  bias        slope
+$$   9.142864769690158  9.048270864392926  -0.0  -0.0  # for region 1
+$$   8.386113527312302  8.304253416958929  -0.0  -0.0  # for region 2
+$$   8.231488874422595  8.15326699119604  -0.0  -0.0  # for region 3
+$$   8.07686422153289  8.002280565433148  -0.0  -0.0  # for region 4
+$$   7.715524906262521  7.660065139731903  -0.0  -0.0  # for region 5
+$$   7.660065139731903  7.591685768498128  -0.0  -0.0  # for region 6
+##$RELAX= 
+##$BRUKER FILE PROC=mol2ppm.txt
+$$ # 2020-02-07 15:14:33 +0100 nes@nmr-nesnotebook
+$$ # TOPSPIN Molecule to PPM ranges correlations
+$$ # D:/SciPrograms/Bruker/TopSpin3.5.b.91pl7/data/nes/nmr/Displayer_86-55-5/1/pdata/1
+$$ # Start [PPM]     End [PPM]     Atom Numbers
+##$RELAX= 
+##$BRUKER FILE PROC=multiplet.txt
+$$ # 2020-02-07 15:14:33 +0100 nes@nmr-nesnotebook
+$$ # TOPSPIN Multiplet Table
+$$ # D:/SciPrograms/Bruker/TopSpin3.5.b.91pl7/data/nes/nmr/Displayer_86-55-5/1/pdata/1
+$$ 
+$$ 1D TopSPIN Multiplet Table
+$$ 
+$$ ----------------------------------------------------------------------
+$$ Number    Shift [ppm]    J [Hz]    M         Connection     Identifier
+$$ ----------------------------------------------------------------------
+$$      1         9.0874    8.6522    2             J(1,0)               
+$$      2         8.3424    7.2019    2             J(2,0)               
+$$      3         8.1911    8.2021    2             J(3,0)               
+$$      4         8.0338    8.1021    2             J(4,0)               
+$$      5         7.6829    7.5520    3             J(5,0)               
+$$ ----------------------------------------------------------------------
+$$ 
+$$ 
+$$ 
+$$ 1D TopSPIN Multiplet Lines Table
+$$ 
+$$ --------------------------
+$$ Number      Position [ppm]
+$$ --------------------------
+$$      1              9.0960
+$$      2              9.0787
+$$      3              8.3496
+$$      4              8.3352
+$$      5              8.1993
+$$      6              8.1829
+$$      7              8.0419
+$$      8              8.0257
+$$      9              7.6980
+$$     10              7.6834
+$$     11              7.6678
+$$ --------------------------
+##$RELAX= 
+##$BRUKER FILE PROC=peaklist.xml
+$$ <?xml version="1.0" encoding="UTF-8"?>
+$$ <PeakList modified="2020-02-07T15:11:52">
+$$   <PeakList1D>
+$$     <PeakList1DHeader creator="nes" date="2020-02-07T15:11:52" expNo="1" name="Displayer_86-55-5" owner="" procNo="1" source="D:\SciPrograms\Bruker\TopSpin3.5.b.91pl7\data\nes\nmr">
+$$       <PeakPickDetails>F1=9.120128ppm, F2=9.053557ppm, MI=89.25cm, MAXI=130.21cm, PC=0.000
+$$       </PeakPickDetails>
+$$     </PeakList1DHeader>
+$$     <Peak1D F1="9.0960" intensity="110.85" type="0"/>
+$$     <Peak1D F1="9.0787" intensity="110.63" type="0"/>
+$$   </PeakList1D>
+$$   <PeakList1D>
+$$     <PeakList1DHeader creator="nes" date="2020-02-07T15:11:52" expNo="1" name="Displayer_86-55-5" owner="" procNo="1" source="D:\SciPrograms\Bruker\TopSpin3.5.b.91pl7\data\nes\nmr">
+$$       <PeakPickDetails>F1=8.396730ppm, F2=7.952929ppm, MI=100.25cm, MAXI=161.38cm, PC=0.000
+$$       </PeakPickDetails>
+$$     </PeakList1DHeader>
+$$     <Peak1D F1="8.3496" intensity="118.61" type="0"/>
+$$     <Peak1D F1="8.3352" intensity="119.97" type="0"/>
+$$     <Peak1D F1="8.1993" intensity="112.05" type="0"/>
+$$     <Peak1D F1="8.1829" intensity="116.55" type="0"/>
+$$     <Peak1D F1="8.0419" intensity="107.40" type="0"/>
+$$     <Peak1D F1="8.0257" intensity="113.51" type="0"/>
+$$   </PeakList1D>
+$$   <PeakList1D>
+$$     <PeakList1DHeader creator="nes" date="2020-02-07T15:11:52" expNo="1" name="Displayer_86-55-5" owner="" procNo="1" source="D:\SciPrograms\Bruker\TopSpin3.5.b.91pl7\data\nes\nmr">
+$$       <PeakPickDetails>F1=7.733987ppm, F2=7.581615ppm, MI=38.51cm, MAXI=233.52cm, PC=0.000
+$$       </PeakPickDetails>
+$$     </PeakList1DHeader>
+$$     <Peak1D F1="7.6980" intensity="52.55" type="0"/>
+$$     <Peak1D F1="7.6834" intensity="95.57" type="0"/>
+$$     <Peak1D F1="7.6678" intensity="73.59" type="0"/>
+$$     <Peak1D F1="7.6496" intensity="91.59" type="0"/>
+$$     <Peak1D F1="7.6336" intensity="200.00" type="0"/>
+$$     <Peak1D F1="7.6181" intensity="168.46" type="0"/>
+$$     <Peak1D F1="7.6022" intensity="51.74" type="0"/>
+$$   </PeakList1D>
+$$ </PeakList>
+##$RELAX= 
+##$BRUKER FILE PROC=peakrng
+$$ P    #regions in PPM
+$$ # 2020-02-07 15:11:54 +0100  nes@nmr-nesnotebook
+$$ # low field   high field   mi   maxi
+$$   9.12012777282654  9.053557497112477  89.251  130.208  # for region 1
+$$   8.39673077673373  7.95292893863998  100.254  161.385  # for region 2
+$$   7.733986698513731  7.581614734101544  38.512  233.519  # for region 3
+##$RELAX= 
+##$BRUKER FILE STRUCTURE=structure_nesEX12.mol
+$$ 
+$$   CDK     0416161932
+$$ 
+$$  13 14  0  0  0  0  0  0  0  0999 V2000
+$$    -3.3775   -0.2036    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+$$    -2.0785   -0.9536    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+$$    -2.0785   -2.4537    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+$$    -3.3775   -3.2037    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+$$    -4.6765   -2.4537    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+$$    -4.6765   -0.9536    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+$$    -0.7794   -0.2036    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+$$     0.5196   -0.9536    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+$$     0.5196   -2.4537    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+$$    -0.7794   -3.2037    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+$$    -0.7794    1.2964    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+$$     0.5196    2.0464    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+$$    -2.0785    2.0464    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+$$   1  2  2  0  0  0  0 
+$$   2  3  1  0  0  0  0 
+$$   3  4  2  0  0  0  0 
+$$   4  5  1  0  0  0  0 
+$$   5  6  2  0  0  0  0 
+$$   6  1  1  0  0  0  0 
+$$   7  8  2  0  0  0  0 
+$$   8  9  1  0  0  0  0 
+$$   9 10  2  0  0  0  0 
+$$  10  3  1  0  0  0  0 
+$$   2  7  1  0  0  0  0 
+$$   7 11  1  0  0  0  0 
+$$  11 12  2  0  0  0  0 
+$$  11 13  1  0  0  0  0 
+$$ M  END
+$$ $$$$
+##$RELAX= 
+$$ Bruker specific parameters
+$$ --------------------------
+##$DATPATH= <D:/SciPrograms/Bruker/TopSpin3.5.b.91pl7/data/nes/nmr>
+##$EXPNO= 1
+##$NAME= <Displayer_86-55-5>
+##$PROCNO= 1
+##$ACQT0= 0
+##$AMP= (0..31)
+100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100
+100 100 100 100 100 100 100 100 100 100 100 100 100 100
+##$AMPCOIL= (0..19)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$ANAVPT= 1
+##$AQSEQ= 0
+##$AQ_mod= 3
+##$AUNM= <au_zg>
+##$AUTOPOS= <>
+##$BF1= 500.13
+##$BF2= 500.13
+##$BF3= 500.13
+##$BF4= 500.13
+##$BF5= 500.13
+##$BF6= 500.13
+##$BF7= 500.13
+##$BF8= 500.13
+##$BWFAC= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$BYTORDA= 1
+##$CAGPARS= (0..11)
+0 0 0 0 0 0 0 0 0 0 0 0
+##$CHEMSTR= <none>
+##$CNST= (0..63)
+1 1 145 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+##$CPDPRG= (0..8)
+<> <mlev> <mlev> <mlev> <mlev> <mlev> <mlev> <mlev> <mlev>
+##$D= (0..63)
+0 3 0 0 0 0 0 0 0 0.25 0 0 0 0 0 0 0.0002 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$DATE= 1129885427
+##$DE= 6
+##$DECBNUC= <off>
+##$DECIM= 8
+##$DECNUC= <off>
+##$DECSTAT= 4
+##$DIGMOD= 1
+##$DIGTYP= 8
+##$DQDMODE= 0
+##$DR= 17
+##$DS= 0
+##$DSPFIRM= 0
+##$DSPFVS= 12
+##$DTYPA= 0
+##$EXP= <>
+##$FCUCHAN= (0..9)
+0 1 0 0 0 0 0 0 0 0
+##$FL1= 90
+##$FL2= 90
+##$FL3= 90
+##$FL4= 90
+##$FN_INDIRECT= (0..7)
+0 2 2 2 2 2 2 2
+##$FOV= 20
+##$FQ1LIST= <freqlist>
+##$FQ2LIST= <freqlist>
+##$FQ3LIST= <freqlist>
+##$FQ4LIST= <freqlist>
+##$FQ5LIST= <freqlist>
+##$FQ6LIST= <freqlist>
+##$FQ7LIST= <freqlist>
+##$FQ8LIST= <freqlist>
+##$FRQLO3= 0
+##$FRQLO3N= 0
+##$FS= (0..7)
+83 83 83 83 83 83 83 83
+##$FTLPGN= 0
+##$FW= 125000
+##$FnILOOP= 0
+##$FnMODE= 0
+##$FnTYPE= 0
+##$GPNAM= (0..31)
+<sine.100> <sine.100> <sine.100> <sine.100> <sine.100> <sine.100> <sine.100>
+<sine.100> <sine.100> <sine.100> <sine.100> <sine.100> <sine.100> <sine.100>
+<sine.100> <sine.100> <sine.100> <sine.100> <sine.100> <sine.100> <sine.100>
+<sine.100> <sine.100> <sine.100> <sine.100> <sine.100> <sine.100> <sine.100>
+<sine.100> <sine.100> <sine.100> <sine.100>
+##$GPX= (0..31)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$GPY= (0..31)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$GPZ= (0..31)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$GRDPROG= <>
+##$GRPDLY= -1
+##$HDDUTY= 20
+##$HDRATE= 20
+##$HGAIN= (0..3)
+0 0 0 0
+##$HL1= 1
+##$HL2= 35
+##$HL3= 16
+##$HL4= 17
+##$HOLDER= 0
+##$HPMOD= (0..7)
+0 0 0 0 0 0 0 0
+##$HPPRGN= 0
+##$IN= (0..63)
+0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001
+0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001
+0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001
+0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001
+0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001
+0.001 0.001 0.001 0.001
+##$INF= (0..7)
+0 0 0 0 0 0 0 0
+##$INP= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$INSTRUM= <spect>
+##$INTEGFAC= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$L= (0..31)
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+##$LFILTER= 100
+##$LGAIN= -10
+##$LINPSTP= 0
+##$LOCKED= yes
+##$LOCKFLD= 2385
+##$LOCKGN= 103.800003051758
+##$LOCKPOW= -40
+##$LOCKPPM= 2.05999994277954
+##$LOCNUC= <2H>
+##$LOCPHAS= 44.9
+##$LOCSHFT= no
+##$LOCSW= 0
+##$LTIME= 0.100000001490116
+##$MASR= 0
+##$MASRLST= <masrlst>
+##$MULEXPNO= (0..15)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$NBL= 1
+##$NC= -1
+##$NLOGCH= 1
+##$NOVFLW= 0
+##$NS= 64
+##$NUC1= <1H>
+##$NUC2= <off>
+##$NUC3= <off>
+##$NUC4= <off>
+##$NUC5= <off>
+##$NUC6= <off>
+##$NUC7= <off>
+##$NUC8= <off>
+##$NUCLEUS= <off>
+##$NUSLIST= <>
+##$NusAMOUNT= 0
+##$NusFPNZ= no
+##$NusJSP= 0
+##$NusSEED= 0
+##$NusSPTYPE= 0
+##$NusT2= 0
+##$NusTD= 0
+##$O1= 7501.95
+##$O2= 0
+##$O3= 0
+##$O4= 0
+##$O5= 0
+##$O6= 0
+##$O7= 0
+##$O8= 0
+##$OVERFLW= 0
+##$P= (0..63)
+9.1 9.1 18.2 0 0 19.8 30 60 0 0 0 0 0 0 0 200000 1000 2500 0 600 26 0 0
+0 0 0 0 9.1 1000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+##$PACOIL= (0..15)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$PAPS= 2
+##$PARMODE= 0
+##$PCPD= (0..9)
+100 100 100 100 100 100 100 100 100 100
+##$PEXSEL= (0..9)
+1 1 1 1 1 1 1 1 1 1
+##$PHCOR= (0..31)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$PHLIST= <>
+##$PHP= 1
+##$PH_ref= 0
+##$PL= (0..63)
+120 5 120 120 120 120 120 120 120 120 15 120 120 120 120 120 120 120 5
+120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120
+120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120
+120 120 120 120 120 120 120 120 120
+##$PLSTEP= 0.1
+##$PLSTRT= -6
+##$PLW= (0..63)
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+##$PLWMAX= (0..7)
+0 0 0 0 0 0 0 0
+##$PQPHASE= 0
+##$PQSCALE= 1
+##$PR= 1
+##$PRECHAN= (0..15)
+-1 3 4 -1 2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+##$PRGAIN= 0
+##$PROBHD= <5 mm BBI 1H-BB-D Z-GRD LTB Z5542/0003
+>
+##$PROBINPUTS= (0..15)
+<> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <>
+##$PULPROG= <zg30>
+##$PW= 0
+##$PYNM= <acqu.py>
+##$ProjAngle= 0
+##$QNP= 1
+##$RD= 0
+##$RECCHAN= (0..15)
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+##$RECPH= 0
+##$RECPRE= (0..15)
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+##$RECPRFX= (0..15)
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+##$RECSEL= (0..15)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$RG= 40.3
+##$RO= 0
+##$RSEL= (0..15)
+0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$S= (0..7)
+83 4 83 83 83 83 83 83
+##$SELREC= (0..9)
+0 0 0 0 0 0 0 0 0 0
+##$SFO1= 500.13750195
+##$SFO2= 500.13
+##$SFO3= 500.13
+##$SFO4= 500.13
+##$SFO5= 500.13
+##$SFO6= 500.13
+##$SFO7= 500.13
+##$SFO8= 500.13
+##$SOLVENT= <Acetone>
+##$SOLVOLD= <off>
+##$SP= (0..63)
+1 120 120 0 0 0 120 0 0 0 0 0 0 0 0 0 150 150 150 150 150 150 150 150 150
+150 150 150 150 150 150 150 120 120 120 120 120 120 120 120 120 120 120
+120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120
+120 120 120
+##$SPECTR= 0
+##$SPINCNT= 0
+##$SPNAM= (0..63)
+<gauss> <Gaus1.1000> <Gaus1.1000> <> <gauss> <gauss> <Gaus1.1000> <> <gauss>
+<gauss> <gauss> <gauss> <gauss> <gauss> <gauss> <gauss> <gauss> <gauss>
+<gauss> <gauss> <gauss> <gauss> <gauss> <gauss> <gauss> <gauss> <gauss>
+<gauss> <gauss> <gauss> <gauss> <gauss> <> <> <> <> <> <> <> <> <> <> <>
+<> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <>
+##$SPOAL= (0..63)
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+##$SPOFFS= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$SPPEX= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$SPW= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$SUBNAM= (0..9)
+<""> <""> <""> <""> <""> <""> <""> <""> <""> <"">
+##$SW= 34.9554220876348
+##$SWIBOX= (0..19)
+0 0 4 4 0 5 6 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$SW_h= 17482.5174825175
+##$SWfinal= 0
+##$SigLockShift= 0
+##$TD= 16384
+##$TD0= 1
+##$TD_INDIRECT= (0..7)
+0 2 2 2 2 2 2 2
+##$TDav= 0
+##$TE= 298
+##$TE1= 300
+##$TE2= 300
+##$TE3= 300
+##$TE4= 300
+##$TEG= 300
+##$TE_MAGNET= 300
+##$TE_PIDX= 0
+##$TE_STAB= (0..9)
+0 0 0 0 0 0 0 0 0 0
+##$TL= (0..7)
+0 120 120 120 120 120 120 120
+##$TOTROT= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$TUBE_TYPE= <>
+##$USERA1= <user>
+##$USERA2= <user>
+##$USERA3= <user>
+##$USERA4= <user>
+##$USERA5= <user>
+##$V9= 5
+##$VALIDCODE= 0
+##$VALIST= <valist>
+##$VCLIST= <CCCCCCCCCCCCCCC>
+##$VDLIST= <DDDDDDDDDDDDDDD>
+##$VPLIST= <PPPPPPPPPPPPPPP>
+##$VTLIST= <TTTTTTTTTTTTTTT>
+##$WBST= 1024
+##$WBSW= 4
+##$XGAIN= (0..3)
+0 0 0 0
+##$XL= 0
+##$YL= 0
+##$YMAX_a= 730761
+##$YMIN_a= -895662
+##$ZGOPTNS= <>
+##$ZL1= 120
+##$ZL2= 120
+##$ZL3= 120
+##$ZL4= 120
+##$ABSF1= 10
+##$ABSF2= 0
+##$ABSG= 5
+##$ABSL= 3
+##$ALPHA= 0
+##$AQORDER= 0
+##$ASSFAC= 0
+##$ASSFACI= 0
+##$ASSFACX= 0
+##$ASSWID= 0
+##$AUNMP= <>
+##$AXLEFT= 0
+##$AXNAME= <>
+##$AXNUC= <off>
+##$AXRIGHT= 0
+##$AXTYPE= 0
+##$AXUNIT= <>
+##$AZFE= 0.1
+##$AZFW= 0.1
+##$BCFW= 1
+##$BC_mod= 2
+##$BYTORDP= 0
+##$COROFFS= 0
+##$CY= 200
+##$DATMOD= 1
+##$DC= 2
+##$DFILT= <>
+##$DTYPP= 0
+##$ERETIC= no
+##$F1P= 31.6040714628169
+##$F2P= -1.6040776352009
+##$FCOR= 0.5
+##$FTSIZE= 16384
+##$FT_mod= 0
+##$GAMMA= 1
+##$GB= 0
+##$INTBC= 1
+##$INTSCL= 1
+##$ISEN= 128
+##$LB= 0.5
+##$LEV0= 0
+##$LPBIN= 0
+##$MAXI= 1000
+##$MC2= 0
+##$MEAN= 0
+##$ME_mod= 0
+##$MI= 0.1403264
+##$MddCEXP= no
+##$MddCT_SP= no
+##$MddF180= no
+##$MddLAMBDA= 0
+##$MddMEMORY= 0
+##$MddMERGE= 0
+##$MddNCOMP= 0
+##$MddNITER= 0
+##$MddNOISE= 0
+##$MddPHASE= 0
+##$MddSEED= 0
+##$MddSRSIZE= 0
+##$Mdd_CsALG= 0
+##$Mdd_CsLAMBDA= 0
+##$Mdd_CsNITER= 0
+##$Mdd_CsNORM= 0
+##$Mdd_CsVE= yes
+##$Mdd_CsZF= 0
+##$Mdd_LrLAMBDA= 0
+##$Mdd_LrNITER= 0
+##$Mdd_LrRANK= 0
+##$Mdd_LrZF= 0
+##$Mdd_mod= 0
+##$NCOEF= 0
+##$NC_proc= 0
+##$NLEV= 6
+##$NOISF1= 0
+##$NOISF2= 0
+##$NSP= 1
+##$NTH_PI= 0
+##$NZP= 0
+##$OFFSET= 32.47797
+##$PC= 0.0001
+##$PHC0= 17.69496
+##$PHC1= 7.738377
+##$PH_mod= 0
+##$PKNL= yes
+##$PPARMOD= 0
+##$PPDIAG= 0
+##$PPIPTYP= 0
+##$PPMPNUM= 2147483647
+##$PPRESOL= 1
+##$PSCAL= 0
+##$PSIGN= 2
+##$PYNMP= <proc.py>
+##$RDF1= 0
+##$RDF2= 0
+##$RDFWHM= 0
+##$RDINT= 0
+##$RDPOS= 0
+##$REVERSE= no
+##$SF= 500.13
+##$SI= 131072
+##$SIGF1= 0
+##$SIGF2= 0
+##$SINO= 400
+##$SIOLD= 131072
+##$SPECTYP= <PROTON>
+##$SREF_mod= 1
+##$SREGLST= <1H.CDCl3>
+##$SSB= 0
+##$STSI= 0
+##$STSR= 0
+##$SW_p= 8012.82051282052
+##$SYMM= 0
+##$S_DEV= 0
+##$TDeff= 0
+##$TDoff= 0
+##$TI= <>
+##$TILT= no
+##$TM1= 0
+##$TM2= 0
+##$TOPLEV= 0
+##$USERP1= <user>
+##$USERP2= <user>
+##$USERP3= <user>
+##$USERP4= <user>
+##$USERP5= <user>
+##$WDW= 1
+##$XDIM= 64
+##$YMAX_p= 0
+##$YMIN_p= 0
+##$CURPLOT= <ljet2100>
+##$CURPRIN= <$ljet2100>
+##$DFORMAT= <normdp>
+##$LAYOUT= <+/1D_H.xwp>
+##$LFORMAT= <normlp>
+##$PFORMAT= <normpl>
+$$ End of Bruker specific parameters
+$$ ---------------------------------
+##NTUPLES= NMR FID
+##VAR_NAME=  TIME,          FID/REAL,        FID/IMAG
+##SYMBOL=    X,             R,               I
+##VAR_TYPE=  INDEPENDENT,   DEPENDENT,       DEPENDENT
+##VAR_FORM=  AFFN,          ASDF,            ASDF
+##VAR_DIM=   8192,          8192,            8192
+##UNITS=     SECONDS,       ARBITRARY UNITS, ARBITRARY UNITS
+##FACTOR=    5.71999999999999e-005, 1,       1
+##FIRST=     0,             0,               0
+##LAST=      0.4685252,     -6261,           20711
+##MIN=       0,             -895662,         -895662
+##MAX=       0.4685252,     730761,          730761
+$$ Real data points
+##PAGE= N=1
+##DATA TABLE= (X++(R..R)), XYDATA
+0@@@@@@@@@@@@@@@@f4Bf3F4f4F4f4A28a28A28b08B47b40C20c84C84d48E12e63
+35F24g43H19h90I73a130A246a381A529a693A872b044B226b378B369a986B87P178
+52G465g5586q20076b13278C90165O0994A58261f44397c11537D01980m5484C2053
+64d15028J65204C61216j51555h7772j54894J08404C54680A28683b70700i8695
+75c0976B56913n9108c60713a16750A38166E8549J29100a57791m4926A74598b7219
+87e583A04672g1301E2482a01996o8107B16957n3839F33b00958j11037B45101J08759
+99C53860c8287j60612j55979A20205L81498f7951j85796R6686a2743D07481A4508
+111c66925B6301Q5717L2223c264l42731F5842K46376B0415a51852j49482H4907
+123D24617a0892k25350j286B1927M29056A3611c19910e5520b854B41354I8566
+135c42798D4964J41135d8604a1954j80566E9617K98887a18092j56410i9508A40193
+147D07369g1160l48320a02072A66441K24244A6806d66126g1206A83828J4923q8636
+158A10115c61068a03300B92635f346j8265p2312Q9B92076g579k59237A7193N2239
+170F9432J32347B6842c38573c1538A74512k7170D7089b91803f2541A96749A3594
+182E7651a09721O646B09444i3650j9592A50608a4791H8500f4477k37975A82536
+194B42385b2895o7878k02710D8094L12483A5139a36548p1697c4395C04310B1412
+206a24725d3863l4861A74246A2242a89229A50156C6118f1402A3515b00068A36248
+218B74617a79713N1218O1130D6700K65137h6287j66796A8961M4378J10390d4555
+230b29918A07597j351D754h0703j32511B18261L9618a92442J4422K9088A87191
+242D60542a96856k15893e4087A59006K84023G061e29675a19268B16125R2208A12351
+254d05990a94788B02654r144q5959b51461P2525B05640F5768B7193h2011j06501
+265a88512B14108I6988a52483B0140a17011F4154J78690a54171O5475g636o7610
+276g5246B30776G2423a58655f4650o8130A33842J28837f1456q3608q1264A4001
+288C92610F4230a81582m7344P4492C91189j36721b55877P4553M0102A86889J89363
+299C76252b08136m9021B7757N1508J64195h7863k12215A00277N7914p4209i3886
+311b80544A19167J28916A7464a02717j90907E5626L01934a0509r5152q2537O1459
+322a26739C42416A10577a71314c6069j21857H6466J41943a07081a5076j9456q4603
+333a19135A28429C2119A0922L8561a66378a2345F7701B6750J05835a33428J1031
+344a22397A05292c2657A06508C7304a98982I2869A7605h5386A44576f8185b6745
+356A02024a62841A8556R5741c5532G1540a02321n236A24706A9995L6074b3507
+368a54311G8240H965B433J23284a24382b5379C6032a27466A72990p7048a50444
+380B935a27923B9147K56792g0908o9230O6586J7813B49198H5146a74674g5665
+392e9270A48435j8859a48985b2849L493A3335J20706a40501b4715A48845h7866
+404B0810d2130p2395B32860C2808a62560C81h7682A17778O2193a54713g1979b2298
+417H399J57998d5193k0540I699h5844H9161C2759d1739A07096a25911M0404A17851
+430b9218A19261A7857b50475E6907K5960A9254J08580a68336N4015A22235a439
+442H3331B513a37023C7854b0636B6224Q2316g4114c122m7897k8794A82953A4501
+455g5728A5167a44600I9914O0940a54048C297j467c9743A52194a04536k537A55166
+468A9738g93r9514m8223B01658l7158f6429j08908k9691B15463Q7688h7177j10056
+480a97233m1147A00226L31941c8786k28365J29458b5474C52231A27868c22174
+491i6779C8161J09936J9909b21608Q7205A22954m8990l846a39478J4390A55925
+503F6679A3014i4852p7580A64932m0328d9177b808j94863F65K42101b2390c905
+516h5518j19219A73187q972a8108j1136k08092b6601B57344H8179c2244j86198
+527b18442P6952B31270p9021a1010j48229n0794A96023n856i0517K6514q5863
+538a49866H0508J77301a56498J8082D5919j3593J59118h6110j85164I9284N3572
+549A52856o4238e2193k21698B5401J91605G7724c3486j99464c6859B08194B8051
+561I753i8041k7841A68543F540f9139A03055h6864d587D8222a35714A24439j2279
+573A12160a28157b7455m8431D9896J51688g8785m0198d1393B2680J57148c6862
+585a26610A7582a7765A10745H707a66357A01922D8942e7303D2372a35487D2405
+597B04754a16032L8701a9906n912B03382A272a69975g718j103A08146l6145a20874
+610g824j4854C521R5623f1533B8829m651a51170F6514p705e478A04890a69696
+623a09666A77326B6514J3842d9484j49737A16184J3229c9091a6722r8718C6340
+635A28632f8138b7703L853C0630Q5733a30867N7804I5773A8856Q2096i6038j07956
+647b03994A58206n3164a1734e303j99507C8183J72426e3505J7337k5020J4586
+658d6602A47724a9595n3058C6967a1969E4407e3079m1126A26845D1475a5530l7685
+670e3215j12111A44281L2195a02765M7069o7525A5910K52693e1316j02765a7379
+682c2288A64600F1081a73719a0547B7011K6554J384a22748b737F6567a092C7625
+695a10580b4715A43921c6218A035b9065r7032A43447F6224h1272D1563a16519
+707b6589A67523a9509A2d2143j02658I9140J5314A3862c4815j44860H897J54544
+719A63441E8119a244j92154h1904B09693F0691a7796q0101o8589A84801m0198
+730A44603a28150d3697l6264F6907J36833a32833r314D3113K2701P8252g9040
+742b06437D2397Q2089j450e7760j75159B2703J13095m0272B4298b33796e6759
+754A81245C0033J5647h7026q2734A42498o8942d2032C9822a14484h786A08967
+766d6358B4419c281o0454E3108a6912H878K7061f8128C9098G00c8700G4780g0681
+780h042A02562h6011A1026M426h8317A33773B3133a22501B9959d1505D7196P9734
+792A26930a08105M1630H892Q301J01714c5331n6219a320j2129A02898A7964i9268
+805C5571d0601D990J01096h7611H518L6785a12764G3047l1615f3605G4816f8747
+818e7299A06501a8943E878b488p6635F2896B3982b0413A2898f2443E1891j7308
+830C4583g8186D3151b1017B341R5691a20755c5661I6968c3375G1790b8134j25551
+842a53685I8566l5540a3092B6047a26361g336A15314a656G588f9480K0958H8735
+855E78J4990a3182p2578G9318E788d6480G7882g0513h534H1859i8309C7685J9584
+868E7269h6312F1805a5855m9918H9831b4100P521C6743f3795B7657q778b0982
+881D6090e0355d971C1059e0326G2837a758p4993F6054d9268d192A05682h9732
+894c576D2021h4231H1398B9058g7207D6861d3527a5833H1447b9445C823b1037
+907e1297F8422F595M04B619a00445E6148j332d0752E2690h2388L8856A32365d3019
+921a6464B6461i6384H1612k5623i4792B5751a5839D595P5133g0438c4814B5326
+934A2360N7389e9986n662D3696D51P8715a0977j27956E6289j9816G743O7419a31755
+948d9050A19621a7016C5185a7823j05589G7418j8635b2353A2110h0865E993O9304
+960G5297a1386F076e9038a6149H6627b7904A995a0289o3954A02973B0294h1540
+973D4191e5773A2565J04036i1337c3023C4099c8883H9474D832i7379B1336A220
+986D0306p3g6791i087A395K1119M6857g3833b3542C4309d0097H0857d334r3794
+999i8128G1295a6506k036H3851h4532a1947F9350e7925C6643A0862f3506E0663
+1012d706q034B6673d2865B2790H224b0074D2502e1067d71E2815e7834D4286G175
+1026h3828G9301d321l9723G3612g0163a6310H3453e3153A5704l273f4112E3923
+1039A2487b2634A5742d3513B4366k25b3733B9724d9645a704F6764e5907B2811
+1052A3276g7373H1343F013f6132F5789d8065a5604H6079f1776d487B9310d9523
+1065E0748G437d0520B0047b5416B6070m087d0914B5373b9990d94F7759f4084D377
+1079C2975f5807G1129G345h3298F8218a9490n229G4233f6412a1706E4888d0121
+1092B8477a849m1449C8048f930H789k210d5688C7377f194o467E1771f3985B418
+1106E3038f3816E0090A5402h3546F4721g527k8602G5799e3432b6060E2288c6072
+1119B9182A1131e0408B4913d488A2407N357d8170B6604a461j5423E3133e7308
+1132d698F5385f3379B5053n797g3135G8405F926g0805D9781c0439F68P0240f0495
+1146a8013A8945a1172E1143a7903j7701I069a6598E3402A502e4260C6310c2153
+1159D927O4530g2465G350L2119f9289E7312A3487f5171F1515b2399j1991E7797
+1172c4173C519K4945d0816A6451c189M0C1201c1540A0990e337k7637F5215a7264
+1186b9450D2383f5452B1890M9129f9889A9970E336f0788G8155B434e1184C7857
+1199c3483C110L8791c4765A1200b14j3117B0229c0484B4093j846c9755B8048c3945
+1213a8348H9997d0430J2684B7878f5528F0813m466h4305A5151f270j6208G9182
+1226b4814j6888B1678a9783B6931A0277b4444A7333b2498I307K644c5096E1728
+1239e571m3219D2723c8171G588P0112g2157a1450C2073d8808F4069A7717g1711
+1252B7653a0773N036E1329b5696a0760c542j4568C3254b338I414B085e7733C2994
+1266A7320a8808E4808e4600J3268G0772c0427A6519K1419h4303B2020J2451c8504
+1279D7411i922l1150B7744a7325A0637J5665a7756A967c1047D246L7160b0822
+1292B1894a7798l8592F4199C48b2772E2829f4221a6024F2212d2863C1231k430
+1304B8801g4815A6133n181e486E5778b6770j7828a733I313M6154d167l4820a2475
+1318b5067F1597k9729f4795A7022a5149l148G4944d1549J5897E9730e1088b518
+1331C0590c8157E2595A4042g1233D7J1333K8646m756e6482J5915d571E2185J1143
+1344F3328e8452J7458i16m428H7663f297p8395C3463a1659B940O2560f1441a2470
+1358D7905d5686A4204L077b6286C9888i541k9866D304K107L7535B338d1744a2572
+1372b4951E4796L241f2563a7405m463M717A11068d38p9539C695c6293D5401M6912
+1385I2313f7205J7602B767n01O7890C83f2082h488A4020K6600g934l3981A8416
+1399F099J7344d119p8887D3298K9316b7762g142o6838b5011A42769A8830g8306
+1412d4963l056I3658J2504g1075j3468c0569E0042M8708a2220n9987K2275B0975
+1425H6959g965l2498e469k7172E0967k3154f7426C4447A3067c7527D0057c6636
+1438a9841G7454b1177o376A301c7205D2506L609b2818m150j2958A4039L6496B0625
+1452d30p5026c1806F9506B4176L598b7534q2578D1550L4054d109B0084g3394J8339
+1465e5055H9963B1529a4951b009n0337A6270K1229a5619B799a190D366h710k0644
+1478b9354B5935r148n243m283g7972A863P0610i622A5928b9348m4792F5629l0013
+1491C5616b7941B6461d1450J3971D2591i350A8991Q029d1028P803i582D5438J1947
+1504E7385b1250l1295p649B9142Q8078h752n9455K9187O688A00520l2980i4206
+1517b9459A555N904O8013c0947k6335D0553B282a0489a885j3306C8729j7268c7134
+1531d5722d261G9051C1922e1447J1018j209E6188M1992e2472r70a1729j1116H5587
+1545C8093g2123f333j2618h006G1240D329b9422J4246j8365A9750K4473A5385
+1558b2277k6863G130J4517q794J8998d1694J6629C4865c4993A6293L8086c6298
+1571g02k1414l3089H1852k0779d5282j73j1452C2768P9531E102h3442J4638B5777
+1585I3082B2070d7647j9425a748I1715a691n8577A1844B429L2840H627a02849
+1598B1338Q5757c197m0901m3011b3241A49205G1319i7260j6458b3405A21866r002
+1610A12864e0706q4742f0549A05615N908b7156m9093J886B7901R1832a3763m9969
+1622f3732b405j9659D5181q278f7792G148K8123a7959A0757b5938J118E1702k3929
+1635B7773a7743k5814J0319C2282K4113j9233e2276n0259A7556O2652j7863A0900
+1648a39956N9095A16672k2212B0920h2073o8239E0038J07043B3465f7589l8966
+1659a06555a7444A23826E8500f5922j1504E029P2094A8240d6998M691A4827P3778
+1671H8605a0643r4186b22E1505J1206B4475a30024f0847A05125m0904A1722f4578
+1684a06516D4604N4661A4167b9473l2336b6910C9591N812B0116b8677o247J0871
+1696b4053e795G6738l6784e7872J9288q06B9852Q5645b1387o4395a5213d323F7573
+1710E0648g5457c2296B6130I520O936a5098K601B6536E001c0991l707C3956L0213
+1723F4169a4822k8393n586f176A07441C2196g7690c4651M208C8679O3384b8391
+1736f4264a7956p447E6886J3825b7201k3455M076g9G5624j9799c0438o1345c0758
+1750F7352q551A6245f4368j7012E8669O098b2387i783k7464B936O5148d3623o764
+1763e0387E1656j9015G715d6876l4983D7301O6563A3139i5477J690C3886Q3320
+1775A17206n7249g3213o0110A0980J05332D1151b0032o1470K7306H7919D2050
+1787c9909D814b1208e909B9865c6073E888N6039a2482l4610J2648I261O3040l2597
+1800C9704d8732l5646h441G9956l2332d589n3277k0360D4909L4744i4m066n5767
+1813e9927L906G3272k5909a1006K295n4759i701G1039A1904b2267M663N397B0925
+1827A0098b0730R575C6065Q1e4365n328B0223M1723J6705d5356j13573a429A31608
+1841H9101a3462j54063O6895A48960M4b0481j13649J5088G2631R5706A8147a25134
+1854i2697D9130N5997B1954g1268m223D5729M5975c5210k9766f149C1341N1303
+1866H2644a9502j05349A860P9277k7248A1500a05663K5449G8646J5579B2709e8982
+1879a05340a5266I8255m421b0175q8816M1070C1192Q8493m5384a03446j1510A0685
+1892G7659K6491b1456j25689a6902H6684l7019D739h0431L5630H4409C9243e4750
+1905d3829A6283N3000B2309g7500L178D7145P3396G835a05770L5393A9794R9091
+1917A18885n1314a10761K3278B7390K3705J8817a3932p5045c00B1012c54D3955
+1930A4876c1550n579M53C1788N8966B5574i0919l177C7047O9508E1468e6854p0474
+1943a27328b01A30796C2363e7035j037b1257H7679C9577i4432b3290F1455k2487
+1955C8968a0850p8606c6659A10878k6467f3454n7855b5799A04671O9b2793j13236
+1967a36029f4498I7544q583i56n2649l1648A2093P0488F176A436g393o1156e848
+1981D4831j1648M439d6678m8138A3840P4864m1466c9828m1584a8948G0159q009
+1993F2150d7394k1611C4596J3102i293l1749l757F8651L1190g9948m1071A1580
+2006A05681P804f1191j34825a6983A69715n6918f2624j06580e2958A43306j6966
+2017A26340f3282p5755h402I8991m8908d6229l6610B6123Q6526c0032q7384b353
+2030H7884P167c8983j42419b2954A74469p5454f9625q9536e7687A51534j5888
+2041A35646f9404p4010b7937I5954j4600b7726o1633a5802G9780A4631f1496c933
+2054C1509M43b492q3429a2712I9761B5267d4311j485J6335E4910j78c2836R177
+2067b3659C706a9602Q964B9914J8965A2264f3538k9946A7698J40387F7762a33137
+2080a45454D062J73010k8199a36318q4672A9460J64388n7788i0172j26612c948
+2092B06641H2654a26043j8609C1867J45412E4561a67936L2793A13210P7673a0972
+2104a87520O4192A17872J11504i453k20964a01370A14525O3711C6300a82525N9775
+2115a22750A03443J4957G464f8923r39B8250K8419a9234K728C7432H634e5298
+2128d0862C5368M5343C1310i6541m365G1303M7970c993q1549P898D5556Q0692
+2140A26248b4831r5009a17H5496l0519e6693o7392B4627J40224C9548a45733J9585
+2152a26148F1065J19782F4493a60648j0795G1589J22195D4049a20276j4482A5110
+2164A57452D5370a04427d7821B3997J1101A4972d3197D261O4516b8649o1145B299
+2177H7424j9143d9416p9720a9729A38612n0620i3519k5040A5115R5499m5780i3812
+2190a15403G8152M9729c5820q6543e3057A13385M4080g7574j38721a6699A90726
+2202A48082h6757j52333e5076B24082m9157a08359j08054d3481A66250q879f9619
+2214a88464a2476A39506E8825e9360k8574F170J05520F609a15867a8010H6453
+2226F1436c1917q2951b7440A26008n1883g6106j6749a057G6864j9498d3004k7486
+2238g0490B3246K7322b6655j860B5020R426A0193f7766l41H5368K3987d0974o7631
+2251a08605N2934G0650O6399a3708j30801d2365H4906o872a2919p2689b7800G8869
+2264C5664g6130c7768G0082q566c4057p4279c8818A41050k3455a07334n3837d568
+2277A50214j2508i0236j18402d21A81270q7688h9805o6150e910A67722G2731a33756
+2290a11881F9557O5127A5014a41594L4869A17660N5902d3999j34524g2541A13700
+2302A79594a0172j95039h5617A23706J3468A0741a28348K0983F9123M6342B803
+2314e6887J3192f934C8432j1282a0286B126g523l8969B065N8116A9427b7201j8136
+2327d5337K0513F4571r494f3521Q490C3945J8285A6867f5818n246G5161L7302
+2339A12463d0472q6802d7031I9351M6625b2441j69743g9910A44848J3239a8893
+2351a70251N3363A12038P1339a4974j35006P4352E7911O4271B0607a12384d6711
+2363F5109k7487a6835j5623h305D7924A4977f6978b1975F2273k5266b4686k6451
+2375e1137K5193E3834K304d3607n953B4867R36b019j9671l90D8177j954g1185
+2389g0479D4722M3515C6865h1355m4317C2364J25742D9231a06560j5491b15A40584
+2402I8207i1985m0681E375R0266k4876b7570p2782b0428G8016B9701b8598P420
+2414b1178Q856B2322J804c4174a3940C5216C330a2652c127j5604F588K2831d549
+2428e408A956c5099a1152E2260j8249a7928l5422j338D4770O8966B566a08366
+2441g0944C3728Q6070n7175a11080r458D1020P2400E1476f1035n1212C465J09235
+2453A12700C2672f7444J9519A3740M4132B1365f9074L2416F9188k2755c9602j9280
+2465e8882a9281F5373J2118d8731m7931C015O1913j3164h794p2100c1458F4577
+2478C6239a8432q9j405E729K0104a3074N164C1192e058l0754e144A2233J6922
+2491B9155j709d0630j0838B2028J5769A6856B911d4067R287C2901k648A0209m863
+2504E346d6425N586C8184R878A3816b2992m5575a6980H1250l2603d1052j7780
+2516e8832b3778D9433K3058c0153n2657E412N5731B8236b9297m0083A364R8254
+2528I9618B6411i1427K8376C3966O5108m8382a03655j4463E2155P8645D1301h2218
+2541a23525a72A41161o9125h2109j6676a4237G6590J0023b9713o5300a1817D6917
+2554C3649A2141c7669L4B9077o941a0608E578a1689m213B5461G533a9939b59m296
+2568d555E459L0388a1010m3305b936D2711m444A614g0817J2409F6355K6820a0387
+2582h1498J0106B8867R5693C4822a06911K8456B6658N9874k6045f1540l6666A8322
+2595G4615B2628b3403k2066a2214D7331A5212c6043e10B0513d894n14o222d783
+2609C6442F117d3967i04B5329I1M57a2226M007C4099c141m8993G043M5383A9853
+2624b8028l9194a7800I5550k6275f9780l0589h744I0271P841d0213j01501b6876
+2637A09222k7349b2416q1668M3551H6477O331c6710l6968b2456C7117K6074a2197
+2650g0593A059M9619A0528b0084r356g311D5540k2058d2471J7936A4571k374R571
+2663B1768C127c6191h990A1806A000L1091A5745e1782J9102B0121K0717L304c0275
+2677i1307c389H4447l6090b7904n1638L8787G6888M617d0319l8181a2233D7029
+2690E7937a5987o3607B15P1262A1224d2321O612H667O0194A8275h3616c8905E7911
+2704E6349c68o4657R263E4357K5653b2970m3164a6821C2708J6161e680n7801b363
+2718E8973C471c9689a9341A4387L9806I364h1226c0663F7906j6096a1330n4922
+2730f6252J1658E8249L0266b0769n2965c0513B7390L8359A7647f5167K8804C3558
+2743B6938F489h687k1768B470K4118a0271c172A6245a7194Q297A5915c583D916
+2757D639b6679G937K6615a6430j2767B092J6225J5549c309o5096a9669G1608k2857
+2770D8751b9038m2122K8633F9650L1503c3201p5863c1412F2573L1437F469a16509
+2783e9970H0459j00f135o6369J0704D8565M0414a6874n5985a7550C5238J2643
+2795D7881a6o4728b0707E8472B8138b6741k769J2637B9422J5994b4214j5369H484
+2809G891M006P164b0326L367G592a0210A2572K4979a5276k6065i592A6328K8087
+2822D4415k0708e9049M080C5756K3547A6260c6436k9971B717P9538B4318e2781
+2835c9568a342D6252k392d3147r779B4546J1489H263a5408k4683C664M8511B971
+2849c7055a1860C996J7934M507b4410j0065A2857K176o582P464b3507q611A5580
+2863A9548m805l264d2805N184C8459M778C613b8592k6225B544P3895B5565e2450
+2877d6665a117E2816j346d0715l1305A3012M4299B3357b2437l4622i991G1159
+2890B7761e2379J6438F031L6577j018d2819k0267B3874K7247A4466a9984l0862
+2902e0846a0086E9452B6453c3512O766h596A6858K1391e913l1455g5A0114B292
+2916A9171e365j9984G804l448d312B1773d296k2740H366r7h78A4419a2401q963
+2930b1364A8784p701a1757B588c713l161A7948f12k1031A0515J052a0085E155
+2944d452r979B0829G800b1044F385B822a1809A5428B331a4414A2166c634j5059
+2957a8693A7485l110a0396d381r056f510C4628A5320c4356J4704G790J1008J1475
+2970C0273a4458l8571E424L6719A2095f088k8137P236D4940q065b8809J306h923
+2984A4747K8254e352m6051d653C1421j2979B347c0531l41C1542Q524a5357j1694
+2997b7051J2385B882L9787A5557d6296b0595A6999R64Q411a4318l5625F466L0547
+3010C7013A0091a529k6178j064C0940N805a3414r883Q336E07L6281A7139c8351
+3024b0900A5948j718M940h014l5009E938L0882D46f289j0098n844C0180j287b3974
+3039a7044b629B361K6980F417c5434a0011A7691p532Q00g656k4693C674K7868
+3052C1542A446g137k671j3071A8831J4831a6826j092c596l000B9223j0358c5412
+3066a6407A3215l113R897e952l3352D23L2659H561g351j0163m403B1111J5607
+3079C6718a5154j1932b984A376K5675q368c8498J8391B1930A0728L143d977l4685
+3092c9662C577L1580B641g862o660m918B1620R271a5354q773b009E055J6889p736
+3106A4208c3313J2323B5006j0993D495e233l0794C233L9514i92j7055O681m402
+3119a5768B6609N760b6054j46D149N506J3277E338c5229a3735B6254j2655b503
+3133g485j5157C226K9713d492j4673C089g656H220J4533b0324O524A6542d365
+3147C358P317b0341c041A8548e070b305E232a3779e09A9001c280o809C306i023
+3162A705K3196h366j2774F504a682H903J3883b4228Q42A8426G823R51l036c2437
+3177i288C0385H642f075k193j1141F178K3801b058j9547a673B4O154J3887a3724
+3192b2026A6403D778d098A1757a7287P288B6332b934q634F739a2378C087K0905
+3205B3992a1049o257D722A274Q485M808a8822m249A4621K956B842D53b5500Q800
+3219a6700C5402j7333a7394P969r670D169L8596c755k8487b293F29J4914P164
+3232B2707b3024j230A5734l395G22a58j5477e685B3544C317b0817B401K288g14
+3247A6194a1770j1850B0274r639h149G613a6968M385B7832D956a1289B108a5278
+3261d107B6277E433a4077f463l113B161K6121E293b8085h823D905L370J7981i139
+3276c7908H431R957C011Q422b1250j325B7829A1601a3154F69i358a79B1390g091
+3291a9606I429J895b807d09j0124L90B3433j0312b2575e758A209b345B5521I84
+3306c0077D249J558a923B2137e874j9453F047k052j050J5916h504j7065B746J0842
+3320A3588o414J262a2418j3940A2048J2322e545b619n985q503B3003q620b2110
+3334B976Q1i558A5626c152j3873A7534E990a5314I24a174d5A7522i05k2265a291
+3350A3454B247N765b132k3066D303J4349e057I163a147k8351G595J1317a639A1747
+3365a2828j9036A5955J0087A254d323j8542O139B8356j896a5118n717f076C897
+3379B4585I351c1916g497B1055e61B982c837j6899B0272j258b6298g809G606k986
+3393D620J7065h845k8045E240K3268I900d197j8531R08B1338J3115g740j4752
+3406b2492a0236L603B4792J602b4966O246D552c990B2547p641b9847g285I205
+3420c061A7274C845b4088A076R903c826D106k041a0248D706M294a4876d287A7994
+3435fk328M44k2218I321K5861h948q122Q344m218B9515j280b8004N967F98N717
+3450F415K0577F799c1580a2578A4328n946q99B046a9580e980A5825c596A042J3597
+3464A4639a5966O038A1275g792A0795P227b4603a0932A1862b080A4068o637b5080
+3478d926A2944e4E878p91a4306f135I236b462C283J2670a3366l877I054aA1000
+3494A9122b7606P129A7701F401P580E962c5242h855B4670G327k683d827j9455
+3507b4282E34K1066B209d679A276a1970e106A6056g52k228A2525a5883J513A7921
+3522A743K344P060b7301a2082B3640E223o08D0b7714c302B4789F396b768k450
+3536e218j2660a473B3143E069i923B92a2393f068B3953A528a0253G429a6090g670
+3551B4628a077k988F965b1512e784B2903C568A80a842k1172d345B5892A2383g702
+3566a1640p221D03L4744I475b4813a0508K336H829K6283i207k0952E177A806N797
+3580G603R899a9213P416A8418c209n429E502c10G028J115b1103K812B2636J805
+3594B4441d771j1892j0095a538D8860A6469c6522J4069f842B3157K1837a7222
+3607d5902AJ5604O175p979c0623Q577B0129o345b917K63n526a535A3978d563j3201
+3622a7764A3754J334i568c580j0554O367C6659A0933b9055a0421K663A1777K7601
+3635C9378h308k8624f658F549J5588J926b0605j3992B059J9340n590E733b1004
+3649b7309A5665Q941d181a426r559m351B2088G304a8199A0530C035a0625F938
+3663a0436e191B9228C782b5575a2104A477J8769O564a4230k7754c518C1101j1273
+3676A9828B771b6991p182B3430J2082g145j912p453K863B9475A1117a9245D806
+3690a840q330A0500g70j682A5709d889j7481A37J4704n408l695a3058j3895I802
+3705B7689a569j429p332j2463A8071L436a0156C855h934j3999A6853qa917D675
+3720a8300l313A9129M874A39a1109q359Q983B4433O66a5085k866b922p77B0394
+3735A4306b3475b680G294a2626A1995k647a2290I077d002j7321A2540L912h32
+3749d96j5182o35A7503O958c919j0709K579J688B0157Q139a4207m334f464l365
+3763i829B7536o21b5356O714d764c73C4937A2102c4645a4458F536O257P778g702
+3778b7716H94J8446A387g053a233j892I927k923b7341d249C2542E600i739j0330
+3792b0069o238C4208J1387b2266j4657a7705A2582M0339A2772e1731K0413A7470
+3805C5314j4081b0869k0867c50C7870A0844a4985M962j149A2501P467b1454g604
+3819B1434d196N48r76j3553B2636M097b1213M79e032G800K3222H640c2855J0006
+3833b2849A1623J0605o003c056l0847a6774B8255j0171A616e073k8336c796C5879
+3847C874e869L40j8708A1133J3994a0953d935B945g806D572B253h842I134O812
+3861A5946a2118j1026A744J4379L567G202c9396J1269C5012m729A943a9073k5783
+3874d4856G028M7742E361b5147M398Q798C0108l714b3687M243H257J034B735e748
+3889i759H859J1817a4129j5586A0810J1942A1254a742l8923a5728D6084B0712
+3902a3171o594j0816A6255K8717d501j8476J0338M622A8924L316h237p370d395
+3916b835D780J4956A176a9083b844m69B516K4255f421j7451G712b289A537J7484
+3930A9021a3224N591A3715a3516f338A5962D396j310f781j7957a91C2560j6029
+3943A6531b0428m882i363A7691K2082c422m0196g923A2822M508O551b2972p482
+3956c0454A5326F957l050J0534a5212L048F630e063G523J1104g880j2322c898
+3970I079L753k439a4450r549A3830L374h878A758d796j299A9205a2193r541B6315
+3985A5596i693m577j3510A4944L7740e09m5730J6771A4678L5415k4458d1689j3683
+3998e5372A1672M3564B0206b2604j9944a6303D8403j8328c0895J1967c210I778
+4011B8435a5570j1730B0092p865g330J572r046H568K0102d573k2326h841A1354
+4025A7027m080a1896j9317E52K2190I538J983a6066k3267A1381J9860A1294D007
+4039c7198M686C7260n73d034k0508r971G462M0049I914c3959J1939A1839J1534
+4052B3373G725b0254k516B3099N922b4369p88E004J5495J2448b0345l8497A1600
+4066D9311A7734a5233l6120a6501E7162k3805b8036q568a0230B7659L932a0896
+4079c3381a92B4640f83j0948d62A696J5738b679l5113G655K8490A840a0173j7414
+4093b7587J1585D2992j8110b6605O212g573A2243J5457b846j9459c478E897g10
+4107E576N226f491k549d338m419B1379K255b6462O671E982Q13J8369b932l3471
+4121c6403F734J4057d003J619n341A279J8829h393k0959D695K9760A2936b5732
+4135c3517d088D6506o889d0947j2205H555K9662N54a4194n2231b896E1265A6392
+4149a1145j9120J3875C6236A8062b7945a1649A3654k87b144j8671J0307B5335
+4162B6197b2759j0339H832J3135n395d938l3257b16C4801c858o289G03f562A2901
+4177a869k3370A7445J2195a1868j7125J2623B0390K4673B853e4500K1404C8199
+4190D8784B78d0699k918B1439M1449c320m0502a5305G277K7772A2676d3018i566
+4204C0226E869g972q107g149B8956A4295b8093Q100A3601P444E380a1366r495
+4217b0861d59B4107e6r316A0194a0807k482I858C562J5262r260d5911b0922C7482
+4232C3545D666d2322n837C1268L5121B812e5337J5462B3373L5456A6066e6880
+4245d4243C9882R595h839l1745R955C4056K5413b7278l4309B159M0258j317a8006
+4259g3303f844F7919C3825b9890k3567a4726E0206o173b5702k3165a111C0270
+4272A6949c344k0515g951B4474c648j3076A6567F183f818J703j4715A3796K2380
+4285C6176a5279j4573a033A3198Q970a159k9494d406B6697F820b0354h578A2973
+4299A5491B73c1469a5724D3693j8169c0532m99h938C5987J0224c2524k1475I891
+4313C6051j2081a4582l1169A661M2361F155c0362a3914A7695N869e523l1261a0291
+4327D8122k1864d0937L102E584L9596n408d3626j9448B2147L0992A8221b7574
+4340e3624E873N4242I479d0151J7290A4575J8384D240c6996a7950C5630p684b5721
+4354c1000A176K7073K753b3792k3925A4293K1059E842h988j9110e076C3887H52
+4368a9755F236j319c344k187l778A4487J1559a4501k5240b89C8465j5733a5419
+4382d3135a7144E0712j3939c4449k030b513B9473P713b5668k1597A7936J7630
+4394C5566B424b1778o521A4412L0583d869m0937a2684C1589p34e381l4220J6675
+4407b2926C5991K34b0237o788d241A0091J4765e786k0640A4148k435a7963b805
+4421G127O531j857c1131J961C0879R644f484l4173J2969B4597K9145B179e9579
+4435b5363D0127k212b690m1926J2973D5981p85c1460r777c131C5046O575b8967
+4449f1103A1266M2728B0997b8791k1562c170E6586k5833c6919m728C602K7449
+4461C1051m314a0689k7916a446B4841A838L88f88j5409C214K50d734B0125C624
+4476b8522f421A4740R02G558b3466n03B1691Q991a0988j7671e786A9897P624i578
+4491d7074b48D9179A5214b6561j2347h337E7550k2088d8902K360I411L5379q644
+4504C6146c2118k6787H849M2529A7083b6361o821d9C6187A6384c1507J2924B1931
+4518A3632e850r105K413B5549k877c0427Q769A5036K806m546a7522j4778A5526
+4532C0925e849j1884g879F382J1733a944k1643A949K3169a084j8548g306E929
+4546B3853H816c6250a5709B7992j1557c47j7192p118A8191R833a2109j841C8J074
+4560A112P814e54j0462H646K845a5877J640A3047K956C784a3972j3603I593L0454
+4574D0047b035k7649a2377E567K4900A2251c8668a6382B7940j1083e063j7360
+4586b2423O777B8130m36b3738q593F613K2557j1220a6978k2589A16M5026A3798
+4600b7168M820d711B6984k52b4587j81A1496k749k463H24a5450C476P929a2603
+4615c754A5338C342h137j644L522A5921N043a6608r570H886R425G807e952k0643
+4629b6595D68L3930b34k4341f434E777J6519H712c4458a5947B8818p836f524j7677
+4643b4201M821A9997J5324g120k6188g971A4220M746I369b2851L601A6914p168
+4656I746b118E353a1263K782A0339a955D188R096a6158l98A1219J642n526f538
+4671b5051a099C1225I192b3513P201D818J8173n769b8028l466B3752Q535a996
+4685b4402n910A4477L7253h07m5417a9997A8077K2225A4186d4688R467B6764J2156
+4698C8920C478b6857k400G515L1679G156b9823a1637G328M295J523a3792l498
+4711a7290A4807E940g762E158d280K27A0120e019M08A0521e091m158I019l264
+4725E755c416k73n575A850K0868A346b7008g246A4185K632o956b6328k001B4622
+4740B9843d903j4013m147G081L1389A663c1463i481A1201N593F852b0557N876
+4753a4681A9273n535a3515M163B686N140L488a2120q594A6240K581i928R9K022
+4767g807D358J9581e481k0163E293R491B773c562j1490a341B3849C053b4070f891
+4782A4724j015B365b0966J575B3227K825a3492n845h275H028K0687a288l0027
+4795c1315a708A4749F843j833a3297R71A4891G032i958G26K307b753A874b479
+4810d293A1379C865a6875a162A2171A040J54h139l977A8084n333a8962h192E625
+4825H500M627a3941j1039A3927J1295a894j5041Q3D142K6516I035c0702J3500
+4838a7202A5283L105H884a5801j0991A2245J4103e432n487M361b958A7712D237
+4852a8678B208P276d544E6a230j450I886a62j4956C143J1151b297n211L394a755
+4868A4986F780b3165f233A8971F856a862j2569k099B2683K116a8346l995a999
+4882A5128J0830f334l0478d963B8746j2166g343j6013P848B2087N293a3329r397
+4895b2726a431G733R548C787b4647d799A6716A231n34a974j0792F434M272g174
+4910C25J926i244B919P097b795l94K15m573A0217N983a2420m430C460N682O144
+4925A5286E01c0996g203B8557A3018f886j3250J647B3205P896a4376j2919e444
+4939A4088J0766A73c2345a0661B4775r390f683q799K321A4360R531a2064p833
+4952a9897D126K709K876B647b0716b659A8649f33m350e21p043E683L792h732b276
+4968G050e521K482F883c78A99J331a1594b65A8065a049j1097b323l97A1035L305
+4983A4340a7196K382A1429l439l485b692j5696A622J8654f56j0223c178a509H416
+4998I427a1857K162A0489C732b945B087g454a186A2475e260j530H735c765l4G163
+5014d505D50P305a0689d976A2780B127d377J162n042F138J1082f370j0977A063
+5029H256O37D322a8681O877A9905q793g712K64l572F671J5878f677j2274A488
+5044E732K938k998a6451P222A5100F877e005K012m274A009J3119a934r269C371
+5059B87a469I236c888m403F785b008q07A1031c991n815D961D29J727O208a0074
+5075a0750A0471k867a745n67q032a744A7982C347a4996c855A979M059O464i652
+5090a7729I245J470c37C88a2474e972A8085D762a0824b285j161B300J1138c300
+5105a2796B531Q19G14O698d630o769E929l54a923E062e952n222A0571k737e302
+5121A8g614K926A7041D336a4009c611D84N031P902g590j1208E237Q096C104a554
+5137a3271M314A8569o138a2806L688b681D415J3761b167j9492B77J0260D645Q49
+5151E494a1029l129A2375q28e045J839l253K999A3917D876a2053b461B039a04
+5166I374b30j3764B173N344a413D831c715r004H259J748e360f22m229j718A3654
+5182G158a2270c903G33N48J0665g59j5671C54R189A644J705e542p100H340L408
+5197A1748e836b717K71l204A0839m465a1717a139C339b833G415A388a1477B647
+5212F027c699C449A82i185D591K637e421D47r5g267F877R18i111b378B387c330
+5229H677D278a3974a400G720A7N373b129j2088D398P778b413M65k013l919I500
+5245A0577h931L398A379a646H425l546a2951b441H020a162C231H84a1502C112
+5260A0247d909a274F62f926F568J659i242c325C728b058F258k566a2517b030I179
+5276A97J591i93j1049C205J0142c045j526a767n072H122L473i549K551B899a172
+5292G429j975a2794c720H351a32B325q99a0593G75R588c084P26A852f478C113
+5308I171g163K999D949c051C188K650a0343b894I161a166D04R75a0401A700J0718
+5323A2418b890k167e82m942F202N107h243m17C274F58N141K14a2113N587I622
+5339B109G28J062a0905a248A2495a501k520A691f579B121Q346e867J95D456b475
+5355A966M483h349M125H598d27j197B474g700d04A1846b585m375A590c467C773
+5371A0836h028j550E423A838J940J589a1750N040A1044C347a267D18i600a408
+5386A3055h4o595H27d294A118R670d355l631D977i02c32G233f318O70H404g95
+5403c118D755e383b337I656b507l582C758b166C32Q257e492k899E778B194C73
+5419D930h258Q05A0438D188c486A013g807c085A3556A407h285C50c713F80J1212
+5434A1892c087o783C264E77j76P096e349k691F878A949b990D267d191o78H946
+5450A91f814C877a072j165H257c522n167F309B677a874D275f358l54A0331D245
+5466e327c4m959b212A2321A701a0094b85K8C10R992b265r344C213mf18F860d324
+5484i696F682k955c081D190c848k814H176B480e894B695a247k345G612c31q007
+5499h338D206j033c003C849c390l955H992l852g081d54j850J10A1453A456a1981
+5515g2B924H32P271c314q638D255K033a475C563c595n091F726j379d718B397a507
+5532f915F634k536e906B515d58n465F745B957g365B476n70d110E003f1p710E547
+5549D934f032A58c54k857I009B728a1873g35E461H70M990c466r318E212M823b520
+5566f82l224k898I038k291h138i76A526c875E581B673g403B980N8f873B988J454
+5582D442d658B434D71g323E226N82f630H5J919d402D484j855g589B958K198f490
+5599B3L208b975E095A621a1301A434P867a573b36k667n672G763K261g377L144
+5614d233F82b521G227l064i804d67E318c864A807J865e478A548J217g345C131
+5630H083e703b804A402c745F546j006a0833b096G071a255A472A66g673D600L003
+5645G603h047c565E527D44K260h46j0505C152J0565b981m465b329n05A0087j019
+5660I068a3225N482G097B669J724A6a1907A475Q750c452J029B400c805A904J800
+5675C704f558A078O964e117N84C843a307C090J417i875b130I912b257n02B396
+5691d811C319K746i437b037I684g08k452J155l537G237L949i002j945C985J704
+5706E689M20H49a4829d044A5118C169e603b509l947E097O256h146J490F577b33
+5722E3J637f598B524O259f323j38D965B246r63m5h365a579A1265a131n851B936
+5739a204E21N187g763b394A1498c075m401A900d81F389l01a3326N811A1333m290
+5754G043a352m608l793D075J1635a721j1439g11C830J011L65a0343L405A2528
+5769B193g200E80b661C671N184a0089K036I668D271a443q69n551B189R670b081
+5785i264A365J240E39L085d676M58I044a281p424E554B665a036C208i490c650
+5801A4815A384h936b381J5F490L229h379j818E682P29c83j391l428h11A0024h52
+5818a1286C866K434a455A363h046L572A5726B114a2082a205c6E476M056i718m22
+5833a0140H052k193a437p58k473G94P555a700q078C860L530b995a432l144J654
+5848b922A3995A813a4712B67L874j050M521i713o02A0678n203c773a300k981A039
+5864G715b570m869D005J785c893J531f39m42I296F05a4040B601N562a329C314
+5880f578j534A2504C600h899A012b03H24M782e844L96H019l341f263J404A372
+5896C956K889b573j1889B887J0440a587q26l247j611A4017F549a3133f90B046
+5911A51P559e477k644H474C839e394b064F1K713K142b612o945B406Q067b674j297
+5927c971g59m061H510k726a2321A269M603d838D049a531m609I622F73i989A845
+5943D183j729q68g095J122G279K277d983l632G64R71N139l233a3865i34A1308
+5959c471A67d81p458I800D511a2265A684K864a75D049f189o35G915j329c775k100
+5975e875g10B218K207j301h725c031I099b942a450D565g031C251K099a0698C933
+5991G524f762A218a512k932I569B181h585a557B577M87j378b258k769E81P479
+6006H060c052k835E527a479B69M316a0486A819J0410g422b944A123e077A0615
+6021D035a2809h30D302j852J504d657j591B684L903d58n323A905E39a073E172
+6037f130b533A0987e683J009E845e451D881J512a2516F68O089c002C745a727m715
+6052f442D445j320b066P31I99m05b430B229d23j767G298d514k919I017i88k67
+6068a255E818a1215c8A1999e794h67A465f772F457k468f882C69J551B04a01j091
+6084a192a38gD531a870o243F446B987c723E190g837L689A3716c835n47D546h159
+6101D003M431h395I0K465c631C440G33b274F47j05a11k969C185j22e721C089f60
+6119e552A0041a990n976H375d428K159I668g938a164G466g256A156L052d099B884
+6135A48d069G11K154j41c864a865A630b697G030I94a0965E761A570d468I497f371
+6152f786A1062d369b064F515g535A817L683f245H66J400e87A025b029d67m47C032
+6169D018g819E81L363e276G986d48j0852H813c2m885I648g157K675I649e210b2
+6186D934f079A465O98b447A433I7R11b348J136D363c923B179J567i671D961q49
+6202D112h498H396a377p647A0350c113j337I465f442b357E917d835B470N71d283
+6218c44o9B879G77b342A930e208B025N628h410A657K189h795H706A091a0578I762
+6235a236n146H304e614a304H647f023b017B166h77D120a270j394J150B39P253
+6250G492d112r2E259e847D436J503a2457E509p24i577H139a625n429A1334d624
+6266f125G217b986A778O39f798A146J370k04e53n299C788A2i74F008h699E45Q904
+6283I449i936B732K026i345I338a55j1487I883E26c766E441h005c41H158b182
+6299a226k154B06M636b058A769c600P20I808e864K519H392g975C668J626a3234
+6315H124k399a0123F119c161j218A1504d600n22C660a644C947g96l049B187i69
+6331D338b567m314I657a384k705E607a0266D650P774a3585c5C899e979A2416b464
+6347a3394G891B073E14J722i028A697M261A22a439n875E110Q35e988B305e535
+6363g23A5096i655K412H467e936H055l963a7437F561O38e265E272f936L371A0408
+6379b314k45a231c29F259d203a687A544b920I245d384n839A1554a942J02G131
+6395a4077C875Q932a1671A887k59f415A1113b894n874F579D48J206a781m533E968
+6411A925H01b241p625A0666n004i547C969f800B07J6611a2595N864I842e632G595
+6427I20a5563I383k834e145D84g066C740N453d783P94j107F078M337a0143b724
+6443G79a910A4689g343o521A2924a376B73N765a6179E452P552a0561D60a333q88
+6458b221A1838d998k705B641n79N226e877j385F264i77E974a060j3186A1584D233
+6474h849G621h557g77A6013a2968c855I221e788G139a641j0422I660C834b428
+6489a746n506G591k992d504b48p541G727J421a4079B204L58d050A3631a0251q81
+6504a1132A6994b689N13B564a3616A0303M32a1787a616m22D334N595i451M395
+6518e056A440K945M986a2575e660A0692b471F389d630j0986A7722D876a1544D466
+6533i519D763J2486a5588f211F569b49A0104f683n141H220l897q33f202l835A1549
+6549B620b627C22a2639A1227j34a6474B806C25b819A6705a2063K43A5037b115
+6564A843E61a3926I998k405g150i39m481G122m17a0019D49a742D011O581a6232
+6580b095A2313e689G427e830q866B0053B206a1641D537h685G456N612a6241c271
+6595E564k688M557a2043e782I636B780J633a2313M391A8487g16l415a399j2338
+6609a3737A7569o879b0526B303A85J331J5209a6436N543A4921H34K606f306n952
+6623a2258A3493F181d070j491l279A4616F113a1824F91f625H186O648b0355b653
+6638A0474d913A1931h084q095A9056A909g094B521a0754I081J178a2677a719b26
+6653E860J874a3792a112E388E58Q868a4263f850A8520e590g08H36a4726A7397
+6668F601a8797E952h22A750J0504a6598d320A2623b63B613a0226M913A5097b79
+6683b455m474k36B0165c64j4015D571f238A1140L56b5205A573J1354c811I063
+6698a3479K068B2314A036g641L542l900A6673F307a3622c821J064A4574G115a9967
+6713G01L203j96R365b0582g416B0739d812A960c162j3357B0187F728a6174C093
+6728d471F435N263a6098b893F302B685M012a3942b773A2566c538D111g908j141
+6742i049B1360d248p191G516i111A1347k003b4071E324M765c695G994a4609e873
+6757A9524a861k524k434K085A8483a000r624a162l501A7787B358b2252G114C211
+6772C006Q436b4029b247B2651g172F16f429n545B3506B387a6145F45c067A3137
+6787F139a8994A92M471L093j821b1694A385J3598c709E653a4372N472B7473d641
+6802a1920C159a0514A7731q049b5214B349M117l095O383a8692e342A5326A187
+6816B246a3131e951A9763b658j481J080p702B1177B708b0274H472b949C904J0419
+6830A4323b3249g19A7167g673D925g091k404A9886b211p146G67d222A4663c77
+6845a5706E797a16H836D347b4013H038N049f896G354a6159e567B7903h913j159
+6859a0072B844h902A9353C936b3066D643p6K282j646b0897A574J0940H86K559
+6873C445a8437g36B2013g846b063k566n857B5557a446j9529I798c694G528L741
+6887A1269b5341B452J2893d681D438a2842d741B0207c558j868j53J223B0920c911
+6902a3991D769e544A4974E573b6461H986m38d378A1859a9002e658B4542h312c496
+6917e58r873A8742A447a5027D090b597I603C786a7487F818C165c27H236a8515
+6932C552J3628a4072D098b254p218B3281h225q054A3823d245G039k675b2650I300
+6947A1744d312A280a5523D531J3681h281b906o307C9K4690a1482j366F147e888
+6962A9461A069b8690A2273m520a312I652b2986a297B3395g217a751n183J65B1284
+6977b637q250F93d992A6431f8j8281I512a424C775N854b3352F227R622a3468G385
+6993f808j991B4272i083k949I618f373A1483A746a9450I212m497A309J409a8300
+7008G850M470h135D348a3142f24B4042a4194f028E765a0479A9762d80k2975A4089
+7023A218h44I307a9872C837J1422i035B456g677a329A7430a0437c997B305e224
+7038A7717h088p816A6106d167C826J964b4542A3404J221a5287E894i728b164B4571
+7053a2990K617E587c069A6559d908j3421I520A845O600B77b2962A1964k524e783
+7068G786a9291F96K4267a4911a686B015a2149B2210b085j7449A2461c313C778
+7082G886a9085F513J666e999F296a2038B031J2524a3239C359f31o705A9965a1603
+7097a1692A7237i145F245j162b3274A5623o642a3222G938a1551A054J8455a3876
+7111c339A641c169A6767i709r49A0272e045A1125a495j8969A7147A809g037A0928
+7126a8895E126J4632a9173C144n78i265A9565h917m403A4370d384E260b0j6353
+7140a6373A4172C391e310C817a5671A1356K238a7944D921d380J570B4099a7406
+7154a1487A5799h122A2106E94b4783A5996F867f184F445a7001D430J2035a0636
+7168A720f828b237A9305a1761d159F095a0733A6790b074j6261A7513e559K117
+7181c442A3874a9325F492O593a7981H954a38p224A5694a2264d469A2199f919G499
+7196e800n375A8007d014J529C250a7187A7352q618a9479H870g285A70K2801b1030
+7211f601A3739h351A4020d236j5811A6779A720a586C691a7378A0370p65a0118
+7225E764a1303B350J5574a7199A854L147a1347A9052g696p708B0225h185i46I555
+7240a9401A2106k560a6309G845e103E2J5090a5749a135F212d344A4059a2129J861
+7254a0268A7334f908E604A248b1890A9214F196a4311A1056a3958A066K1125a8277
+7268a132F058i524A6804e437p720A2654e476D986j754a5813A2752F8g090A1509
+7283a4350D804Q319a9682I637C367a2273A8173a1865K622B0995a1371H16M221
+7296E037a6316A6556C572a3745F982h450G289M533a8241C487G65a804A7727a7590
+7311f945A6057i916A1300a062k1400B0586A862i918A1925a7140C887J4211a6725
+7325C680C76g518A7050i272K942I793i194A0255a109j3033A6401f112K288A2164
+7340a7878I704R72b0770A2431h62q223A9647a5329f385A7119a0773G072a53j6040
+7354a6193A6602g2n021E784a5381A0718j296a4383H688h665b211B1183a7497a566
+7369A0152a4942A7095d47j9432A7896e102J214A4092a7897D759N546a3029A0154
+7383d703j215A3995a2065C045L842a2994A3210e569m104A9554a2416a315A0959
+7397a8774A4950F849b0503A3337e031J168A9399a7743c130A1224h952A2950e397
+7411a3902A4837d540C723L93a9522A3778D663a0108A3081a5998g97B1329a7523
+7425C901O37a6669B0581b136j3090A4899a0234B427R926a7272G149B660h723A3513
+7440a0047a192A1246a4754I480B013a2657A7426a0682L493A8839a5007E124K945
+7453H069b1258A6312C785a3946A3766a2075a097A7656a4577B542j270i038A7512
+7467g373n29I766a1206A2341D033b0024A4026b957j364A7950b0391d04A6621a5400
+7482A1379e88j7079A9415d071k419A1933a4955F205J737a3151A1165e144N0A3356
+7497a3971E817K295a6563A3374c936n636B1061a4613d544A4922a5902A1989D764
+7511b1230A5275d40n162A3075a7277B083J1302a0389G867h035N64A9860i113a256
+7526C876a6164A9258B866a7962A3339a0215A038J9036b1881A558Q758a3292A6062
+7540d873r299A7154g632A18P724a5104A1448A297a0880A2766i800B051R381a9401
+7555A0178m576a3597A6327a1741M142B2960a4603f47G882a6796A7967B615a8518
+7569A1431e715C796Q891b0594C185L395d186A4393a6121g438A8371h998G953a220
+7584b1122B1793A420a1852A3101a7186D124J5073b0080E139j703a1104A7869h917
+7598h645A4388a0154E909B038a4176A6205d123l381A2028a4577I138N87b2053
+7612A2915A542i377A8458a7643e232B1977a3212D175C69a6932B1595I58a2813
+7626F615a1888A1542L15a9765D767b527A69J9408b0086d547A3847a1094A5167
+7640d171j6948B2489c040l921A2445a9484H470O136a9130G945a462m261A7352
+7654a4302c083A1512i954A1058e586o938B0439h069c519H667a8262A6566H088
+7668b3095A2456c554J105B0896b2366d898A6995h725A1606f840j1246B0392i0
+7682b338B625a9059A5091n527a3934H064a2549B088J9637b0325H07O702a3354
+7696B0239f306j1578B0599g852h86A0727b0002A1221k982a4980A0598g102h53
+7710A4539a7134C948K809i623A4880a2146L423B2011a1686A406L106b0400B1569
+7724E537a9987A1443i776C057J7790b2187a876H590f476A6899a0615l156A6238
+7738e072F345D90b0037A7723B422i518A1584a7499E441J3217b1378F542C186a2437
+7753B1191a0354j767A8709a0666C631J852a7494A5409A492a1276I718a1094G446
+7767A1369b0342G420A395d686A9058a9202g602B0062a0803I385a024k2535B2099
+7781D122a1209I672a7496E927J3111a6920B583b256l019B0352a1707M536I390
+7795a0253A4745h46j8040A6989e245K539A5044b1176F177O741a8192A3446b114
+7809a2382A8738a1721c038A4783a4240F611H63a1718A7798f111p20H464a3481
+7823A3844F495b0286A1384d460a563B0233b1971b858A5668a2352A3988d030j6179
+7836b0209B1030a536l525H373a8659I810K539a4126F790h448a247A9448a5211
+7850d14E106a2090A9549e001j0814A7667a0519A999J1625b2192A0175k144a6214
+7864A4862f747q4A7661a4519G73P999a1721A3056e362n491A5927i044C444L076
+7878F520a9678A4971C541a3129A5382a3799b296B0702a8250C605L258a5978A8201
+7892b907j1172A5127i505B927P160a7643I107A825g943A4752a3090a627A3102
+7906a5083A1356A737a6889A8123g505J024A8834a7822B402R077a7469A4761D52
+7920a5171A5165h468g3A3096a6857F015k490i185A5879a0901M996A4397a3260
+7934I614C927b0055A7504a796p283A6931a7965G68J7022a6963H101B85a4701A9880
+7949d943k921I981a4026I762j827a5373A0021f798b637A7857a6530A858O265a5569
+7964A7390b617j2920A8931a0800b000A5357a9190H161l14a6348A3797d724j965
+7977f689A5541a3834A944O212a2241A3097e468m468A7174a1172B029O678a9464
+7991A5280D251a6468A5128a0462b722B0815a8655C9Q621a2354A7140d144j1565
+8004a5709A4012e996E122K083b0319I705C974f215A4037a6764b150A7475a4250
+8018H771G99a7985B0629c986o380A5838a5432C580R575a7862I987A096a1314A5285
+8033i120a768A1052a4931H726B980a0779A4758a1632d419A7671a4006E993k728
+8046C265a9381B0234A296a3539A2391a4813D007J5468a8672A694l10g382B0346
+8060i136k513A0453g419A2280A408b0412A3716b45j739A2168b1878D767J2074
+8073A6841a5327I137e517o781B4692h437j239A0875a3076A2000n113a9565A0294
+8087i99j257A2184a6934C511P133a1923A0361g457O9B1097a3143c466I898a4831
+8102A6273B201b1549A5380b594Q8A4294b0383B382J1652a1191H817f953j564A8744
+8117h694a834D942a2942A6078e76j4534A4340h483A667J1763b1798G895K132a4755
+8132A3709g629j473B0604a2202b683I314a2449A2869i48j3698A4010d322A389
+8146F425a9299A1638l281a1391I964a4034a335B3674a5987a874D466a3126B1975
+8160a765j8569A3382d606D472O179b2722E811M454f578I483a4559c390A9652a0021
+8175A908b212j0411B2819c650j0305A1582a1963I183L328b4226H514k397i163
+8189A5279a3620f261
+$$ Imaginary data points
+##PAGE= N=2
+##DATA TABLE= (X++(I..I)), XYDATA
+0@@@@@@@@@a28@f6A28g8A28a92A92a94B59c22C41d48E74e78G05h33I16a027A157
+29a343A490a714A936b174B431b699C020c359C783d255D765e355F048f850G834
+45i013A0496a2441A5033a8742B4541c4812E7772a58209O8287G30761B95216e2053
+58f01859b58271E65273k23730a87891j91673J88730D22515j86193b36523K7930
+68b08593d6047C02108j44080c53334i2707A25656L5663j2568c39457J62361B90301
+80F5041k1230i9354j44770A92673I3675a01961A03353f5523K5287D930a30985
+92A93741k1111a46534k2847m259B39167J34728a81999r8651J20966A43223L39767
+103D82990a07000l04245b1594I3690K08879D2584d31665B4630K18155C3968b4687
+115b63962C1776L29453e7050j72331P4658A04614K99767f5071k92963i4750A09948
+127C73979A3125d32506a6711A53886j5777m3459c22388c4902B89901h4099O305
+138g7794K1100A0941K95395a12675k27743D4827J53340P2337a04872l56954H151
+150C04819n6338e1551m24653d7633C56671A18348h676k84145a43433C65559C5216
+162a63221a4443n7600B06241E6944c15261D4628J26192G6457E31c04677b6057
+174B87928G0866d6638j88490h0787B81467B6992f6089K2171p8541A77711A4692
+186a84605A62441C2097e5063A500b24193A43391J59977a43371j5139J5990E7452
+198C74713c3212k32835a03204B5091K63154D0676b42532a4375f2A06790k6421
+209H0369b09341H3379L6759a45410A8534g1457D9773K25410a93771j8714H3213
+221F5500J51941f4252k56449G7193P3026p3748b7405k04837H5554R0194g8619
+233f5606n0211A44831J18480b47474K9793D8431J18625J71309b11409k71542A09449
+245B88471k9757e8559m86435e7228D04731j97673b6697l61262a81152C40524j52223
+256A88301c4818j85511L8221B55090A24296a02153d6387r0825A52760J5463b20924
+268a9457B4488e21B18235a31556n7711A04538a2125A38520m8892b40358e5903
+280A6087Q3163J35760a30269r1837f9711F8691K82388B2853c29528a32122B35
+292C29869q8483c71602J51058F6711J01843J35498b12448j37707A46577M140l2831
+303A17886f3298k45536A13570J22798b9778p5209r6902A10879J83608h1338r0228
+314a71566J3474F5047L06155d8059k08011g2871L5434B94443A45193c00027f1755
+326b002D8853J92289a16112k0864E0079h2262A06905j3607h3239B5001a10271
+338c8222A50235B183M1348h0244q0988A49444D2709g866F3879a88213B8320J03788
+350A32108a17419I1454A0936a18184A12558h4582L7894A73157e3497a7556j0510
+361b8066q8363A44101F3904d6820d344j31448E8719M4692e8048H2263g6875k5243
+373a02118A12508f5464G6011N9891b05456c7526B3410c780B45176f6219j75741
+384b41960B1729N228J52389H9538b48890g1390E5854N0660K0600a71169h1928
+396G7746f957A02209g3886k7969A73211e3870j9657E2635i2833A54898o9337b37485
+409E251L2344J1850J17848a63812K7005H4278B2394R7646b4350j18936D4139b5767
+422D5054M1923i1975D5799d4296p7041A58751B3316a1719D4163b21002B7577J68617
+434A96194d2314D1275a03212m7053A78481E1110b0464A9037a44004B5765M4436
+445G0201a7920I0721f7177l900C0936e7095A36529E8742a62054A9424d2738C1969
+458A88464a51581O9138I7703e1892I4452b4213j28440A57957D9724i4586c9174
+470h9735A68970n87a67907O504g3285B01803Q5862a83829p8909f6192A38085K37715
+482C75800g5137l14654c1030A11090J47291A06692c79587a12470A94253q6689
+492A07564j2599a97069K3705A97421I0074b1618p4596k5698A69623p3414h8964
+504f3940m8662A40234L3289a37446e5957k1776a4385B62277b2886j21387a6999
+516a26862A50714O1974a27555L5485k8347h166B88883D6916a58472O476P4940
+527g7056B54408r4740a42775m055K5596A83611M7362a69246M8745b7405E0063
+539B35768a29220q6800A30855o4792R114d5733k17444A15493J09162b5313o3682
+550h8995j13612C8197K39152A0223a22583m0290b1525B53816B9926a07966e1065
+562i8848A47229o0900a41409F9827b0332n6569I8487g8762D0579J04645a60706
+574f2528C7071j2247J41136g7669j00969C6535K1102O7943b1040j58681D2877
+586D7722p282j621a61219E1036P0969a08608A6650c6334a7157A99485i9516n5244
+598a54760G2800H479J18112B2677b19014A0423P0423k6236R659a37560d3836E8980
+611i198H5899c5311j8813E9646a10428B8303J02686f1853C2889h4642m6188B08492
+624F3966h2968b0943j25633I1552R5845i9488L8331J7265A1492J34997f4417j3769
+636g8186C5449G811P5772h2646k7032A41073C3265d216l9148j36208A46143K5419
+648A71562a11390c9888o8371I877K32439f1284o7763G444b9204A22342B1546a26654
+661D5477A5919C298c667q6307A05715l4789i5374c1005n3189A00238R8051a52200
+674a18084H17J7397K07203c6045k03325C6248J3901M4562k5757a95920c1522A07666
+687A8062J6243i7407c6904A11921a6824g379m1621O23A50712a3257p3105B2422
+700h2763I6032K0906a41363b948j4726l2145A74438e391r4335A369i2094H5751
+713A48074f4248m978l8393A8182J82495A2028h6009l9938e9487B29253G4392a31830
+726f5299k8693A46832L3933a83048h7188C0311O814J29250a09672p9440A11843
+738I3009l9888f6189j33223G8158R5525C1139h2183j18344D4133J63450B3265
+750d7336j28763e8627B39288C8643g4286K7039q9411A27989J3345a12788b422
+762d5214N074A38092b8609j5435C2943f5291C9595j1592c3753D3179e1082h66
+775D8337e7430D9742a1901m6779A07637e1149m923G4073f7317F6022K159a56484
+788A8144K7785c694A05664i3991j3178G6588C1015L5929b4108j02524C0590M427
+800C5017J8259k1144a23413A2958K3090c0246I6660e3154j1184H6261g8381A8011
+813I7205i1952B6454A57h4498A10645A3803e9774B2647e9583C9198K2463e6488
+826G747b7716A2132N2910h0956A0754K8354d0115G5092f6593j4375A35080a1396
+839a7743A7236a36565G6705M5642g5993e689n9647b6130A44654g976m6859K5677
+851b9158j6344I5650B6165d6082F437f7858D9330J1352h1052E0293a2905m8658
+863f1563I8377e5362K7422I8995h2997F447M0109h3764G0012B1190f7511D6438
+876c5963d692E5459c8936B2939a6291k1726E8342c2229B1199J5829i6463D4627
+889A9782e1173I8710e2544j5088H6658e5893B4369M7286a02122A8707O39d3587
+902H2305a5789k9960A4715d1554E6389k2277d5067I999f4673B5551P1086f6014
+915D588a5936n1232A28767b346q6818E3894e5079B7524O6444a08674f896D5824
+928b5566F3504d5073j9706F3597A2395J4958c3790m9622F8378C0505A2127n191
+940F936a29114C9756O3264d1474C2204g5032l495A50635H626d8591A2952i9733
+953E6079M8017f5851a3043k1984a0815I5546a8776j4952J4885n880H7601h412
+966e2250B3439e1752F0610p7a13379B2963o266c0424A06576f2231k3779H1844
+979a5617C2477j158a13550A8840L3393B173L0841g1499b6518D9746E499M0278
+991D5777e1561p892G0382a7493B4007P261a10438D6817J712f1498F7822c9110
+1004f0307I6474c5260a6707D6920f7008B9019M013d3345B8438b2754d003C6566
+1017c4219B4857a4481j8524F8098c7198h821D7096h1373D3471O487h0533E2995
+1030a5020m2954I6616b8476j0119D6017e4971B8278J6472e1257A2200a5975I81
+1043D5992c5996G797a0071j7554G3504c3283L942D9819f5076C8608J4955i3149
+1056D1721A0999e4939H5429c1387k1614F0641c5370A5416K0518e9849A6259E392
+1069b032C5683d5285D571O904b5007F2385c6221n381F4917d7480B0101K9790i6269
+1083D0040k301f2265F2723b6366k5998G7099b5301a2583B7649d9312B9395j0643
+1095A8752b2339A7334c7125A7296J1129c7561C9148b7909p646G5469d2637d122
+1108E3424h4751C1856J5275f6619E5307a1645n0988F9131a3419P12C3245e3457
+1121A3975J1599a4126B1926c8886C614K8995c4029C6499a9309k1716G6830c7619
+1134b5758E7196f3809C4103J5660i2906C3045j0559c5750F5600c9711j0142E2080
+1147f085B2162a042n4200B3527E624J5982k729f7950B2844p492b6823F6025d4890
+1161d0516G1504e0899A0989M3135g8356C2358p450f1384E4560d057k9448D2589
+1174c3082c271B4976a8677B6462a8883L412B3271c1509D1286A3203f2059D0893
+1187b0382K365H5388e7690K8261E0102e4760D4955o332h0142B8138F223b4153
+1200E1017b7224J1801B2750b2566A8703i309b669C6311d3081D326O276c4470G4027
+1214a2394o0140D8329b5799A4616O1430h8882a9392D7646c0677E4955a339p0905
+1226g2244C3283E087j817K0491c5684H144A2a0233B8363b8892B0362J453f4345
+1240C2497I137b7968G2038d7674n686F7060b8412A8914K3964h4226A1062K2940
+1252C4002b4482D3111a5616k0991A7759a1015B5318A0692b0108H912d1050A5631
+1265D9120c6591B3676a6473m5105G7121D558c5107D6872f2811i850G2672d1001
+1278A2359M915e7143B7999A0791a1147C0678b3292a1331d199l96D7051a6677K152
+1291a4525H792e0287D7445j0751e6205C5104b4019k0781G9484a8815k99D5767
+1304f7441c185E2093a8996C0282a4391m4536B1401L016Q098c927n4561A058M846
+1317E904L0516L108g4577h125C1352b8433E6418i508n3279F1732a9197j7049E5363
+1331b6236A1714J9583g4996B8M5731A6140K177e7639J7364C3215J0650k064f0424
+1345f1809C8061A3663L4920G227a02263B4570J6434b4006E2305c6583j2160F5851
+1358b4800Q602D1850c0043A5014o264d7990A5748O313k119A317e3700c472A1402
+1372C1734J9957f9287K5770B9904f486G5717A2380a13190I153J4166o022O1309
+1384G8606f6310j2418D3708B0439K0049B708g6907a83C6462j2067d333m3803A6687
+1398B4722d927B740e7366B3578O5465d8182P220a7205N99A22160B2223a26735
+1411b5228A3312N8874J7691i5547n471B4332M1871R889c3692o1339a7020D3332
+1424G6999a0261o3549E356e04B6459J6239f7932C468M3431d8718B0502D475c8751
+1438F8334d858n6397A9852i576B4155K4615d2834O502i419B0485L5080a510k7041
+1451b8551k1020b1986H5240C0236b8156O111n7921C7084P0784c1670M910q678
+1463c5438j3877I4840D1866e9549f049k1199G662M6579a9988N842F255e737F61
+1477a9383B0865P290a5574b098m5427f603H8768a0289k2673d700n1651E3851J1199
+1490F5050e6649b71r545k5800E3869I222a3668B1751d0340J1043B1376J8672p85
+1503C9263d1386j9260a5231D0168N8986b0078q5991a0287A6170N6496j0293a10236
+1516e2581E4139A1671L5185a6391o1284D1293j4192b8523F705e665B0938k239
+1528A8699d5290J5611A7959M7471B1924g6264c6454H142L9251L4196f0520k6345
+1540h6865B7418A1774M2575j4332i2945b3453B9757d991E6830E754e9558g718
+1553e997B1473K4618f538k7257l685A3527L0078G22P224b8325j0568D5473c720
+1567a1332E4793c5736K115A4684c2322E9686M244g7319K4232d709C9858N5973
+1579I5831a8876q7046c6990E4242L5840g66p5866L1895A7772O7039F012h3281
+1592A1500J8217D163P406g2442F248J09591b3123n7178c7335G831J21839D8634
+1605a37688M4242C8681Q7150m9415i6416l5434f274A26476k8254g2163k9093b4854
+1618D8543O0767a7457q5049I184P640N224J8981f2848a6485E7408b1157i807g28
+1632b1899D5854k0917d0941N682i529D4975M071c170n3974j9766D0108O4021A7619
+1646c7716p0027e3021A45384n2027e6738l3017o597G0173J00711a8424r9450M9041
+1658f8833A9728J06985D2474a00559L0985C1139M9697A0090f5122b7038B8227
+1670F4627i798r4973A0143P5610B5225a1320r1136d8904A32693F4146e2335j2411
+1682f4746m836E9551N6156a8591m8134K2306c340E9965j9310h925l2775N346F025
+1696A8149L6775B7347g9564L7040A4532J8807N4445b7289q6863G587L3539J919
+1708D3045n921h0108L3696E4843A7728E25i574r558B1755E083b9188J3324C3050
+1722E3789b9574l0898a2442A8238O6462B3664a06333c4347B7409Q923M1956c7678
+1735i5990H791J0243K4191J3839e1809j5198i619B7005M4085B8358e9864j9050
+1747g8914b731H8997l9724b9428l3332N770F3845J9398d5309R460g445b510E9341
+1761b1876m1380E6252j8469b8502q636j0431E3264N1332b4340q5990N3900F9925
+1774A15547A0946a00961l353D1494R6759A6457g2762R295b6377I1169l3059f9736
+1787a6831F193a3293C4066a3351J18E4040a6779m2032f903B9944K9467A4134f8158
+1801f4853B0503P0883C2131d9261o448J3221E4727L7138b6727j9695J5038k179
+1813c3563G6237j6709d9531K1948l323d077G7516A1151d9366a4196b58B0330o431
+1826A3899b0157g595B5818m180d7971k137D6920J6573B4451e6113p2171B7203
+1839A60723D1421g8379n6866d9814A74168m0264i4080n4188e5921A08568M9076
+1850A57644b8795j26015f1235H7849J9621a2124p8306L8537E5177L4325d1255
+1862h2250B0749K5393k893b3129r0015A4612R8785B1828c5955m9601L3474A04597
+1875I3992c2414m9803R458B5693Q8063n5829f4262m8985b6089G9750K0762B4827
+1888a21598J5498F5012L7954D9938d8077r1227A48J27022C2820c8299k8364c3141
+1901H7187m3092g2470L4598C5212K0724B224g7865L1305F6701L4848b1469j02032
+1913a23501c9013F8718L0046B9442a24561L7294G6657l849B5991b9850o2967D241
+1926F1528A347J7079E649d8301K1610f3D0661K8537h654q9550L5051G0019L9761
+1939A09780E048h6633q411B5778J14673A8937a00244d4374A2792O0642l4924i5898
+1952c1131H2225B4692c6457k6694a3285A07967m7729i5443j1158B0619J01441
+1963A22060n2757f9536n8571b5464A26036l9720e3624k1902K6269C0683O6601
+1974I7284g0m5633h273l5613B889O5670A8690e543l8686k9270C6399O2840A6597
+1988f7308l048I973P0060l5965e7776j2862D0477J9150b5459j4336a5025E2170
+2001G4914h1367l4186E6964O0200D9387h7238p9029B6410J70314F5596a21817
+2013a49935A883J64626o9838a05924l4601B3469J00340C2009g0738M472C0845
+2025I9271b8400r1107B1936Q4270D3457f4926q0503I926J82554F0043a30650l770
+2037a34420C262J62735o0651a17068l0847A7890J06974F1658f1625k7594D29Q5140
+2049H5569A9813g2141f734D7593A1980a5691m3797f682A01651A8157g9018c5010
+2062D734M8956l296d7448L420A6098A74a267C0749j962a5478m7331J2459D8139
+2076A32740B3031a59963M9580G8534R0343G6844a66864l2459H5840J28061E4844
+2088a39723m3210D1315J82654D5064a71225N4948G8265Q7386A2116a78186Q2188
+2099i5998A46465K1963f7929j30099e4754A59750K5416f6148j80026d7821A83671
+2111A46531c6304j55057i1356A51631k1532d6639m8713M6931D5291K5645a9531
+2123c5429B6161F599d8832b1379E1885J0306f223q6840K3230H9656K8551d2051
+2136a06435c7957F3497M5119c3416r5779A5194Q8196B3713f9837k0416D3227J07313
+2148A50540B597a63766Q0904A10889N0181d65j80454N5976A22568P3235a3902
+2160a66386P0653F6022R0290B3463a38594e1876F2997k2740C579c5861a0473E5143
+2173b0284o0918B3114O9417C0451g3296l0082A7322J23969E6686a21881J2763
+2184a09118E6656O1075B6843a01643O513H7043L8619f2530o3211c405A18942j1847
+2196A07095a01435r4630C8167J76559H1920a46593n7461A7098K29341A21813a75619
+2208b07743C1974J69141r2224a19524o4801B4136J47654C9387i9226K5077B7039
+2220A00887C616a17499i363A05325C5692f1081k9094A641J26689E3314a07465
+2232h7816C7633N1195C4058f0191r127B9778L3293b3168j4451B8897k023a2066
+2245d9550J0921H2190J0886g2101m2405d239I3241R855d3339j07949a5713A20127
+2258F3714d6885l8009a2419H2561C4519g6742c5352G5125k9200e7139k6391A059
+2271A29914m9611a34820j0885E9110J03459G3995a25395n9576D7153J59297D8824
+2283a39622R140C9466J28933D3449a55460O0401A04711K0292b9444j11313f1441
+2295A34916J0950h7665r7560a1076A53643k1637f3909j42074d1368A76206n7764
+2306A18442e7329q3050f8639A03269J9423c1766n9199b9101B1776K4301k2096
+2317B3981b4906P657a360k4138G492N1752G469d8672J6145F39N5971j2293f7319
+2331e7583E2184k19a0151m7144J2599G3710K0471f5045n9058A798J17674k0386
+2343I9086f6409j12878b8287A80747n5467h8313q5470e3218A48593J3837f5501
+2355a78003c3888A06653q08a3131j10721d0294I1179D4018c8967O347A074L6966
+2367C8040A2775e8849a7576F8858B8789d6938J944a123E4307q930e0124o912C5003
+2381C7472a3729n831R523C2312J852f3371M875F5909J5151h857q0401M617F2383
+2395A51961F338a42317N2338E6490Q3527E4492a23729j473E0483P0936C6863f1965
+2408i2497a191I4657B9253e4392b5564E126J4563K303b8009P555C7460G531b6609
+2422b044j789E208K3054f369j5069B543a5108d533D9056B1563d1885l895a6260
+2436E3788L5979b5560r5342c6262G7658K3035A5851a23908K4683H2108M2662F022
+2449i0390J791C0580Q9502A7828i3744d2000C9378J3301F829f3636c0749G1828
+2462D1368e8797O335A2573N1417j2942f0825l2785B8923N7340B5379c7247l4264
+2474g1511a5380G8354C8181d2978J4520d011I953J7259f892j1301B2229h54l5791
+2487c6645B876K4606j0464G378c8075n348C5204J4348c415j5463j5182J1776D3833
+2501C7572a3435j213j7528O827D9053j68a5705k3169n188C226P8631C5095f6705
+2515e6574I057M6917l722d0545m2160A8580N6083A0090d5125l526A4654P3021
+2527H7675A1783a01768d3629F8236J4542G492a07461J8020H5138M7438g941j05180
+2539a13121K5421D2597R9891D0024a19743K7626C4781N8022l5961e4169m5311
+2550i9480F916O8805B5304a5451k1995O803C4765j035b0902g478g23j3066B0483
+2564A3012b5398b475I485A510J9051i542l8393G299M5592A8917b3939l3239K6704
+2577c0474G4910N727d4186m9424c0383E8777M6276C837a25489f0603G1798J5304
+2589H7102B0252g7475j0042D0929N1770C627d9506J2626A780M6887A7476d2646
+2602h339B8498d686p945i14K90B4613F686d3587c693C7305g65j0589d381l259
+2616g640B2694C690d4548H121M6941B274d3374K91G144P9413m2282i0439J435
+2629h9004C5322O5640m5190f9127n9499F863J28014E7469f9316k8534b3327A00165
+2642H4191f4486k3412F540M8691q831b2453m8656E742N7383C883c5701J6361E408
+2656C8869A7116d7254K1240C1108j1597D345c997k9471g818B8515F572L654l468
+2669F758d7533K2874D2299l785A0748c8441l4517A6058P9331B5864f0515o756
+2681f7271g762H3002j6577f1994k3155A4608M9840k7191b9859m2567F431P2660
+2693G9091D748e8472b1400B5040K7546E906h0372b9063G6107k7918c1312l1178
+2705f2490c0192F2577J0315d0764l6314C032M7126j5513a7023m1613e25F3450
+2718B326e0733h593B7194Q276b027o8942b0134H0777l9413d3592j7224b3377F6018
+2732G7461d2826m3917d977E2567o35b663o7524c1052E2083j7821a2897m413m337
+2745b1647C340K8667e393j0649A4569h981n266A9677B233f915F228a6917G01L1974
+2759C2675a4101j8925A2669J1478r967a1538m1775g090G5413C4009e5730o160
+2771f1890e419G4466J895e6002n6658B974Q8278k5776b8201q4037c6894A05478
+2784G4387d5504l3635c1393F1980J9442c3347n1938d41E5075k1343a6299m2389
+2796e8688a2357F4949B5705d5433J6333D902K4832M981b7901j9107A7661P556
+2808B5217B118O137a8586l544A6231E237k083K2455a7404k5837E804K6180m305
+2821B7679C247e5944J4141E2211Q870a1747l8748O653A9611O0429A2286g2564
+2834c3246B6479J7399j7752d6263o493C6068J0256i231j5740o15H378M1033b77
+2848d7770f944B1573m392m193b4678r366B0485P219b640F50a8043r255B3021O354
+2862B9375b057k842k6305M756D5856k610b1024j6996P311A6404N4764A1877f9877
+2876c7552B7354K4596k3246d9018j7291B8485M0070D646d0972n63D784O2873B0720
+2890f6068c2422C1380Q022A9643d4398j2290C6296K4493f204l0439J934C714N5992
+2903E9706B0362e0131K1815A2742R803M035a1008l0972B244K3503A396M737c704
+2917b6134G013J0246f963I963A62b7869G659J2009f048D137e847j4642A7186N98
+2931A7784a6898c615D580f380A1647D205b1546F072J2053a2140c151D163a1577
+2945A3657o85b3672e62A3425a1059G844P69a7826E243J069a6913A2553N062a6825
+2960i690d96o04B5749A1299c7894a8169B3913m146q426a7004k8110A0696M1269
+2973E1965B173b5625K274J0752D2301p181d0482O837A1310R480P387i694m1436
+2986e1130G87M3545A1248a5048j0261O983C2964N325b5690j0295A393J3957J4989
+2999C0339G896d8652a9570C5243j5658E058a6199k6145A1340L6504H55b0329O43
+3012a9686L892C1865M042b4513p622d83A2081J5654I772d0611J9832B9854j1674
+3025A8180A389a0494k3633F807L7225c967j9243g583k336B4906L695c0211N857
+3038b4354A2281l123Q368B861c5610h686B9017A0531c596n617j4491E688K9527
+3051C5215a396k0241e082l813A4865J6916b0081q246H605l449J2133k335c5962
+3065a8939B7378A3115C664g840k4828C656L5732C789b1811Q497N285B0210J1856
+3078C2066a9624j5261G546P532J62m635c5738J4082C3866A5733d763k188k2905
+3091b9856D276L7087a488k1502h355J320A9441Q072b0266r252G623P865l258E439
+3106b9407R774C2065j3335a2155L088j2753C523M0179b999l0465c850C80J9396
+3119A9776P382b9238k360A7110J212q153a492l0209a0549C3204A4678a5470M626
+3132a0844n1D652K5993c425k5520D790J087A458J6573a5248n641B1035D383g655
+3147I720a3603N709B1994a882r501F143f649c048A8106a748j4468C821A201a404
+3162A8510e371k0609I201J937g5A4050a8017p964B4665q193f302A43b2936h532
+3177C5148I040a9781h499O50G689J9414d237k3704I9J1611C583P777i817j4139
+3191b3956A6512j568a2331E063f693o737B4661C648b1509F883g25k033B0658h456
+3206b2532I645J32B367M797a5610m555A8493L835g254k163n074M606C3290j3866
+3220A9424c0080a4164c16E781K8808c961l7769A952J5266q587M874b0904n155
+3233b6059B1212k105g942K232l128c795B0639E441b3832c03A4221c051F212d681
+3248b2538A7825J273a7011g54l640p801B5747I526b2553f75j906r58B3733D557
+3263b2594f238B541K538J5451A643c1173g739A8993H620K682h404k7606I624K1755
+3277C1379d304J662r663q107B7095q289b2723d333A526b118A7318c418j8366I380
+3292A5897g195J180K631j925A7748m741b5604a0404A4065I09J2351B917c1897
+3306B079J8458d388A0014b123k5439G441R074b117H672g021j7658F872J4611B428
+3321c095p483q478A2835J5539i676n294f93q527A6836K008b5226e883A4023h945
+3336G796k876a8782A1633L37a8871a393H009a026A0274h52k1300b5B0264B090
+3351c529J566j6602B969K2549e390o04B728b2372E283K3000f510K347j480j9057
+3365b4700A7007J5011i344o646K943N923B8273m910b3557k043D798Q245L157D275
+3380c0279a0353B8907B980i603E42a3969A1701J0551b6154J2838A9829D677K701
+3393G378f738k5388H748K6675A474a7508j19Q162B3995O793a5591j6083a159H666
+3408A8591Q20b7417J462A7081G503K297K211c0032a2681B2252A330L959n98b3844
+3423a556A8970b988L68C486h375F65R551i783K901A8240A727a2559A68a0962E505
+3439C3126a1144j8206A992l02J8768L043c2603N296A6396j949N60I36c2737a0796
+3454B4715A1747b912l33j2001e666A9775B564h448A0263a0006m734A6671A532
+3468a097A5013b0533M294B1432D059A304M670b2674f738B1199B545b999B679a1849
+3483f568A3148C166c400I548i363r691A3578l127b46A0840b1535r35B6561j2237
+3497A4324b806I18b7977h397C3982H221a0490M269j0783B870K2692A518a4019
+3511a147l350N52A6146C650a1374F806g142q301B0164I233i115E805a7627M421
+3525a3206B9611H896a0949b120j6609a614B9716D968a4851f603k312B203K0724
+3538B2927D334a8515c325a214k810B1016E128b0172C338c312n797B4208C731a7140
+3553D835a0328L394B6053D487a3036b932j0277e51B7439H766a8840N229e583F684
+3568B9607E502c3763a0974I742k74J5119i002k8019H324Q699D85J0307a4566k849
+3582a7415B0551C766a3963F629k824d17D002a4886J818B4054j302a6175o325a0362
+3597H047L2806A0049d7705b0485A6980O299N919b1419k9308A0067K2756A1381
+3610A070b8696P861B7252q131a1324L525c601f85A1323c55j5873I695P979a4278
+3625a0145e15k320B7643A0340c7613a0580A2545j518J5686a1363l1536A988K1705
+3638B3693q083n275b4072q331A2513J8190H119h603j1528J436A9278J0183a0624
+3652a4237c195o301A7886l684b2221B365Q680a3912C538A598g078B1851C415c0552
+3667f901A5163K124l933a9380j7688E993L4158A2611a5931q712L732B6676J2764
+3680C9440a6833p345d651j54B5569j0035b7136c114H465i745H751k643g724H709
+3695b397j8196C972J6514D856e707o455n495A2064J8818f322j1331d156p827A5590
+3710B6284a6416O253H02a6032A5689P325a1753N099k682n307B1905K953a0912
+3724a9265Q191F35K3369m141b1183l299F721P33N068o86b4570a0685A7294f317
+3739C623J0165a5171g26D853a7136A0748J0204h740m95Q90l0A9039L126a1905
+3754b2018d567B982J4525M440a9222p922E226l32J3594K886c0467M952A2670l595
+3768I075J3188G702c9370a4027B2467q499n030a0732j6008D117K0556A042a3179
+3782i83A419K498K203a8498e971C3051C570b4472a1408K848B8852J0569c2536
+3796d4335D258K1332J2945E35e7539b3338C7140j547C144c0110m368I834L2923
+3809D2757G511b8072a0945I36R147Q523a6989J484B3684b13j4112B465h090A4335
+3824B4623b5584N44A0016M710N323A23c5432a6686B4263Q20B607a4318j2961h331
+3839C4430j4308a5537L414p347g34C9531D327b3407d012p721H363K0483a2309
+3853a5864G551c689A366N477f767C761Q023a2186q204H555J3590H104e665k5456
+3867c1121J1669D1430r819a9747n632j1A2838M2650a248m2186a2968E063K2018
+3880B7081m446b8881M406A6076k318a886m671M49F653Q048a1797j4630A4420J4254
+3894B8674b090j0893j3848h594D8165A9634c3587J3099a0159A8598K4324a1660
+3907c7237d285F563J1502o5a5175n979I52O170r44O308a747k0578b710I838B378
+3923A6941d068k5277H211L712d361A3883h169q313A5152c868o199A8040D197h158
+3938e839r083E027K5949H091b9069O172G126J6188K903a0567l5762b742C1496
+3952A2740n282b1188j0836B1177m18f100F044a1897m461A3061D092A287J1793
+3965A3080a0021j0970B499J3606o707B46a4191m959A4288Q989a2357M750B975
+3979g138A2975a330k0973B2065l231b2212Q247N485A5401K8263a0343m3126a3719
+3993C2562J0136E599d9703O543B8191L1674D997d1927Q973A523M6511k0778d2638
+4007b6123A4546k008O071a1423j9654A9418M14a5944g204L441F917J6703h135
+4021b9718a708B0752o286C25a5904q369F377K4734D855g333o201j5210A5797K4422
+4035D0219a999j2992j0717M828D1921m374b3667q056J4723A6266K8818A358d3040
+4049a7143B2956J016a559j9919N484B0839O527b5146k751A7959M281r074b0260
+4063d9545A8195M0411F76c3568k606b213E9152B6784d5849R274G925K5697r875
+4076B3747a9479j4906C842K6042G72a8349A652M080J318g55k8236E741L4983e533
+4091b5052J1107d456C8597j5749c8791J5248I653O865M278g622j9932a259A4192
+4105B838A002N069g499m810B468j135J1601N167b6730K696A9226o162k852c282
+4120c4617D871K6013f736l343a165d00A4400e120j9963H603K4181C014c2664R143
+4134b3521A3176K8341j8581d6756l579B8051K0384A5130b5922l1371D628N9432
+4146F4060I513c1856Q316e982C4996j5221c3670a4418B0713r451g643r306c602
+4160B3796n381b5123o564A7506J2076B985a2853j6587D19L9818a742k1810C872
+4174a148E454l16a9921A0769J7523a8142j1702e25B6210N966a0618m2232a8398
+4188D9600n658b1073k6177b3118C1363K6481a2090m5502e534B5353L22F138d1455
+4202a2934C8931F195a9025i395i84B3471A1240c0653J3402B2013l52d081j3318
+4215a7399L394D600K0042B095a8750D857a714j1757A4245m684B166J028c5258
+4229a5309D7068k0105a8934k0539J1094D0095K1081a6208m7888b2583D1265J0923
+4241E2188c447n6582K7363E0069l67b6066j9523a0795C6508J1241c1798l2272
+4253f4070A7780L5843A8586c0201l0582E838O9985B0318e1529N857F757M8487
+4265E5244k3134c9633j0084A1388L0551A0524a6287m916e418B5090D268b1614
+4278A1883q71a5025c925k060I147K1580a6558j8868H971J2686r322f235k2212
+4291b8447b154B9517E863b3390g551A7097o194g062j5592h287C9505j8020d1271
+4305b8420A2770K0898l600c6166j8156B3749K3144G047b4528j3138G053M0405
+4317D7458B429c7640i886B3652n261a1954j7778a989D3532A8622d7907J5273B6315
+4331D2025A7933d6182r449C5894K5732c260l7465K314A5661M5377B224e2248a6314
+4345B6885J653d252l1525a1453C7068j3469c2225J730A5359J4719j4881b6164
+4358d2707B0176K4630e511j6585M235f63C3935D548b8438C365P583f282L098J065
+4372b119A0050P500a6410j7562H635L3040A1187b9371m478a151D9346j9672d5869
+4386c8550A7442J5357j0832b7343j8410B3106J9781i311j8597J2303A7533K0968
+4398C8501a0587l6864c142D0409j7971a9591j7114i542C9274o858b9581m433H561
+4412A8007j867e682k2812I307J0714a7602e059A4188E986B024b3234K180C4201
+4426C5823b1093k1306a0548C4679P923a1662m7998a5016E2962k0140b2524j9174
+4438d1698a6323D6535n191d1388k981A6134K1625j4284c2691k2009B2242L8367
+4450F0609C826d2893N302A2987M4081A8261d9476J0527B0983J7725A2957b0809
+4463c5712B906L1763B630a1357h55j1466A610J1126d413H757D190b7245d157B3845
+4478A0529c563j6811L421B3973M570a7206j3424C290K1554q674a4671k3737D832
+4492E1173F628d0593J4211I290M1049B3810e7592J4670C1921J5139A4717c9918
+4505e1478B1578L6844D571c9940J3078A2477K3615I929c4440J5315B7424j1215
+4517A6209a4703J834c680A9786o48b9952O748B5377n868a193j6126p783A7236
+4531C3950a1646j3234a040A1240K485c357j7999A655K3268b047k1498a859A3597
+4545A4994A966c1788a3391C5205A6430a5520j138K578A8379J0968a6259n802F305
+4559F343j045G79a0709D048O987a2990L26A6218o54f306r064m48A2013K4340f448
+4575c7649d240A7964L732E027c6731a5562C5651A6243a7092j926f228B5927l213
+4588B2714b7609l188A6625J5246E358b4169n750H607L6540G495c8993a8623A1612
+4602B5233o893b6975j735A9292k139b346J32j0385d7A4724h249J092A5176B373
+4617a2923f050A539J1741R20a7148q091A3956R682a451j0366n926B064L0540d05
+4632c1445a713A5265j574B518b9908a2896C4149j5639a9154m047f892B3315N894
+4645B9209a4321k2415f74B5457j1253a797k0149N059B1285m841a0234a586m091
+4658e677l316A2989D372c923H303a1695m394A5958p01b766p142p259B873K7028
+4672B9901E203b9076a2924A5152M424F500b5968J01B7718N741a5072j3800a3970
+4686A9629K4140h396m4161h866C3944k764a293m3960J8465C8213J096a2144k2313
+4699c4457J6574A7334J9310A036c6808a0476A9431p881D216a2384n266A4968k258
+4712A2710a2382F85J035f132H647b69q287H750d58j0062H121p29g315K723K266
+4727b326B831J3665d80k6219c841B2769j1159b633j9530J283B7620L645a6832
+4741b5193i344A2611K0827b386l5225e545B1995q622a115j8119P102B0418n424
+4754A4994a7024N426H755q47l662i355p786A4847O342a4809L32A917M211J1021
+4768A7149d425k2512F194J4870b209o290m40C72J9960B262b5137d603B0571I964
+4783f820j0742O060B3251J301b0225l805C576R903O348c878k9010b95B4732C860
+4798c993o279m29A5085m421a3069b745F472b732c36I58c420F857k367a5046b580
+4814A5959C70e936K248m019A3473K61b0287R881A3778o437l362a1111r381A5274
+4829B6434i326j2522g347A0872J4215B739c2751a3987B4782o183c510j3707k360
+4842a9577A4152J4894i575j0049a06B741J0155E233a9732a203A4905d413L04B447
+4857b350E688A592a3210A965J3609c263q233a63B753O540m308b0181f974B3002
+4872E915a1509J728J699A9312K996b2731j821I731R262m307a1008k2787A011L4022
+4886C5033A1035a9061j796d742B3771l52a8556q489F543R101n994g69k1881e479
+4901B2600B944h365h55p412D159R301g574J995E221e608H28R919c698l647C93
+4917b013F783N769a2407n330I471M239E254d110k0489d243C2587I972a9402K917
+4931a6485f525B2787M143b0529j0456E193J6060n155f751k3799f104C0270A3705
+4945a6564P37c710A4944N250a3566j0098I044M660B387i69j5358c610B1604H43
+4960a2586H08b241B931P147g776J226H344b117k966G344A102d257A258e855a112
+4976A6048g08j6022A79N059J084L299a5148q39A6003m263d078p12p728A861J9229
+4991B1090a424j5070i58D508J345N27a0520m2A1949m751g412b12k143l09A1166
+5007a760r082G907A348g198F885e13l871G120f125p53A3194C172i616b223K74
+5022a949D774Q791f832j1725D450R257C537a893j2390N234B0815q514a5349O088
+5036i261a675F652J1839g009j5562D973P774C299G44a3369M896A7066q472a0772
+5051d887a308A606J0142a226j2700B888L387b943E328a017r338F075k302e636
+5066G479h22j0986E560P1b167D589f585l823A1572j913g019J995O44aA5182B810
+5083a7957c523I311D590J251g815q933A0411M986e779Q16j253K013A6801E912
+5098a5922c340C843j832P619b881j1664C253N516a148B337b697p899E844L763
+5112I607d626b50j582p405I236J318i253d006h03k212A3536D921a7266c753H026
+5128D343K764f882j0573G227R981a685o096n41M044A7002n236a7260N900E772
+5143F598M718b923j8957A477J6060A689b305n731l197A2704J362i771K181f20
+5158f83A1061D832a4248c948G807I34L144C69a3005A248J0826b371R10P28r251
+5173i984F560O102h033K413G22c742A0112k469a4475e653G337B321L792h04j4764
+5188a5568G23J3567B92c296j72n484G382O190g950J51B228b159G165o1a2603d137
+5205H443a492B359L75a0695F13R107c806a289B404g198B282O903e740J990C580
+5221d326C431N036i047L499F793h80C250J233a2712b976A2237B66a333O26j0205
+5236a0912C625J1005d114l433e23l083G240L102a0142J374E844A700K004L46a1753
+5252d197A1656D27b638A644h297I68J1189d656j617C548c465B946N641h818K609
+5267f209G412C42Q92K225a0299c136A2077I44d231c19p302B094J1964c670o289
+5282i959A135a448E094N290i795m10G076B849m67J786a1225e208A1759A752c250
+5298A340g307f43A1714b210m751C059b483C54Q543e558j864F918D30a318E220
+5314g458K529A1013E67e093A848e970C6J2658b783o926A679c56C482N927h005
+5330a1037F621j707A088K157i775K577A2031D631e109B51f428b045A3112a97q974
+5345i171B126a643i2I808d395m555E973A473a687E225e570m20I423A828e807A986
+5362c219J355A0858a348r141B802q66G46P297f417m966G776j634a322B304h447
+5378f824A2681E409f863a157l496a347A2621G95a0946G17N42b58H555b805p726
+5393a0531E221j511c233D891c067m358H230B561f610C484a168l042H429b30q605
+5408h835C803j687b145F043c183o247F493o34c352A665d547k456A0465m073g995
+5424a455q48l24A1935B563a2287c06B462b08H935a993j0228C661J925a776D203
+5440c002n866F735j213e618A576d78m975G245B945h840B305R84c872E202e09q881
+5456i390E709M82d982A088b233m020I380l451h969b063D07a464I639B229a2499
+5472h98E564C1N939a183j1150C104N171b402B250a800p703F133J353e579E54c35
+5489f395F738j592g902C67K209c877D886B076h866B663L616d432E09A56f311F764
+5506F867i163b835B966a329G550B164a3145f48H301I7K835b037r257D265N925
+5521A0190c391a353L70o107E716K316f437a578A783e484D628J704g160h58C145
+5537d944D008J095h004a33E122d020A786Q29g104C085L860f747b318C544b151
+5553D886j577a1540a725I721D56A83a974q337D696P919d445j195d53l355G023
+5569G772i475d214E266b051B382J761g412IN841e605A64O297d598a140C126e557
+5586B603M809f716c058D931b860A340K948f738d8F952e361b576E750b064F67K129
+5602B796h957AJ1469b116l161b62m562E713M715h457P60D654E15L072N57i457
+5619b688H287b021L34D522d373a515D812d769A70Q427e257p38D391g30B604K784
+5635E388i576d264I927H2b965A341e220B055O347f920J110G608A617a877a75p243
+5651g418B042J1590c711p788A028J228M078N24a2795L542A1338E221a480P14q421
+5666i187C56J1895b637l918C384a281e07D679d416a659G845c541l320E314A646
+5682h82C524f870K920A1006b34o771C141a509h0F407f756K462A0471B8g038ij239
+5699a248D690M198h868k997G399J396H11b264q868c036A6282C857a1327b552h04
+5715C432O778f900l009H091B896c607A874c726C3Q244d914l108F394j912b305
+5731b86m734a885A0629D71i895B485M68a966D381d183o49A0495f63r739C641n5
+5747C586A746K038a0628L387A3585o210f990L54K085E150Q547b954j2520F13Q416
+5762I029B547A258g636M11A2237D945a0784b2B406G87N828g208k004A1078m955
+5777F123f272b962n96B205Q483b229r031A786M411f54I28b333k515G136A899i725
+5794D168J985d495G33d099l8A3508B422a3135a283C315R83K614g978k736G547
+5810H562c114r45J682A2P833E25a1309B614O900c697J392m78r52A2893C598a5442
+5827a052F466B804K943h159k711I737j535d969J225J855A186N639i29q493B734
+5843I146d095m91A0a346I638B964a5937c52A0466F04J846f605l708A1291k998
+5858H293g904b925f63G95N802a774o012C393L393d220k3B345D67M311A509a2777
+5875A034J1365b945O26J64m848A0445l890a2010f84D353i38C746c381k571G448
+5891D849g573K818D325K38k164c144q138B581J2756b781n790a360j996A0414k227
+5906H187a5163c489H309e98C758b619o455G764j733g537b442B765l76L3b858m578
+5922g436B394Q396b670n435A664g94D407K221a1513b640A0306d183e06B607f377
+5938F084k354a0944A511N931c35p62m090J318G707L50f296l627C260K312B713
+5954A754a1069c157A4122a832m176B728e316E272K143a2590i28I231b050C30c120
+5970f130H013j285f196j62A341L217k025F91f612K514I820B44f095D924c528a500
+5987G795g880h24A0457f856c109C495c862F435k888a0212a377E657B376a26k950
+6002c076k24A154N596a330o588D866k423c833D317e599b272A3074e679k714E726
+6018b053E087M67a3398b058I265A013m98c940j746D128K208a164n396I41K793
+6033C734b260B905a984l192I679a677p540G398h78l20G459a0220c018A1159b943
+6049a095I71f310C891J120c590J716I86J52a814F93J162c080C957f14q076G976
+6066C705f709D645e511J625A3687c872l165D966d277B928L441g774a293D485f28
+6082d49n73B78L59J180c11o829D290K420f552A646a623m539A2543A73a0634E716
+6099b749g63A0080g548L213F386b987A195J224c579E41L77b01j367A142K750e121
+6116c70C731e567E960B740a0980F377B064f861H998c413l181I390d176R86F972
+6132c898c59B340d253A146K165I82c223Q5C683e84B272P18a0436B558N125f750
+6149E015d91r663A0448A029g820G257c834R49G914e228a949D843a670c5j058K58
+6165h35A174k05K222e828b582G476c786A974J688a1683E467J347h779F309a165
+6181h808A0417i76m509F557d348a565D975b928D60N53f72M9j368D161a194q99
+6197b093E161f915I9Q694h346B500K214a0906G283C519i220H092a669n349G933
+6213b242N25D829d735a108B008p62K21c611I36a110P0G938e911J995G974f755
+6230B581M053a1812E345J20a0155F551B18f048H923c573k158E334d16A671b09
+6246d291I07j16M154a585n863E874a002m56G871i897f03A0564i651B447K743i845
+6263H024A296a0351G811H24c200C977e763a46E196c06k66m419B092J920c703D122
+6280c903m44A1033f203K142I531h033B577L468a2870F586J30h743D095b794q47
+6295c641I786b134k376a87j45E363a599k92A74c833G734a004p305H984c084n57
+6311c641H992a0153A357J0073a1545A175L160g226I210d37r194E694F84C03J005
+6326A308e296B560A129E62k6g071F816l250h939E237c276J440A3849a0895L910
+6341f985A1051d902E088k277a5425F911J120d971A632f057c92H777b066p21j160
+6356c947B522N647f988a637A378c377A2083d529q695A1537c76o36G310a5151A602
+6372A4191h059C58f71n443A0574d1o925A724b70D655a841l225D529a734C807E79
+6389a1881I474m656h911F706f979b903A6132i748M145H494f444F008B452a1936
+6404F458k429c217B87e406D687j06d069f26n711F317L357a2366b8B310d046A4226
+6421f928o875A3882i29o77E443a4010E092P143i429a503K22H32R075e769o48E78
+6438C840N588i134J570G371a287G792a542j5590A2103n499h431F248i687a158
+6453A7262a0204M297E989c412H103a525r651E634j723j354c214n888G643B941
+6468a137A862a2171F622M600a2849C235F39f666A4984g010m383A3844b986a042
+6483C771a2018G129J306g747a177k272D721K647g878a325l54B655Q159a2543c905
+6499A0526e633F768b158j3011A6291C900a1585E237g527C693J0659a3581e304
+6513E679A418O479g974l17G149C244J837h296j137A3971E39b945A144a3528A2194
+6529A1935a7733A822o78a871A6375a1991q67A3624A005J610b441j0865I375j605
+6543G770c179n42m893I801k570i175H02e899D432J0159a6333d020A0468e649A0185
+6559d257j2851A6540C988g952C806a0127E278P098a0874b765F52K331N112a0382
+6574b838E470c56H081a0700K723A7259c786R46B148a4053A4738n003a8957C533
+6589I43d7A3726a4019N679A2866A008J346g598o23A3194C028b730l555k204A7505
+6605C761a3618B224f393I114O029b2367c436A2193c169A0786i477o758A8839D478
+6620f212a709q693A1352j271a0824d019M08A0043n29a5904a520C300j623J1892
+6634A3569a5865N616A8629c634A171B75a7434A5870o243a5696B982c130B587J0389
+6648A2976a3358e365G218A933M126a1030e297A1889a242C033f633m194A9304i9
+6663a1531F230i481H495M792b1551A294Q726d771I264a0269N51A7510Hd704P56
+6678c948k229A4928A962a0163a214l173A4587D879b0481D687o98A346J0812b0584
+6693e668B2351e690h87k798r620B0969E921a7144a03j892A0913k002a7968c514
+6708E479K610n93a9725c295A4189a016F631a2257p57B4272b0j0669C765a2295
+6723A2746J052b1744C04N682b73A0964a3249N420A3368E09J173h284J526A5962
+6738a919k726Hi567A6515C304a9556I015A83J07J2266b0742a891A9870g729G17
+6754e074m345B0243F69a3101c46k005A4177B578a7206B288l47P041k864b3374
+6769C434J1048e110F844a4362N176B7352d707p055B956i489A6907q435b3072A606
+6784E841n62J927a8813b404A3357A564J336a5911c655B1580e071P28P09o950B3936
+6800B372b2884G263i61F537O785b5152b805A7929b324D076a1883K447B0219A415
+6815f399N15r52A9083A449a4074B675e640A2403k974b4611D828M831e291A2137
+6830a5198N867B4003f305N19B409a0505A5946C860a7089D309H88O052l014a8261
+6845E007L295g15E163a8668A338K0478a0884a637j794o437B5772b466j9283I433
+6860a800H398O37b5042B068J2715a288B987a5770b509A9504c012k90n911M538
+6874d675B3797e010q517D660g353A6481F577b7457H475L04c765A1228a8945e248
+6889B3826f762K524J109m355A9676d11j3925A540a939A4713A489b0796G199C487
+6904C571N369b4087B014J8471a0373D057g082m938B5930b836j2842G067f548A0835
+6919G814b0356C821K003A231M883a6230B028J0253f582E136i608d599B1653a1477
+6934f928H950a0524A4878A775b3640A4756E252e399G672a7909B993J6776a0082
+6948c287k536b57B0279h732k237A631a437A9602e766j6286A2462A741M311O24
+6962F676b8307G078J3540a0496C874a1726L799B7431e362p860B501e702A6414
+6976B652a9017D514A282O365k561b0941F588K828e907I081a5311c295B3572a3396
+6991c610E726a2047A8654C7b1376A3156I86A59O783a8932E311Q156f838A714a1368
+7007A627J6989a1136c048a236m442B2257g803r767A3924e128G293P15b6089I665
+7022A3535a0805G613a1252d210B1247i521L907B244e018A5562e494p020I671c437
+7037H548D31b0739A5225E828i023H833a6974C336K0036a8495b852D295g579B0859
+7052f494j3520A3008A148M882A016b1201I853L86b595B292a8654F057J3226a2585
+7067A354f559k30B6563i848n270A2341h889A1505m128b5290A0276k283f836I306
+7082a4059i86A6476i623A144b780k021A6859i826L506I404h993A2335a060j8633
+7096a9693A8391E8g687A1235a8332E854J3430a8769A887n85f440A9499i580l045
+7110a2625A0950c032I364b432j4607A3375A489g34D962a9588A0880K428a6209
+7124G937f749J181B4012a5257O370A4383a0277A0773A225b0271A5429C268f164
+7138E461a4145H356L345a3246C201f243B106J6399a8161c925I401g812A7527g502
+7153b1446B1203d17k470H022b2766I343Q729a4980B889f440b960B0726a0438L217
+7167g221C920e402A6221e176r149A2681e937E528J859b2049A2274m972a4156A3984
+7182i860M376B0461a6014a174A1522a2280A0888b658j0142A6134c718J088C107
+7196a2940A4572C859a3362G301i636F651R899b2892A776O100h261A9234a1973
+7210a7572B1904c922C16M518b1430A3288j524a2326D440a0187B753J4131a3908
+7224b33B10d887A8571a1643K039A4891a0382H399C992b1813A7587C404a3757A3312
+7239a2085F76J7368a8414A155N739g245A3617i672J29A4601d844E315b630j3295
+7253a5925A8582G57h051G947a7345I794P442b1374E295D63h442B2732a2043j260
+7267a3303A6070g880F959l103a9043A2289C065e618G952a3639E478M700a3672
+7281H870d141j908A8090a5394a987A5110a5445I800A404a7761B0756b667r619
+7294a2286A2373a2017F691N732a9342D558j982b104A3926a5852d303A2365f295
+7308A1212g929p944B1311c712L41H137b1458A2819J701a9711H683d595k120B2265
+7323a3499O047A1494i476A0990e50j4336A3389c637c00G253a6329A0944E107a3864
+7338A3223h854b992A8619a9297A899J0838a5319A3707c224j3182B0846d700j250
+7351e950H713a5635A0556j133a4509F388f828A340J4877a6424I03L622i278A8997
+7366h862n395A8366a0051C734O868b3429A2090l791a4629A3875i186K927A8190
+7380a2672A278M685a1958A2886d101l412A3337a1457C952K194a5588A6091a731
+7394a3765A6302a1594A566J5186b2613E402M224a2723A6346h447n244A8878f166
+7408A480K534a7647A3367D578h158H184a4885E068J0320a6268F809b605p874B3519
+7423a0782M14A5304a4557I739m2b2745A2119B088i016A5766a3080b850A3032a1878
+7438H151c85j0227A4675i239a392A1943a5452I927B219a6438A9325e567l684A6121
+7453a7131D931J0795a9904H072A198a0661A9417i375Q21A1370i555A0388A782
+7467a6490A2367c345A75J1197b0508F565M172a3401A4433i221k964B3543a0826
+7481b792A0816a9288A2809m805a6896A2072f257J941A5357a3401C050K486a2018
+7495A3076e659j65A5137a4987C496N610a5959A6037b775j3626A9674h448b384
+7509A4277b1283G329N075a4655A0486g203l32A9673i640b180C360a1582A7514
+7523a346j2176A0562a0566H095M715b3522G929l210i870A9906a3822K636B0557
+7537a1470D205K315a9696A4525B957a1174A1883a0730A876R243a5223H573G44
+7551h561A4960a3445a298A6375a6380G476B446a6248B1829d959r499A5992a1765
+7565E669P095b3077G352m42f931A3259a5002e482A7262g464F093e455r140B1728
+7580b570m251G707a8923A3308N89b1541I533c373m142B3330a5390g662A5441a2587
+7595I803B184a7147A5664b562l045I778a3907H746k120a5916A2041d816J132A6531
+7610a9549B376J2612a6009A1813c984j1651B4825f531l863A0779a4706A2677j912
+7623A0765b1696F431e27F94J5382a9493c018A1126f150A4659a1058m182B1702
+7637f340E75O238b3154A6334n918a9042A2215h285c974B1799a7866b497A1322
+7651a1104A2908d804q198A7236f457i3E054a6155A6150B545a5650A2905i964C093
+7666A7359b4748D142P772a1926A6430a1421m363B4809e167K509C744a9417A6879
+7680I636a4755E172a1111E915J2262a8907A309L06f746B1788a3305P10A8429a1251
+7695G697j516b4154A7230D939a4066A4005a2714c53A7926a7524C467J532i463
+7709A4950a0068L382A5897a0810E658D66a6041B1417b714j0407A2686a4592I273
+7723A6430b6098E828P3g834B0089a5240K174A9617f093E932f34j8930A7433C406
+7738f947F653a7164I748M190a8081H076d511j642B3098a6721f734A6121a4214
+7752A1608B395b1116A8964g77q840A2416a4443E847O123a7642G428c37l350A5356
+7767a7351a815A4193a0408A1866g255r941B4761c916k817H917b1190A3627K761
+7780A6388b1464F370d084k59B3103a4851O420A0177g924A4503c164j4075A4747
+7794d049B347N899b1508A1325l187a3835A4574a1268M819B1806a6292A185R672
+7807A0857a7847A4005D47a4222A7728h459L628A1071a3164A0894C642a6224A1384
+7821e190A532J2272b1630D075N999a0639A6428a1634k821B3955h175g86G396b1978
+7836A5696n251a7047I051i033c42A9687a6002a435D402g743A7979h441l761A4287
+7851i501H415k316b2564A4905B616a1153A6905a5257b680A9247a7677E667O03
+7864F270a5147A6320e322n136A5940i803C027K359a6203A4265D24h958A1990a5030
+7879D451J0683a8743H831B36a2718B2101a0412M7A6972a4004G194J708b0775A2712
+7894A825h777A4068a3583c48A2826a2620I358b583q969A7596i344a567A2154a8826
+7909A0529m127a6595A7569g354l308A9406a3730B325R592a9833A0592C730a0861
+7923A5118a1201d322A3783a1589H522g3j4667A6957e630J706A2635a9245H518
+7937A1543a8006A3258e257n861B2962a2229e280A2135a5979A2652E913a7905A1514
+7951e033a205A4977a6776B480L500a0244A6404h341k114A6750a2458E515L926
+7964I441b1469A4202B596a4121A7917a1378d785A7615a6669D852K847a4429A3916
+7978d955l902A5195a0691C466K203a5736A4923a137r417A4413a4098C265J2277
+7991A5542b0745H060l973a2972B0250a0149k217A8270i996E391R17b1053A2705
+8005D670g021A0566a6156A423J3950a2016G844e403o117B1838h584L284A1349
+8019a8031A2183l189b0030A3971c814m820A8957a4301a298A2447a4966A0194A282
+8033a1837A4150i185a653A2391a3974H128D75a3323A9120f743j005A2811a6777
+8047A0093K812b1823H993i10o113B1893a4585M892A3602h442A1973a29j9824A3759
+8062C89a90H002b0517G886M129a1774A0004a1407N458B4107a3701c631G909a5253
+8077A8453B366b1165A3982c965d51A3932b0022C233P813i963A0329h689K366A7796
+8092a1145G73L710a2985A7762c455j1817A6077h630B920R141b3689I022J959a2861
+8107A2497a0778K860B1592a0292a774D183a2692A6356e68j2362A0799h600E878
+8121I113a9932A0314C737i749A5331a4334c901B0086a5602C459K029a5780A8003
+8135b336j2033A5004h014A961O539a7845A0409m970i422I208a2950B342J5028
+8148A7370a5791B840b42r035B3361i146n902A4469i281I913j633b5994A0886k770
+8162H116g458A1874a6587c022B0130a0070A544c310o570B1195e081n329G410a1017
+8177A4322F347b2845A1342A56c630A6830b0397b120A8651a3166G269a581j2902
+8190a4483B0711
+##END NTUPLES=NMR FID
+##END=
