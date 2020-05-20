@@ -22,7 +22,7 @@ for (let file of files) {
 
 writeFileSync(
     join(__dirname, './toc.json'),
-    `export const toc = ${JSON.stringify(toc, undefined, 2)};`,
+    `${JSON.stringify(toc, undefined, 2)}`,
   );
   
 console.log(JSON.stringify(toc, undefined, 2));
