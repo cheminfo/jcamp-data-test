@@ -1,3 +1,12 @@
+## [0.0.3](https://github.com/cheminfo/jcamp-data-test/compare/v0.0.2...v0.0.3) (2020-05-20)
+
+
+### Bug Fixes
+
+* readme ([8677dcc](https://github.com/cheminfo/jcamp-data-test/commit/8677dccb3b6ef8c16432c39e4c075e979f00ea4a))
+
+
+
 ## 0.0.2 (2020-05-12)
 
 
