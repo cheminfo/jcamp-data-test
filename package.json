@@ -2,11 +2,23 @@
   "name": "jcamp-data-test",
   "version": "0.0.2",
   "description": "provides JCAMP-DX NMR data files for testing purposes",
-  "keywords": ["magnetic resonance", "nmr", "JCAMP", "dataset"],
+  "keywords": [
+    "magnetic resonance",
+    "nmr",
+    "JCAMP",
+    "dataset"
+  ],
   "main": "index.js",
+  "files": [
+    "toc.json",
+    "data/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": "Julien Wist",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "recursive-readdir-synchronous": "0.0.4"
+  }
 }
