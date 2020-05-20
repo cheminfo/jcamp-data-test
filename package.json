@@ -1,6 +1,6 @@
 {
   "name": "jcamp-data-test",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "provides JCAMP-DX NMR data files for testing purposes",
   "keywords": [
     "magnetic resonance",
