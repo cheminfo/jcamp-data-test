@@ -34,5 +34,9 @@
   {
     "filename": "naphtoicAcid-1h.fid.dx",
     "url": "./data/naphtoicAcid-1h.fid.dx"
+  },
+  {
+    "filename": "qmagnetics ibuprofen j_ave.jdx",
+    "url": "./data/qmagnetics/ibuprofen j_ave.jdx"
   }
 ]
