@@ -1,8 +1,8 @@
-import { join, resolve } from 'path';
+import { join } from "path";
 
-import { fileListFromPath } from 'filelist-utils';
+import { fileListFromPath } from "filelist-utils";
 
-const path = resolve(join(__dirname, '../data/'));
+const path = join(__dirname, "../data/");
 const fileList = fileListFromPath(path);
 
 export function getList() {
