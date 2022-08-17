@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/cheminfo/jcamp-data-test/compare/v0.2.0...v0.2.1) (2022-08-17)
+
+
+### Bug Fixes
+
+* only to publish ([45e1486](https://github.com/cheminfo/jcamp-data-test/commit/45e14868d6d75e8e3d82ea7bc553cf85aa9cccaf))
+
 ## [0.2.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.1.0...v0.2.0) (2022-07-22)
 
 
