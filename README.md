@@ -6,9 +6,15 @@ provides JCAMP-DX NMR data files for testing purposes.
 
 ```js
 import { getData, getFileList, getList } from "jcamp-data-test";
-console.log(getList()); // to get a list of file names
-console.log(getFileList("Rutin_3080ug200uL_DMSOd6_qHNMR_400MHz_JDX.jdx")); // to get an array of fileList.
-const buffer = getData("Rutin_3080ug200uL_DMSOd6_qHNMR_400MHz_JDX.jdx"); // to get a promise of the arrayBuffer of the file.
+const listOfFilenames = await getList();
+
+const filename = "Rutin_3080ug200uL_DMSOd6_qHNMR_400MHz_JDX.jdx";
+
+const file = await getFileList(filename);
+const jcampString = await file.text();
+const jcampBuffer = await file.arrayBuffer();
+//or
+const buffer = await getData(filename);
 ```
 
 ## acknowledgements
