@@ -35,6 +35,6 @@ export async function getFileList(name) {
   return result[0];
 }
 
-export async function getData(name) {
+export function getData(name) {
   return getFileList(name).arrayBuffer();
 }
