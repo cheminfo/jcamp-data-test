@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.2.1...v0.3.0) (2022-09-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* export more specific functions (#8)
+* async functions n add cache
+
+### Features
+
+* async functions n add cache ([2c6a701](https://github.com/cheminfo/jcamp-data-test/commit/2c6a701ee9fca5ac4285c6ce238b54747b5d1980)), closes [#5](https://github.com/cheminfo/jcamp-data-test/issues/5)
+* export more specific functions ([#8](https://github.com/cheminfo/jcamp-data-test/issues/8)) ([bbb64c5](https://github.com/cheminfo/jcamp-data-test/commit/bbb64c5cfb9e50899b1b236cb47ea75ef8a5f1a6))
+
 ## [0.2.1](https://github.com/cheminfo/jcamp-data-test/compare/v0.2.0...v0.2.1) (2022-08-17)
 
 
