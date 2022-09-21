@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/cheminfo/jcamp-data-test/compare/v0.3.0...v0.3.1) (2022-09-21)
+
+
+### Bug Fixes
+
+* getData ([912eea7](https://github.com/cheminfo/jcamp-data-test/commit/912eea782905cfb69e415641948da9a9b8e35ae8))
+
 ## [0.3.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.2.1...v0.3.0) (2022-09-06)
 
 
