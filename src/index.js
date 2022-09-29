@@ -6,7 +6,7 @@ const path = join(__dirname, "../data/");
 
 const cache = {};
 
-async function loadFileList(path) {
+async function loadFileCollection(path) {
   if (cache[path]) {
     return cache[path];
   }
@@ -19,17 +19,17 @@ async function loadFileList(path) {
   return cache[path];
 }
 
-export function getFileList() {
-  return loadFileList(path);
+export function getFileCollection() {
+  return loadFileCollection(path);
 }
 
 export async function getList() {
-  const fileCollection = await getFileList();
+  const fileCollection = await getFileCollection();
   return fileCollection.files.map((file) => file.name);
 }
 
 export async function getFile(name) {
-  const fileCollection = await getFileList();
+  const fileCollection = await getFileCollection();
   const file = fileCollection.files.find((d) => d.name === name);
 
   if (!file) {
@@ -38,6 +38,7 @@ export async function getFile(name) {
 
   return file;
 }
+
 export async function getData(name) {
   return (await getFile(name)).arrayBuffer();
 }

@@ -1,4 +1,4 @@
-import { getFile, getFileList, getList } from "..";
+import { getFile, getFileCollection, getList } from "..";
 
 describe("simple test", () => {
   const filename = "aspirin-1h.dx";
@@ -11,8 +11,8 @@ describe("simple test", () => {
     const file = await getFile(filename);
     expect(file.name).toBe(filename);
   });
-  it("check getFileList", async () => {
-    const fileCollection = await getFileList();
+  it("check getFileCollection", async () => {
+    const fileCollection = await getFileCollection();
     expect(fileCollection.files.map((f) => f.name)).toContain(filename);
   });
 });
