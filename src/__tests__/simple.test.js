@@ -12,7 +12,7 @@ describe("simple test", () => {
     expect(file.name).toBe(filename);
   });
   it("check getFileList", async () => {
-    const fileList = await getFileList();
-    expect(fileList.map((f) => f.name)).toContain(filename);
+    const fileCollection = await getFileList();
+    expect(fileCollection.files.map((f) => f.name)).toContain(filename);
   });
 });

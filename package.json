@@ -37,6 +37,6 @@
     "rollup": "^2.77.0"
   },
   "dependencies": {
-    "filelist-utils": "^0.7.1"
+    "filelist-utils": "^0.11.0"
   }
 }
