@@ -1,4 +1,4 @@
-import { FileCollectionItem } from "filelist-utils";
+import { FileCollection, FileCollectionItem } from "filelist-utils";
 
 export function getList(): Promise<string[]>;
 
