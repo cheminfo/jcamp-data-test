@@ -1,9 +1,9 @@
-import { PartialFile } from "filelist-utils";
+import { FileCollection, FileCollectionItem } from "filelist-utils";
 
 export function getList(): Promise<string[]>;
 
-export function getFile(name: string): Promise<PartialFile>;
+export function getFile(name: string): Promise<FileCollectionItem>;
 
-export function getFileList(name: string): Promise<PartialFile>;
+export function getFileCollection(name: string): Promise<FileCollection>;
 
 export function getData(name: string): Promise<ArrayBuffer>;
