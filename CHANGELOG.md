@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.4.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.3.1...v0.4.0) (2022-10-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* use FileCollection (#11)
+
+### Features
+
+* use FileCollection ([#11](https://github.com/cheminfo/jcamp-data-test/issues/11)) ([f7e465d](https://github.com/cheminfo/jcamp-data-test/commit/f7e465d9b528c0c40a19d444527271aaa1668218))
+
 ## [0.3.1](https://github.com/cheminfo/jcamp-data-test/compare/v0.3.0...v0.3.1) (2022-09-21)
 
 
