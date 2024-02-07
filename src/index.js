@@ -1,18 +1,17 @@
-import { join } from "path";
+import { join } from 'path';
 
-import { FileCollection } from "file-collection";
-import { convert } from "jcampconverter";
+import { FileCollection } from 'file-collection';
+import { convert } from 'jcampconverter';
 
-const path = join(__dirname, "../data/");
-
+const path = join(__dirname, '../data/');
 
 async function getFileCollection() {
-  const fileCollection = new FileCollection()
-  await fileCollection.appendPath(path)
+  const fileCollection = new FileCollection();
+  await fileCollection.appendPath(path);
   fileCollection.files.forEach((file) => {
     file.relativePath = file.relativePath.replace('data/', '');
   });
-  return fileCollection
+  return fileCollection;
 }
 
 export async function getList() {
@@ -22,7 +21,9 @@ export async function getList() {
 
 export async function getFile(relativePath) {
   const fileCollection = await getFileCollection();
-  const file = fileCollection.files.find((d) => d.relativePath === relativePath);
+  const file = fileCollection.files.find(
+    (d) => d.relativePath === relativePath,
+  );
 
   if (!file) {
     throw new Error(`There is not a file with name: ${relativePath} `);
@@ -33,6 +34,6 @@ export async function getFile(relativePath) {
 
 export async function getParsedFile(name) {
   const file = await getFile(name);
-  const jcamp = await file.text()
-  return convert(jcamp, { noContour: true })
+  const jcamp = await file.text();
+  return convert(jcamp, { noContour: true });
 }
