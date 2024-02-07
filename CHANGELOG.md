@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.6.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.5.1...v0.6.0) (2024-02-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* reorganize files and add method getParsedFile
+
+### Code Refactoring
+
+* reorganize files and add method getParsedFile ([a63c7c4](https://github.com/cheminfo/jcamp-data-test/commit/a63c7c4182c52084baa5e747b154ae7d7b7a1fc8))
+
 ## [0.5.1](https://github.com/cheminfo/jcamp-data-test/compare/v0.5.0...v0.5.1) (2024-02-07)
 
 
