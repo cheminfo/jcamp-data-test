@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.4.0...v0.5.0) (2024-02-07)
+
+
+### Features
+
+* add indometacin ([2094950](https://github.com/cheminfo/jcamp-data-test/commit/2094950e0cb4438fdd2bba322408178e65fda79f))
+
 ## [0.4.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.3.1...v0.4.0) (2022-10-03)
 
 
