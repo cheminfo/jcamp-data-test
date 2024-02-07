@@ -1,18 +1,17 @@
-import { getFile, getFileCollection, getList } from "..";
+import { getFile, getList, getParsedFile } from "..";
 
 describe("simple test", () => {
-  const filename = "aspirin-1h.dx";
+  const relativePath = "aspirin/1h.dx";
   it("check one name", async () => {
     const list = await getList();
-
-    expect(list).toContain(filename);
+    expect(list).toContain(relativePath);
   });
   it("check getFile", async () => {
-    const file = await getFile(filename);
-    expect(file.name).toBe(filename);
+    const file = await getFile(relativePath);
+    expect(file.relativePath).toBe(relativePath);
   });
-  it("check getFileCollection", async () => {
-    const fileCollection = await getFileCollection();
-    expect(fileCollection.files.map((f) => f.name)).toContain(filename);
+  it("check getParsedFile", async () => {
+    const parsed = await getParsedFile(relativePath);
+    expect(parsed.flatten).toHaveLength(1);
   });
 });
