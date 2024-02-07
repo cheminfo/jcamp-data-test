@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/cheminfo/jcamp-data-test/compare/v0.5.0...v0.5.1) (2024-02-07)
+
+
+### Bug Fixes
+
+* rename rollup config ([99fd447](https://github.com/cheminfo/jcamp-data-test/commit/99fd447956fedad599c00c6e1749806dcfe27bab))
+
 ## [0.5.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.4.0...v0.5.0) (2024-02-07)
 
 
