@@ -19,6 +19,5 @@ describe('simple test', () => {
     expect(dataXY.x[0]).toBeLessThan(dataXY.x[1]);
     expect(dataXY.x).toHaveLength(32768);
     expect(dataXY.y).toHaveLength(32768);
-
   });
 });

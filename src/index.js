@@ -40,5 +40,5 @@ export async function getParsedFile(name) {
 export async function getXY(name) {
   const parsed = await getParsedFile(name);
   const firstSpectrum = parsed.flatten[0]?.spectra[0]?.data;
-  return xySortX(firstSpectrum); //
+  return xySortX(firstSpectrum);
 }
