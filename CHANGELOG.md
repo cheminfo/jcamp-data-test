@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.6.0...v0.7.0) (2024-02-13)
+
+
+### Features
+
+* add getXY to get ordered XY and simplify tests ([5860b30](https://github.com/cheminfo/jcamp-data-test/commit/5860b300cb19afc86023eeaa249261de90701fdf))
+
 ## [0.6.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.5.1...v0.6.0) (2024-02-07)
 
 
