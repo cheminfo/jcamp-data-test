@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "file-collection": "^0.2.0",
-    "jcampconverter": "^9.6.1"
+    "jcampconverter": "^9.6.1",
+    "ml-spectra-processing": "^12.10.2"
   }
 }

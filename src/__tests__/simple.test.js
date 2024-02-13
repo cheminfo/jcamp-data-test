@@ -1,4 +1,4 @@
-import { getFile, getList, getParsedFile } from '..';
+import { getFile, getList, getParsedFile, getXY } from '..';
 
 describe('simple test', () => {
   const relativePath = 'aspirin/1h.dx';
@@ -13,5 +13,12 @@ describe('simple test', () => {
   it('check getParsedFile', async () => {
     const parsed = await getParsedFile(relativePath);
     expect(parsed.flatten).toHaveLength(1);
+  });
+  it('check getXY', async () => {
+    const dataXY = await getXY(relativePath);
+    expect(dataXY.x[0]).toBeLessThan(dataXY.x[1]);
+    expect(dataXY.x).toHaveLength(32768);
+    expect(dataXY.y).toHaveLength(32768);
+
   });
 });
