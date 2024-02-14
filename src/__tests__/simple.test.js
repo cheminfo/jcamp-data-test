@@ -1,7 +1,7 @@
 import { getFile, getList, getParsedFile, getXY } from '..';
 
 describe('simple test', () => {
-  const relativePath = 'aspirin/1h.dx';
+  const relativePath = 'nmr/aspirin/1h.dx';
   it('check one name', async () => {
     const list = await getList();
     expect(list).toContain(relativePath);
