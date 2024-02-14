@@ -1,4 +1,4 @@
-import { getFile, getList, getParsedFile, getXY } from '..';
+import { getFile, getList, getParsedFile, getXY } from '../index';
 
 describe('simple test', () => {
   const relativePath = 'nmr/aspirin/1h.dx';
