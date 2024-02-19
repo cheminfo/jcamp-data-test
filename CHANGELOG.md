@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.8.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.7.0...v0.8.0) (2024-02-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* Add nmr level
+
+### Features
+
+* add mass and ir ([a64d3c5](https://github.com/cheminfo/jcamp-data-test/commit/a64d3c515d32be188282218e06cabf37f5b91a4a))
+* add simulated NMR spectra ([0313ac2](https://github.com/cheminfo/jcamp-data-test/commit/0313ac23cfe3f1c94539ef60121a636ce9c90e15))
+* migrate to typescript ([#18](https://github.com/cheminfo/jcamp-data-test/issues/18)) ([56cf5b7](https://github.com/cheminfo/jcamp-data-test/commit/56cf5b7e9b673865c63989f9a259630310feb7c0))
+
+
+### Bug Fixes
+
+* add nanalysis n oxfordInstruments data ([#19](https://github.com/cheminfo/jcamp-data-test/issues/19)) ([423e193](https://github.com/cheminfo/jcamp-data-test/commit/423e193e3a64ade8a899153a17782e1ae980c2e4))
+
+
+### Miscellaneous Chores
+
+* Add nmr level ([9940fd8](https://github.com/cheminfo/jcamp-data-test/commit/9940fd8fd7459532076394c2929e54f92754e9dc))
+
 ## [0.7.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.6.0...v0.7.0) (2024-02-13)
 
 
