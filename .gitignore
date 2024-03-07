@@ -42,3 +42,5 @@ jspm_packages
 lib
 lib-esm
 dist
+
+.DS_Store
