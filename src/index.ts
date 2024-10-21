@@ -3,7 +3,7 @@ import { join } from 'path';
 import { DataXY } from 'cheminfo-types';
 import { FileCollection } from 'file-collection';
 import { convert } from 'jcampconverter';
-import { xySortX } from 'ml-spectra-processing';
+import { xEnsureFloat64, xySortX } from 'ml-spectra-processing';
 
 const path = join(__dirname, '../data/');
 
@@ -42,6 +42,9 @@ export async function getParsedFile(name: string): Promise<ConvertResult> {
 
 export async function getXY(name: string): Promise<DataXY> {
   const parsed = await getParsedFile(name);
-  const firstSpectrum = parsed.flatten[0]?.spectra[0]?.data;
-  return xySortX(firstSpectrum);
+  const { x, y } = parsed.flatten[0].spectra[0].data;
+  return xySortX({
+    x: xEnsureFloat64(x),
+    y: xEnsureFloat64(y),
+  });
 }

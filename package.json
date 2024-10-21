@@ -47,7 +47,7 @@
   "dependencies": {
     "cheminfo-types": "^1.7.2",
     "file-collection": "^0.2.0",
-    "jcampconverter": "^9.6.2",
-    "ml-spectra-processing": "^14.2.1"
+    "ml-spectra-processing": "^14.2.1",
+    "jcampconverter": "^10.0.1"
   }
 }
