@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.3](https://github.com/cheminfo/jcamp-data-test/compare/v0.8.2...v0.8.3) (2025-02-14)
+
+
+### Bug Fixes
+
+* update jcampconverter ([f1f505c](https://github.com/cheminfo/jcamp-data-test/commit/f1f505c189fa76af19bb9658be27f78ad1e1ab69))
+
 ## [0.8.2](https://github.com/cheminfo/jcamp-data-test/compare/v0.8.1...v0.8.2) (2024-10-21)
 
 
