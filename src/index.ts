@@ -2,12 +2,13 @@ import { join } from 'path';
 
 import type { DataXY } from 'cheminfo-types';
 import { FileCollection } from 'file-collection';
-import { convert } from 'jcampconverter';
+import type { convert } from 'jcampconverter';
 import { xEnsureFloat64, xySortX } from 'ml-spectra-processing';
 
 const path = join(import.meta.dirname, '../data/');
 
-type ConvertResult = ReturnType<typeof convert>;
+type ConvertFn = typeof convert;
+type ConvertResult = ReturnType<ConvertFn>;
 
 async function getFileCollection(): Promise<FileCollection> {
   const fileCollection = new FileCollection();
@@ -34,14 +35,20 @@ export async function getFile(relativePath: string) {
   return file;
 }
 
-export async function getParsedFile(name: string): Promise<ConvertResult> {
+export async function getParsedFile(
+  name: string,
+  convertFn: ConvertFn,
+): Promise<ConvertResult> {
   const file = await getFile(name);
   const jcamp = await file.text();
-  return convert(jcamp, { noContour: true });
+  return convertFn(jcamp, { noContour: true });
 }
 
-export async function getXY(name: string): Promise<DataXY> {
-  const parsed = await getParsedFile(name);
+export async function getXY(
+  name: string,
+  convertFn: ConvertFn,
+): Promise<DataXY> {
+  const parsed = await getParsedFile(name, convertFn);
   const { x, y } = parsed.flatten[0].spectra[0].data;
   return xySortX({
     x: xEnsureFloat64(x),
