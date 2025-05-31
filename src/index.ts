@@ -1,11 +1,11 @@
 import { join } from 'path';
 
-import { DataXY } from 'cheminfo-types';
+import type { DataXY } from 'cheminfo-types';
 import { FileCollection } from 'file-collection';
 import { convert } from 'jcampconverter';
 import { xEnsureFloat64, xySortX } from 'ml-spectra-processing';
 
-const path = join(__dirname, '../data/');
+const path = join(import.meta.dirname, '../data/');
 
 type ConvertResult = ReturnType<typeof convert>;
 

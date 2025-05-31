@@ -1,4 +1,6 @@
-import { getFile, getList, getParsedFile, getXY } from '../index';
+import { describe, expect, it } from 'vitest';
+
+import { getFile, getList, getParsedFile, getXY } from '../index.js';
 
 describe('simple test', () => {
   const relativePath = 'nmr/aspirin/1h.dx';

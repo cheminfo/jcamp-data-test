@@ -1,14 +1,14 @@
 # jcamp-data-test
 
-provides JCAMP-DX NMR data files for testing purposes.
+Provides JCAMP-DX NMR data files for testing purposes.
 
 ## usage
 
 ```js
-import { getData, getFile, getList } from "jcamp-data-test";
+import { getData, getFile, getList } from 'jcamp-data-test';
 const listOfFilenames = await getList();
 
-const filename = "Rutin_3080ug200uL_DMSOd6_qHNMR_400MHz_JDX.jdx";
+const filename = 'Rutin_3080ug200uL_DMSOd6_qHNMR_400MHz_JDX.jdx';
 
 const file = await getFile(filename);
 const jcampString = await file.text();
