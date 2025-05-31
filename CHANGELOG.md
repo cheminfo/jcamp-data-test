@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.8.3...v1.0.0) (2025-05-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* pass `convert` as a parameter
+* convert module to ESM
+
+### Code Refactoring
+
+* convert module to ESM ([ac5a8c1](https://github.com/cheminfo/jcamp-data-test/commit/ac5a8c1833fa33c21e7d02eb7ad339de54f76429))
+* pass `convert` as a parameter ([4bd14a8](https://github.com/cheminfo/jcamp-data-test/commit/4bd14a8d89ff03b23ad3e9e5d257e29b337d340c))
+
 ## [0.8.3](https://github.com/cheminfo/jcamp-data-test/compare/v0.8.2...v0.8.3) (2025-02-14)
 
 
