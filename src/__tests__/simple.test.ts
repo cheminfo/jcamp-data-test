@@ -24,4 +24,16 @@ describe('simple test', () => {
     expect(dataXY.x).toHaveLength(32768);
     expect(dataXY.y).toHaveLength(32768);
   });
+
+  it('should findParsedData', async () => {
+    await expect(
+      jcampFiles.findParsedData('ethylbenzene_ei.jdx', convert),
+    ).resolves.toBeDefined();
+  });
+
+  it('should findXYData', async () => {
+    await expect(
+      jcampFiles.findXYData('ethylbenzene_ei.jdx', convert),
+    ).resolves.toBeDefined();
+  });
 });
