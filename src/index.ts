@@ -1,57 +1,60 @@
-import { join } from 'path';
+import { join } from 'node:path';
 
 import type { DataXY } from 'cheminfo-types';
-import { FileCollection } from 'file-collection';
+import { DataTestApi } from 'data-test-api';
+import type { AbsolutePath, Path } from 'data-test-api';
 import type { convert } from 'jcampconverter';
 import { xEnsureFloat64, xySortX } from 'ml-spectra-processing';
-
-const path = join(import.meta.dirname, '../data/');
 
 type ConvertFn = typeof convert;
 type ConvertResult = ReturnType<ConvertFn>;
 
-async function getFileCollection(): Promise<FileCollection> {
-  const fileCollection = new FileCollection();
-  await fileCollection.appendPath(path);
-  fileCollection.files.forEach((file) => {
-    file.relativePath = file.relativePath.replace('data/', '');
-  });
-  return fileCollection;
-}
+const path = join(import.meta.dirname, '../data/') as AbsolutePath;
 
-export async function getList(): Promise<string[]> {
-  const fileCollection = await getFileCollection();
-  return fileCollection.files.map((f) => f.relativePath);
-}
-
-export async function getFile(relativePath: string) {
-  const fileCollection = await getFileCollection();
-  const file = fileCollection.files.find(
-    (d) => d.relativePath === relativePath,
-  );
-  if (!file) {
-    throw new Error(`There is not a file with name: ${relativePath} `);
+export class JCampDataTestApi<
+  RootPath extends Path<string>,
+> extends DataTestApi<RootPath> {
+  async getParsedData(
+    relativePath: string,
+    convertFn: ConvertFn,
+  ): Promise<ConvertResult> {
+    const file = await this.getFile(relativePath);
+    const buffer = await file.buffer();
+    return convertFn(buffer, { noContour: true });
   }
-  return file;
+
+  async findParsedData(
+    name: string,
+    convertFn: ConvertFn,
+  ): Promise<ConvertResult> {
+    const file = await this.findFile(name);
+    const buffer = await file.buffer();
+    return convertFn(buffer, { noContour: true });
+  }
+
+  async getXYData(
+    relativePath: string,
+    convertFn: ConvertFn,
+  ): Promise<DataXY<Float64Array>> {
+    const parsed = await this.getParsedData(relativePath, convertFn);
+    const { x, y } = parsed.flatten[0].spectra[0].data;
+    return xySortX({
+      x: xEnsureFloat64(x),
+      y: xEnsureFloat64(y),
+    });
+  }
+
+  async findXYData(
+    name: string,
+    convertFn: ConvertFn,
+  ): Promise<DataXY<Float64Array>> {
+    const parsed = await this.findParsedData(name, convertFn);
+    const { x, y } = parsed.flatten[0].spectra[0].data;
+    return xySortX({
+      x: xEnsureFloat64(x),
+      y: xEnsureFloat64(y),
+    });
+  }
 }
 
-export async function getParsedFile(
-  name: string,
-  convertFn: ConvertFn,
-): Promise<ConvertResult> {
-  const file = await getFile(name);
-  const jcamp = await file.text();
-  return convertFn(jcamp, { noContour: true });
-}
-
-export async function getXY(
-  name: string,
-  convertFn: ConvertFn,
-): Promise<DataXY> {
-  const parsed = await getParsedFile(name, convertFn);
-  const { x, y } = parsed.flatten[0].spectra[0].data;
-  return xySortX({
-    x: xEnsureFloat64(x),
-    y: xEnsureFloat64(y),
-  });
-}
+export const jcampFiles = new JCampDataTestApi(path);

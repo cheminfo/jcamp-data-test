@@ -1,20 +1,11 @@
 {
+  "extends": "@zakodium/tsconfig",
   "compilerOptions": {
-    "lib": ["ES2022", "WebWorker"],
-    "types": [],
-    "target": "ES2022",
     "outDir": "lib",
-    "module": "NodeNext",
-    "strict": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": false,
-    "forceConsistentCasingInFileNames": true,
-    "allowJs": false,
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true
+    "target": "ES2022",
+    "lib": ["ES2022", "WebWorker"],
+    "types": ["@types/node"],
+    "noUncheckedIndexedAccess": false
   },
-  "include": ["src"]
+  "include": ["src", "vite*.ts"]
 }
