@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/cheminfo/jcamp-data-test/compare/v1.0.0...v2.0.0) (2025-07-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* use `data-test-api` instead `file-collection` ([#26](https://github.com/cheminfo/jcamp-data-test/issues/26))
+
+### Code Refactoring
+
+* use `data-test-api` instead `file-collection` ([#26](https://github.com/cheminfo/jcamp-data-test/issues/26)) ([fccd097](https://github.com/cheminfo/jcamp-data-test/commit/fccd09719c1a590498e73b36b42f4bce14c9bb92))
+
 ## [1.0.0](https://github.com/cheminfo/jcamp-data-test/compare/v0.8.3...v1.0.0) (2025-05-31)
 
 
