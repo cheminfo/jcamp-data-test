@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/cheminfo/jcamp-data-test/compare/v2.0.0...v2.1.0) (2025-07-28)
+
+
+### Features
+
+* add proton from jeol and varian vendors ([#28](https://github.com/cheminfo/jcamp-data-test/issues/28)) ([bce81e7](https://github.com/cheminfo/jcamp-data-test/commit/bce81e78036b5b0d948fa9eebb4de39a7f7483f2))
+
 ## [2.0.0](https://github.com/cheminfo/jcamp-data-test/compare/v1.0.0...v2.0.0) (2025-07-23)
 
 
