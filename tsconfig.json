@@ -2,9 +2,7 @@
   "extends": "@zakodium/tsconfig",
   "compilerOptions": {
     "outDir": "lib",
-    "target": "ES2022",
-    "lib": ["ES2022", "WebWorker"],
-    "types": ["@types/node"],
+    "types": ["node"],
     "noUncheckedIndexedAccess": false
   },
   "include": ["src", "vite*.ts"]
