@@ -1,16 +1,16 @@
 {
   "name": "jcamp-data-test",
   "version": "2.1.0",
-  "description": "provides JCAMP-DX NMR data files for testing purposes",
   "license": "MIT",
-  "type": "module",
-  "author": "Julien Wist",
+  "description": "provides JCAMP-DX NMR data files for testing purposes",
   "keywords": [
     "magnetic resonance",
     "nmr",
     "JCAMP",
     "dataset"
   ],
+  "author": "Julien Wist",
+  "type": "module",
   "exports": "./lib/index.js",
   "files": [
     "data",
@@ -19,9 +19,9 @@
   ],
   "scripts": {
     "check-types": "tsc --noEmit",
-    "clean": "rimraf lib",
+    "clean": "rimraf coverage lib",
     "eslint": "eslint .",
-    "eslint-fix": "npm run eslint -- --fix",
+    "eslint-fix": "eslint . --fix",
     "prepack": "npm run tsc",
     "prettier": "prettier --check .",
     "prettier-write": "prettier --write .",
@@ -33,21 +33,21 @@
   "dependencies": {
     "cheminfo-types": "^1.8.1",
     "data-test-api": "^1.0.1",
-    "ml-spectra-processing": "^14.12.0"
-  },
-  "devDependencies": {
-    "@types/node": "^22.15.29",
-    "@vitest/coverage-v8": "^3.2.4",
-    "@zakodium/tsconfig": "^1.0.2",
-    "eslint": "^9.28.0",
-    "eslint-config-cheminfo-typescript": "^18.0.1",
-    "jcampconverter": "^11.0.2",
-    "prettier": "^3.5.3",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.8.3",
-    "vitest": "^3.2.4"
+    "ml-spectra-processing": "^14.16.0"
   },
   "peerDependencies": {
     "jcampconverter": ">=11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@zakodium/tsconfig": "^1.0.2",
+    "eslint": "^9.33.0",
+    "eslint-config-cheminfo-typescript": "^19.0.0",
+    "jcampconverter": "^11.0.4",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   }
 }

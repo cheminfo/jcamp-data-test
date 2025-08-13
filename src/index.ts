@@ -1,8 +1,8 @@
 import { join } from 'node:path';
 
 import type { DataXY } from 'cheminfo-types';
-import { DataTestApi } from 'data-test-api';
 import type { AbsolutePath, Path } from 'data-test-api';
+import { DataTestApi } from 'data-test-api';
 import type { convert } from 'jcampconverter';
 import { xEnsureFloat64, xySortX } from 'ml-spectra-processing';
 
