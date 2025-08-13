@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/cheminfo/jcamp-data-test/compare/v2.1.0...v2.1.1) (2025-08-13)
+
+
+### Bug Fixes
+
+* exports ([#30](https://github.com/cheminfo/jcamp-data-test/issues/30)) ([ad6a0a2](https://github.com/cheminfo/jcamp-data-test/commit/ad6a0a2dcca976ae7a11653eb3794a6e0e5a4482))
+
 ## [2.1.0](https://github.com/cheminfo/jcamp-data-test/compare/v2.0.0...v2.1.0) (2025-07-28)
 
 
