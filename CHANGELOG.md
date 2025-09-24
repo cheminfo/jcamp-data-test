@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/cheminfo/jcamp-data-test/compare/v2.1.1...v2.2.0) (2025-09-24)
+
+
+### Features
+
+* cytisine carbon and proton 1D data test ([#32](https://github.com/cheminfo/jcamp-data-test/issues/32)) ([c33ffa6](https://github.com/cheminfo/jcamp-data-test/commit/c33ffa6ae1cae7ca10f08659a0406389d531f367))
+
 ## [2.1.1](https://github.com/cheminfo/jcamp-data-test/compare/v2.1.0...v2.1.1) (2025-08-13)
 
 
