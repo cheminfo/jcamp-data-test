@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/cheminfo/jcamp-data-test/compare/v2.2.0...v2.3.0) (2025-09-25)
+
+
+### Features
+
+* add 2D and dept spectra for cytisine ([#34](https://github.com/cheminfo/jcamp-data-test/issues/34)) ([4abfd14](https://github.com/cheminfo/jcamp-data-test/commit/4abfd14159a0b448556133e7b4752cf4fadec65c))
+
 ## [2.2.0](https://github.com/cheminfo/jcamp-data-test/compare/v2.1.1...v2.2.0) (2025-09-24)
 
 
