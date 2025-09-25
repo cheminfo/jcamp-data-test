@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/cheminfo/jcamp-data-test/compare/v2.3.0...v2.4.0) (2025-09-25)
+
+
+### Features
+
+* add cytisine hmbc.fid.jdx ([#36](https://github.com/cheminfo/jcamp-data-test/issues/36)) ([7ae1c2a](https://github.com/cheminfo/jcamp-data-test/commit/7ae1c2ad10d3abe30ff67e4575b2277c66ca5410))
+
 ## [2.3.0](https://github.com/cheminfo/jcamp-data-test/compare/v2.2.0...v2.3.0) (2025-09-25)
 
 
