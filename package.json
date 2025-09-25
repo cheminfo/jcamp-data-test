@@ -1,6 +1,6 @@
 {
   "name": "jcamp-data-test",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "license": "MIT",
   "description": "provides JCAMP-DX NMR data files for testing purposes",
   "keywords": [
