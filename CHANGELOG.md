@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/cheminfo/jcamp-data-test/compare/v2.4.0...v2.5.0) (2025-12-09)
+
+
+### Features
+
+* get dosy 1D pulse sequence ledbpgp2s1d ([#38](https://github.com/cheminfo/jcamp-data-test/issues/38)) ([269829c](https://github.com/cheminfo/jcamp-data-test/commit/269829c1ff55e2c236a6aa8c998f53db2b212618))
+
 ## [2.4.0](https://github.com/cheminfo/jcamp-data-test/compare/v2.3.0...v2.4.0) (2025-09-25)
 
 
