@@ -1,0 +1,3863 @@
+##TITLE=refe_1d_1H_dosy-hmw-98 CDCl3 /opt/ lrisse 11
+##JCAMPDX= 6.0         $$ Bruker NMR JCAMP-DX V2.0
+##DATA TYPE= NMR FID
+##DATA CLASS= NTUPLES
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+##LONG DATE= 2024/11/21 06:43:43+0000
+$$ 1.90.2.5 TopSpin 3.7.0
+$$ 2024-11-21 07:43:44.900 +0100  nmrsu@nmrf492l
+$$ Compression mode = diff/dup
+##.OBSERVE FREQUENCY= 400.0820004
+##.OBSERVE NUCLEUS= ^1H
+##.DELAY= (11.34553, 11.34553)
+##.ACQUISITION MODE= SIMULTANEOUS (DQD)
+##.ACQUISITION SCHEME= undefined
+##.AVERAGES= 16
+##.DIGITISER RES= 23
+##SPECTROMETER/DATA SYSTEM= spect
+##.PULSE SEQUENCE= ledbpgp2s1d
+##.SOLVENT NAME= CDCl3
+##.SHIFT REFERENCE= INTERNAL, CDCl3, 1, 10.99305
+##AUDIT TRAIL= $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+$$ ##TITLE= Audit trail, TopSpin 3.7.0
+$$ ##JCAMPDX= 5.01
+$$ ##ORIGIN= Bruker BioSpin GmbH
+$$ ##OWNER= nmrsu
+$$ $$ /opt/data/lrisse/nmr/2f955d352529_reference_119-36-8/16/audita.txt
+$$ ##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2024-11-21 07:43:43.207 +0100>,<nmrsu>,<nmrf492l>,<go4>,<TopSpin 3.7.0>,
+      <created by zg on data set with UUID 'b496053e-a7d3-11ef-95fb-001018b14baf'
+       started at 2024-11-21 07:41:58.171 +0100,
+       POWCHK enabled, PULCHK disabled,
+       completed at 2024-11-21 07:43:43.206 +0100
+$$ 
+       configuration hash MD5:
+       52 60 97 4D F0 FF 71 B3 1A AB E0 F9 FD 19 52 CF
+       data hash MD5: 16K
+       CC 8B 82 63 5D 29 2F 7A F3 21 BB 51 A5 8C 14 3C>)
+(   2,<2024-11-21 07:43:43.219 +0100>,<nmrsu>,<nmrf492l>,<audit>,<TopSpin 3.7.0>,
+      <user comment:
+       ICON-NMR User ID: lrisse
+       data hash MD5: 16K
+       CC 8B 82 63 5D 29 2F 7A F3 21 BB 51 A5 8C 14 3C>)
+$$ ##END=
+$$ 
+$$ $$ hash MD5
+$$ $$ FE C9 02 1F 35 B5 0A 54 3F 04 57 9D 23 E8 02 1F
+##$RELAX= 
+##$BRUKER FILE EXP=format.temp
+$$ EDIT_PAR COMMAND FILE
+$$ 
+$$ DI_MODE         LONG
+$$ ED_ENTRY        ACQU
+$$ ORDER           FILE
+$$ 
+$$ 
+$$ HEADER		"F2 - Acquisition Parameters"
+$$ T_NAME		Date_
+$$ 		TYPE	R64
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 50000000
+$$ 		REL	"Date_=itodate(DATE)"
+$$ 		INV_REL	"DATE=datetoi(Date_,DATE)"
+$$ 		FORMAT	"%14.0f"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		Time
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1000000
+$$ 		REL	"Time=itotime(DATE)"
+$$ 		INV_REL	"DATE=timetoi(Time,DATE)"
+$$ 		FORMAT	"%14.2f h"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		INSTRUM
+$$ 		TEXT	" "
+$$ END
+$$ NAME		PROBHD
+$$ 		FORMAT	"%14.14s"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		PULPROG
+$$ 		TEXT	" "
+$$ END
+$$ NAME		TD
+$$ 		TEXT	" "
+$$ END
+$$ NAME		SOLVENT
+$$ 		TEXT	" "
+$$ END
+$$ NAME		NS
+$$ 		TEXT	" "
+$$ END
+$$ NAME		DS
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		SWH
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1e8
+$$ 		REL	"SWH=SW*SFO1"
+$$ 		INV_REL "SW=SWH/SFO1"
+$$ 		UNIT	"Hz"
+$$ 		FORMAT	"%14.3f Hz"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME          FIDRES
+$$                 TYPE    R32
+$$                 CLASS   ACQU
+$$                 SUBRANGE 0.0 100000
+$$                 REL     "FIDRES=2*SW*SFO1/TD"
+$$                 INV_REL "TD = nextpow(2*SW*SFO1/FIDRES)"
+$$ 		UNIT	"Hz"
+$$ 		FORMAT	"%14.6f Hz"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME          AQ
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1000
+$$ 		REL	"AQ=aqcalc(SW,SFO1,TD,DIGTYP)"
+$$ 		INV_REL	"TD=tdcalc(SW,SFO1,1.0e6*AQ,DIGTYP)"
+$$ 		UNIT	"sec"
+$$ 		FORMAT	"%14.7f sec"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		RG
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME          DW
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1000000
+$$ 		REL	"DW=1/(2*SW*SFO1)"
+$$ 		INV_REL	"SW=1000000/(2*(0.005+DW)*SFO1)"
+$$ 		UNIT	"usec"
+$$ 		FORMAT	"%14.3lf usec"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		DE
+$$ 		FORMAT	"%14.2f usec"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		TE
+$$ 		FORMAT	"%14.1f K"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		D1
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1e38
+$$ 		REL	"D1=D[1]"
+$$ 		INV_REL	"D[1]=D1"
+$$ 		UNIT	"sec"
+$$ 		FORMAT	"%14.8f sec"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		D16
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1e38
+$$ 		REL	"D16=D[16]"
+$$ 		INV_REL	"D[16]=D16"
+$$ 		UNIT	"sec"
+$$ 		FORMAT	"%14.8f sec"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		D20
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1e38
+$$ 		REL	"D20=D[20]"
+$$ 		INV_REL	"D[20]=D20"
+$$ 		UNIT	"sec"
+$$ 		FORMAT	"%14.8f sec"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		D21
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1e38
+$$ 		REL	"D21=D[21]"
+$$ 		INV_REL	"D[21]=D21"
+$$ 		UNIT	"sec"
+$$ 		FORMAT	"%14.8f sec"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		TD0
+$$ 		TEXT	" "
+$$ END
+$$ NAME		ZGOPTNS
+$$ 		TEXT	" "
+$$ END
+$$ NAME		SFO1
+$$ 		FORMAT	"%14.7f MHz"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		NUC1
+$$ 		NONEDIT
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		P1
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1.0e10
+$$ 		REL	"P1=P[1]"
+$$ 		INV_REL	"P[1]=P1"
+$$ 		UNIT	"usec"
+$$ 		FORMAT	"%14.2f usec"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		P2
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1.0e10
+$$ 		REL	"P2=P[2]"
+$$ 		INV_REL	"P[2]=P2"
+$$ 		UNIT	"usec"
+$$ 		FORMAT	"%14.2f usec"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		PLW1
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		REL	"PLW1=PLW[1]"
+$$ 		INV_REL	"PLW[1]=PLW1"
+$$ 		UNIT	"W"
+$$ 		FORMAT	"%14.8f W"
+$$ 		TEXT	"power PLW1 "
+$$ END
+$$ NAME		GPNAM[6]
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		GPZ6
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE -100.0 100.0
+$$ 		REL	"GPZ6=GPZ[6]"
+$$ 		INV_REL	"GPZ[6]=GPZ6"
+$$ 		UNIT	"%"
+$$ 		FORMAT	"%14.2f %"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		GPNAM[7]
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		GPZ7
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE -100.0 100.0
+$$ 		REL	"GPZ7=GPZ[7]"
+$$ 		INV_REL	"GPZ[7]=GPZ7"
+$$ 		UNIT	"%"
+$$ 		FORMAT	"%14.2f %"
+$$ 		TEXT	" "
+$$ END
+$$ NAME		GPNAM[8]
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		GPZ8
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE -100.0 100.0
+$$ 		REL	"GPZ8=GPZ[8]"
+$$ 		INV_REL	"GPZ[8]=GPZ8"
+$$ 		UNIT	"%"
+$$ 		FORMAT	"%14.2f %"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		P19
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1.0e10
+$$ 		REL	"P19=P[19]"
+$$ 		INV_REL	"P[19]=P19"
+$$ 		UNIT	"usec"
+$$ 		FORMAT	"%14.2f usec"
+$$ 		TEXT	" "
+$$ END
+$$ T_NAME		P30
+$$ 		TYPE	R32
+$$ 		CLASS	ACQU
+$$ 		SUBRANGE 0.0 1.0e10
+$$ 		REL	"P30=P[30]"
+$$ 		INV_REL	"P[30]=P30"
+$$ 		UNIT	"usec"
+$$ 		FORMAT	"%14.2f usec"
+$$ 		TEXT	" "
+$$ END
+##$RELAX= 
+##$BRUKER FILE EXP=fq1list
+$$ O 400.082000
+$$ -4500000
+$$ -4472656
+$$ -4445312
+$$ -4417969
+$$ -4390625
+$$ -4363281
+$$ -4335938
+$$ -4308594
+$$ -4281250
+$$ -4253906
+$$ -4226562
+$$ -4199219
+$$ -4171875
+$$ -4144531
+$$ -4117188
+$$ -4089844
+$$ -4062500
+$$ -4035156
+$$ -4007812
+$$ -3980469
+$$ -3953125
+$$ -3925781
+$$ -3898438
+$$ -3871094
+$$ -3843750
+$$ -3816406
+$$ -3789062
+$$ -3761719
+$$ -3734375
+$$ -3707031
+$$ -3679688
+$$ -3652344
+$$ -3625000
+$$ -3597656
+$$ -3570312
+$$ -3542969
+$$ -3515625
+$$ -3488281
+$$ -3460938
+$$ -3433594
+$$ -3406250
+$$ -3378906
+$$ -3351562
+$$ -3324219
+$$ -3296875
+$$ -3269531
+$$ -3242188
+$$ -3214844
+$$ -3187500
+$$ -3160156
+$$ -3132812
+$$ -3105469
+$$ -3078125
+$$ -3050781
+$$ -3023438
+$$ -2996094
+$$ -2968750
+$$ -2941406
+$$ -2914062
+$$ -2886719
+$$ -2859375
+$$ -2832031
+$$ -2804688
+$$ -2777344
+$$ -2750000
+$$ -2722656
+$$ -2695312
+$$ -2667969
+$$ -2640625
+$$ -2613281
+$$ -2585938
+$$ -2558594
+$$ -2531250
+$$ -2503906
+$$ -2476562
+$$ -2449219
+$$ -2421875
+$$ -2394531
+$$ -2367188
+$$ -2339844
+$$ -2312500
+$$ -2285156
+$$ -2257812
+$$ -2230469
+$$ -2203125
+$$ -2175781
+$$ -2148438
+$$ -2121094
+$$ -2093750
+$$ -2066406
+$$ -2039062
+$$ -2011719
+$$ -1984375
+$$ -1957031
+$$ -1929688
+$$ -1902344
+$$ -1875000
+$$ -1847656
+$$ -1820312
+$$ -1792969
+$$ -1765625
+$$ -1738281
+$$ -1710938
+$$ -1683594
+$$ -1656250
+$$ -1628906
+$$ -1601562
+$$ -1574219
+$$ -1546875
+$$ -1519531
+$$ -1492188
+$$ -1464844
+$$ -1437500
+$$ -1410156
+$$ -1382812
+$$ -1355469
+$$ -1328125
+$$ -1300781
+$$ -1273438
+$$ -1246094
+$$ -1218750
+$$ -1191406
+$$ -1164062
+$$ -1136719
+$$ -1109375
+$$ -1082031
+$$ -1054688
+$$ -1027344
+$$ -1000000
+$$  -992157
+$$  -984314
+$$  -976471
+$$  -968627
+$$  -960784
+$$  -952941
+$$  -945098
+$$  -937255
+$$  -929412
+$$  -921569
+$$  -913725
+$$  -905882
+$$  -898039
+$$  -890196
+$$  -882353
+$$  -874510
+$$  -866667
+$$  -858824
+$$  -850980
+$$  -843137
+$$  -835294
+$$  -827451
+$$  -819608
+$$  -811765
+$$  -803922
+$$  -796078
+$$  -788235
+$$  -780392
+$$  -772549
+$$  -764706
+$$  -756863
+$$  -749020
+$$  -741176
+$$  -733333
+$$  -725490
+$$  -717647
+$$  -709804
+$$  -701961
+$$  -694118
+$$  -686275
+$$  -678431
+$$  -670588
+$$  -662745
+$$  -654902
+$$  -647059
+$$  -639216
+$$  -631373
+$$  -623529
+$$  -615686
+$$  -607843
+$$  -600000
+$$  -592157
+$$  -584314
+$$  -576471
+$$  -568627
+$$  -560784
+$$  -552941
+$$  -545098
+$$  -537255
+$$  -529412
+$$  -521569
+$$  -513725
+$$  -505882
+$$  -498039
+$$  -490196
+$$  -482353
+$$  -474510
+$$  -466667
+$$  -458824
+$$  -450980
+$$  -443137
+$$  -435294
+$$  -427451
+$$  -419608
+$$  -411765
+$$  -403922
+$$  -396078
+$$  -388235
+$$  -380392
+$$  -372549
+$$  -364706
+$$  -356863
+$$  -349020
+$$  -341176
+$$  -333333
+$$  -325490
+$$  -317647
+$$  -309804
+$$  -301961
+$$  -294118
+$$  -286275
+$$  -278431
+$$  -270588
+$$  -262745
+$$  -254902
+$$  -247059
+$$  -239216
+$$  -231373
+$$  -223529
+$$  -215686
+$$  -207843
+$$  -200000
+$$  -192157
+$$  -184314
+$$  -176471
+$$  -168627
+$$  -160784
+$$  -152941
+$$  -145098
+$$  -137255
+$$  -129412
+$$  -121569
+$$  -113725
+$$  -105882
+$$   -98039
+$$   -90196
+$$   -82353
+$$   -74510
+$$   -66667
+$$   -58824
+$$   -50980
+$$   -43137
+$$   -35294
+$$   -27451
+$$   -19608
+$$   -11765
+$$    -3922
+$$     3922
+$$    11765
+$$    19608
+$$    27451
+$$    35294
+$$    43137
+$$    50980
+$$    58824
+$$    66667
+$$    74510
+$$    82353
+$$    90196
+$$    98039
+$$   105882
+$$   113725
+$$   121569
+$$   129412
+$$   137255
+$$   145098
+$$   152941
+$$   160784
+$$   168627
+$$   176471
+$$   184314
+$$   192157
+$$   200000
+$$   207843
+$$   215686
+$$   223529
+$$   231373
+$$   239216
+$$   247059
+$$   254902
+$$   262745
+$$   270588
+$$   278431
+$$   286275
+$$   294118
+$$   301961
+$$   309804
+$$   317647
+$$   325490
+$$   333333
+$$   341176
+$$   349020
+$$   356863
+$$   364706
+$$   372549
+$$   380392
+$$   388235
+$$   396078
+$$   403922
+$$   411765
+$$   419608
+$$   427451
+$$   435294
+$$   443137
+$$   450980
+$$   458824
+$$   466667
+$$   474510
+$$   482353
+$$   490196
+$$   498039
+$$   505882
+$$   513725
+$$   521569
+$$   529412
+$$   537255
+$$   545098
+$$   552941
+$$   560784
+$$   568627
+$$   576471
+$$   584314
+$$   592157
+$$   600000
+$$   607843
+$$   615686
+$$   623529
+$$   631373
+$$   639216
+$$   647059
+$$   654902
+$$   662745
+$$   670588
+$$   678431
+$$   686275
+$$   694118
+$$   701961
+$$   709804
+$$   717647
+$$   725490
+$$   733333
+$$   741176
+$$   749020
+$$   756863
+$$   764706
+$$   772549
+$$   780392
+$$   788235
+$$   796078
+$$   803922
+$$   811765
+$$   819608
+$$   827451
+$$   835294
+$$   843137
+$$   850980
+$$   858824
+$$   866667
+$$   874510
+$$   882353
+$$   890196
+$$   898039
+$$   905882
+$$   913725
+$$   921569
+$$   929412
+$$   937255
+$$   945098
+$$   952941
+$$   960784
+$$   968627
+$$   976471
+$$   984314
+$$   992157
+$$  1000000
+$$  1027344
+$$  1054687
+$$  1082031
+$$  1109375
+$$  1136719
+$$  1164062
+$$  1191406
+$$  1218750
+$$  1246094
+$$  1273437
+$$  1300781
+$$  1328125
+$$  1355469
+$$  1382812
+$$  1410156
+$$  1437500
+$$  1464844
+$$  1492187
+$$  1519531
+$$  1546875
+$$  1574219
+$$  1601562
+$$  1628906
+$$  1656250
+$$  1683594
+$$  1710937
+$$  1738281
+$$  1765625
+$$  1792969
+$$  1820312
+$$  1847656
+$$  1875000
+$$  1902344
+$$  1929687
+$$  1957031
+$$  1984375
+$$  2011719
+$$  2039062
+$$  2066406
+$$  2093750
+$$  2121094
+$$  2148437
+$$  2175781
+$$  2203125
+$$  2230469
+$$  2257812
+$$  2285156
+$$  2312500
+$$  2339844
+$$  2367187
+$$  2394531
+$$  2421875
+$$  2449219
+$$  2476562
+$$  2503906
+$$  2531250
+$$  2558594
+$$  2585937
+$$  2613281
+$$  2640625
+$$  2667969
+$$  2695312
+$$  2722656
+$$  2750000
+$$  2777344
+$$  2804687
+$$  2832031
+$$  2859375
+$$  2886719
+$$  2914062
+$$  2941406
+$$  2968750
+$$  2996094
+$$  3023437
+$$  3050781
+$$  3078125
+$$  3105469
+$$  3132812
+$$  3160156
+$$  3187500
+$$  3214844
+$$  3242187
+$$  3269531
+$$  3296875
+$$  3324219
+$$  3351562
+$$  3378906
+$$  3406250
+$$  3433594
+$$  3460937
+$$  3488281
+$$  3515625
+$$  3542969
+$$  3570312
+$$  3597656
+$$  3625000
+$$  3652344
+$$  3679687
+$$  3707031
+$$  3734375
+$$  3761719
+$$  3789062
+$$  3816406
+$$  3843750
+$$  3871094
+$$  3898437
+$$  3925781
+$$  3953125
+$$  3980469
+$$  4007812
+$$  4035156
+$$  4062500
+$$  4089844
+$$  4117187
+$$  4144531
+$$  4171875
+$$  4199219
+$$  4226562
+$$  4253906
+$$  4281250
+$$  4308594
+$$  4335937
+$$  4363281
+$$  4390625
+$$  4417969
+$$  4445312
+$$  4472656
+$$  4500000
+##$RELAX= 
+##$BRUKER FILE EXP=gpnam6
+$$ ##TITLE= SmoothedChirp Amplitide
+$$ ##JCAMP-DX= 5.00 Bruker JCAMP library
+$$ ##DATA TYPE= Shape Data
+$$ ##ORIGIN= Bruker BioSpin GmbH
+$$ ##OWNER= <demo>
+$$ ##DATE= 2004/09/06
+$$ ##TIME= 16:28:02
+$$ ##$SHAPE_PARAMETERS= Type: SmoothedSquare
+$$ ##MINX= 0.000000E00
+$$ ##MAXX= 1.000000E02
+$$ ##MINY= 0.000000E00
+$$ ##MAXY= 1.000000E00
+$$ ##$SHAPE_EXMODE= Gradient
+$$ ##$SHAPE_TOTROT= 0.000000E00
+$$ ##$SHAPE_TYPE= None
+$$ ##$SHAPE_USER_DEF= 
+$$ ##$SHAPE_REPHFAC= 
+$$ ##$SHAPE_BWFAC= 0.000000E00
+$$ ##$SHAPE_BWFAC50= 
+$$ ##$SHAPE_INTEGFAC= 9.000000E-01
+$$ ##$SHAPE_MODE= 0
+$$ ##NPOINTS= 100
+$$ ##XYDATA= (X++(Y..Y))
+$$ 0.000000E00
+$$ 3.015369E-02
+$$ 1.169778E-01
+$$ 2.500000E-01
+$$ 4.131759E-01
+$$ 5.868241E-01
+$$ 7.500000E-01
+$$ 8.830222E-01
+$$ 9.698463E-01
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 9.698463E-01
+$$ 8.830222E-01
+$$ 7.500000E-01
+$$ 5.868241E-01
+$$ 4.131759E-01
+$$ 2.500000E-01
+$$ 1.169778E-01
+$$ 3.015369E-02
+$$ 0.000000E00
+$$ ##END
+##$RELAX= 
+##$BRUKER FILE EXP=gpnam7
+$$ ##TITLE= SmoothedChirp Amplitide
+$$ ##JCAMP-DX= 5.00 Bruker JCAMP library
+$$ ##DATA TYPE= Shape Data
+$$ ##ORIGIN= Bruker BioSpin GmbH
+$$ ##OWNER= <demo>
+$$ ##DATE= 2004/09/06
+$$ ##TIME= 16:28:02
+$$ ##$SHAPE_PARAMETERS= Type: SmoothedSquare
+$$ ##MINX= 0.000000E00
+$$ ##MAXX= 1.000000E02
+$$ ##MINY= 0.000000E00
+$$ ##MAXY= 1.000000E00
+$$ ##$SHAPE_EXMODE= Gradient
+$$ ##$SHAPE_TOTROT= 0.000000E00
+$$ ##$SHAPE_TYPE= None
+$$ ##$SHAPE_USER_DEF= 
+$$ ##$SHAPE_REPHFAC= 
+$$ ##$SHAPE_BWFAC= 0.000000E00
+$$ ##$SHAPE_BWFAC50= 
+$$ ##$SHAPE_INTEGFAC= 9.000000E-01
+$$ ##$SHAPE_MODE= 0
+$$ ##NPOINTS= 100
+$$ ##XYDATA= (X++(Y..Y))
+$$ 0.000000E00
+$$ 3.015369E-02
+$$ 1.169778E-01
+$$ 2.500000E-01
+$$ 4.131759E-01
+$$ 5.868241E-01
+$$ 7.500000E-01
+$$ 8.830222E-01
+$$ 9.698463E-01
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 9.698463E-01
+$$ 8.830222E-01
+$$ 7.500000E-01
+$$ 5.868241E-01
+$$ 4.131759E-01
+$$ 2.500000E-01
+$$ 1.169778E-01
+$$ 3.015369E-02
+$$ 0.000000E00
+$$ ##END
+##$RELAX= 
+##$BRUKER FILE EXP=gpnam8
+$$ ##TITLE= SmoothedChirp Amplitide
+$$ ##JCAMP-DX= 5.00 Bruker JCAMP library
+$$ ##DATA TYPE= Shape Data
+$$ ##ORIGIN= Bruker BioSpin GmbH
+$$ ##OWNER= <demo>
+$$ ##DATE= 2004/09/06
+$$ ##TIME= 16:28:02
+$$ ##$SHAPE_PARAMETERS= Type: SmoothedSquare
+$$ ##MINX= 0.000000E00
+$$ ##MAXX= 1.000000E02
+$$ ##MINY= 0.000000E00
+$$ ##MAXY= 1.000000E00
+$$ ##$SHAPE_EXMODE= Gradient
+$$ ##$SHAPE_TOTROT= 0.000000E00
+$$ ##$SHAPE_TYPE= None
+$$ ##$SHAPE_USER_DEF= 
+$$ ##$SHAPE_REPHFAC= 
+$$ ##$SHAPE_BWFAC= 0.000000E00
+$$ ##$SHAPE_BWFAC50= 
+$$ ##$SHAPE_INTEGFAC= 9.000000E-01
+$$ ##$SHAPE_MODE= 0
+$$ ##NPOINTS= 100
+$$ ##XYDATA= (X++(Y..Y))
+$$ 0.000000E00
+$$ 3.015369E-02
+$$ 1.169778E-01
+$$ 2.500000E-01
+$$ 4.131759E-01
+$$ 5.868241E-01
+$$ 7.500000E-01
+$$ 8.830222E-01
+$$ 9.698463E-01
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 1.000000E00
+$$ 9.698463E-01
+$$ 8.830222E-01
+$$ 7.500000E-01
+$$ 5.868241E-01
+$$ 4.131759E-01
+$$ 2.500000E-01
+$$ 1.169778E-01
+$$ 3.015369E-02
+$$ 0.000000E00
+$$ ##END
+##$RELAX= 
+##$BRUKER FILE EXP=scon2
+$$ ##TITLE= Parameter file, TopSpin 3.7.0
+$$ ##JCAMPDX= 5.0
+$$ ##DATATYPE= Parameter Values
+$$ ##NPOINTS= 1	$$ modification sequence number
+$$ ##ORIGIN= Bruker BioSpin GmbH
+$$ ##OWNER= nmrsu
+$$ $$ 2024-11-21 07:41:58.141 +0100  nmrsu@nmrf492l
+$$ $$ /opt/data/lrisse/nmr/2f955d352529_reference_119-36-8/16/scon2
+$$ $$ process /opt/topspin3.7.0/prog/mod/go4
+$$ ##$BLKTR= (0..19)
+$$ 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+$$ ##$DE1= 4.5
+$$ ##$DEADC= 0.5
+$$ ##$DEPA= 4.5
+$$ ##$DERX= 1.5
+$$ ##$FILCOR= 0
+$$ ##$GRADCHAN= 0
+$$ ##$GRADPRE= (0..1)
+$$ 10 10
+$$ ##$HD_BLKTR= (0..19)
+$$ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+$$ ##$HD_DE1= 5
+$$ ##$HD_DEADC= 0
+$$ ##$HD_DEPA= 2.5
+$$ ##$HD_DERX= 0
+$$ ##END=
+##$RELAX= 
+##$BRUKER FILE EXP=prosol_History
+##$RELAX= 
+##$BRUKER FILE EXP=pulseprogram
+$$ # 1 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$ # 1 "<built-in>"
+$$ # 1 "<command-line>"
+$$ # 1 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$ ;ledbpgp2s1d
+$$ ;avance-version (16/09/23)
+$$ ;1D sequence for diffusion measurement using stimulated 
+$$ ;   echo and LED
+$$ ;using bipolar gradient pulses for diffusion
+$$ ;using 2 spoil gradients
+$$ ;
+$$ ;D. Wu, A. Chen & C.S. Johnson Jr., 
+$$ ;   J. Magn. Reson. A 115, 260-264 (1995).
+$$ ;
+$$ ;$CLASS=HighRes
+$$ ;$DIM=1D
+$$ ;$TYPE=
+$$ ;$SUBTYPE=
+$$ ;$COMMENT=
+$$ 
+$$ 
+$$ # 1 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/Avance.incl" 1
+$$ ;Avance3aqs.incl
+$$ ;   for AV III with AQS IPSO
+$$ ;
+$$ ;avance-version (15/06/05)
+$$ ;
+$$ ;$CLASS=HighRes Incl
+$$ ;$COMMENT=
+$$ 
+$$ 
+$$ # 170 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/Avance.incl"
+$$ ;$Id: Avance3aqs.incl,v 1.1.8.3 2015/03/05 16:46:54 ber Exp $
+$$ # 19 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d" 2
+$$ 
+$$ # 1 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/Grad.incl" 1
+$$ ;Grad2.incl  -  include file for Gradient Spectroscopy
+$$ ;   for TCU3
+$$ ;
+$$ ;avance-version (07/01/17)
+$$ ;
+$$ ;$CLASS=HighRes Incl
+$$ ;$COMMENT=
+$$ 
+$$ # 27 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/Grad.incl"
+$$ define list<gradient> EA=<EA>
+$$ 
+$$ 
+$$ # 31 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/Grad.incl"
+$$ ;$Id: Grad2.incl,v 1.14 2012/01/31 17:49:21 ber Exp $
+$$ # 20 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d" 2
+$$ 
+$$ # 1 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/Delay.incl" 1
+$$ ;Delay.incl  -  include file for commonly used delays
+$$ ;
+$$ ;version (13/08/07)
+$$ ;
+$$ ;$CLASS=HighRes Incl
+$$ ;$COMMENT=
+$$ 
+$$ # 9 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/Delay.incl"
+$$ ;general delays
+$$ 
+$$ define delay DELTA
+$$ define delay DELTA1
+$$ define delay DELTA2
+$$ define delay DELTA3
+$$ define delay DELTA4
+$$ define delay DELTA5
+$$ define delay DELTA6
+$$ define delay DELTA7
+$$ define delay DELTA8
+$$ define delay DELTA9
+$$ define delay DELTA10
+$$ define delay DELTA11
+$$ define delay DELTA12
+$$ define delay DELTA13
+$$ define delay DELTA14
+$$ define delay DELTA15
+$$ define delay DELTA16
+$$ 
+$$ define delay TAU
+$$ define delay TAU1
+$$ define delay TAU2
+$$ define delay TAU3
+$$ define delay TAU4
+$$ define delay TAU5
+$$ define delay TAU6
+$$ define delay TAU7
+$$ define delay TAU8
+$$ define delay TAU9
+$$ # 40 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/Delay.incl"
+$$ define delay INCR1
+$$ define delay INCR2
+$$ define delay INCR3
+$$ define delay INCR4
+$$ define delay INCR5
+$$ define delay INCR6
+$$ 
+$$ 
+$$ ;delays for centering pulses
+$$ # 50 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/Delay.incl"
+$$ define delay CEN_HN1
+$$ define delay CEN_HN2
+$$ define delay CEN_HN3
+$$ define delay CEN_HC1
+$$ define delay CEN_HC2
+$$ define delay CEN_HC3
+$$ define delay CEN_HC4
+$$ define delay CEN_HP1
+$$ define delay CEN_HP2
+$$ define delay CEN_CN1
+$$ define delay CEN_CN2
+$$ define delay CEN_CN3
+$$ define delay CEN_CN4
+$$ define delay CEN_CP1
+$$ define delay CEN_CP2
+$$ 
+$$ 
+$$ ;loop counters
+$$ # 69 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/Delay.incl"
+$$ define loopcounter COUNTER
+$$ define loopcounter SCALEF
+$$ define loopcounter FACTOR1
+$$ define loopcounter FACTOR2
+$$ define loopcounter FACTOR3
+$$ define loopcounter FACTOR4
+$$ define loopcounter FACTOR5
+$$ define loopcounter FACTOR6
+$$ 
+$$ 
+$$ # 80 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/Delay.incl"
+$$ ;$Id: Delay.incl,v 1.14.2.1 2013/08/30 09:43:33 ber Exp $
+$$ # 21 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d" 2
+$$ 
+$$ 
+$$ "p2=p1*2"
+$$ # 26 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$ "DELTA1=d20-p1*2-p2-p30*2-d16*2-p19-d16"
+$$ "DELTA2=d21-p19-d16-4u"
+$$ 
+$$ 
+$$ "acqt0=-p1*2/3.1416"
+$$ # 1 "mc_line 33 file /opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d exp. def. part of mc cmd. before ze"
+$$ ; dimension 1D; AQ_mode 
+$$ define delay MCWRK
+$$ define delay MCREST
+$$ "MCREST = 30m - 30m"
+$$ "MCWRK = 0.333333*30m"
+$$ 
+$$     dccorr
+$$ # 33 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$ # 33 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$ 1 ze
+$$ # 1 "mc_line 33 file /opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d exp. def. of mc cmd. after ze"
+$$ # 34 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$ # 1 "mc_line 34 file /opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d exp. start label for mc cmd."
+$$ 2 MCWRK  * 2
+$$ LBLF0, MCWRK
+$$   MCREST
+$$ # 35 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$ 
+$$ 
+$$ # 39 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$   4u
+$$ 
+$$ 
+$$   d1 
+$$   50u setnmr3|0 setnmr0|34|32|33 ctrlgrad 0
+$$   p1 ph1
+$$   p30:gp6
+$$   d16
+$$   p2 ph1
+$$   p30:gp6*-1
+$$   d16
+$$   p1 ph2
+$$   p19:gp7
+$$   d16
+$$   DELTA1
+$$   p1 ph3
+$$   p30:gp6
+$$   d16
+$$   p2 ph1
+$$   p30:gp6*-1
+$$   d16
+$$   p1 ph4
+$$   p19:gp8
+$$   d16
+$$   DELTA2
+$$ # 68 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$   4u setnmr3^0 setnmr0^34^32^33 ctrlgrad 7
+$$ 
+$$ 
+$$   p1 ph5
+$$   go=2 ph31
+$$ # 1 "mc_line 73 file /opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d exp. mc cmd. in line"
+$$   MCWRK wr #0
+$$   MCWRK zd
+$$   lo to LBLF0 times td0
+$$ 
+$$ # 74 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$ # 78 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$   4u
+$$ 
+$$ 
+$$ exit
+$$ # 84 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$ ph1= 0
+$$ ph2= 0 0 2 2
+$$ ph3= 0 0 0 0 2 2 2 2  1 1 1 1 3 3 3 3
+$$ ph4= 0 2 0 2 2 0 2 0  1 3 1 3 3 1 3 1
+$$ ph5= 0 0 0 0 2 2 2 2  1 1 1 1 3 3 3 3
+$$ ph31=0 2 2 0 2 0 0 2  3 1 1 3 1 3 3 1
+$$ 
+$$ 
+$$ ;pl1 : f1 channel - power level for pulse (default)
+$$ ;p1  : f1 channel -  90 degree high power pulse
+$$ ;p2  : f1 channel - 180 degree high power pulse
+$$ ;p19: gradient pulse 2 (spoil gradient)
+$$ ;p30: gradient pulse (little DELTA * 0.5)
+$$ ;d1  : relaxation delay; 1-5 * T1
+$$ ;d16: delay for gradient recovery
+$$ ;d20: diffusion time (big DELTA)
+$$ ;d21: eddy current delay (Te)			[5 ms]
+$$ ;ns: 8 * n, total number of scans: NS * TD0
+$$ ;ds: 4 * m
+$$ ;zgoptns: -DFLAG_BLK
+$$ # 106 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$ ;use gradient ratio:    gp 6 : gp 7   : gp 8
+$$ ;                       var  : -17.13 : -13.17
+$$ 
+$$ ;for z-only gradients:
+$$ ;gpz6: 1-100%
+$$ ;gpz7: -17.13% (spoil)
+$$ ;gpz8: -13.17% (spoil)
+$$ 
+$$ ;use gradient files:   
+$$ ;gpnam6: SMSQ10.100
+$$ ;gpnam7: SMSQ10.100
+$$ ;gpnam8: SMSQ10.100
+$$ # 121 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$                                           ;preprocessor-flags-start
+$$ ;FLAG_BLK: for setnmr3^0 setnmr0^34^32^33 ctrlgrad 7 before d1 rather than go
+$$ ;             option -DFLAG_BLK (eda: ZGOPTNS)
+$$                                           ;preprocessor-flags-end
+$$ 
+$$ 
+$$ # 128 "/opt/topspin3.7.0/exp/stan/nmr/lists/pp/ledbpgp2s1d"
+$$ ;$Id: ledbpgp2s1d,v 1.8.2.1 2016/09/26 13:08:26 ber Exp $
+##$RELAX= 
+##$BRUKER FILE EXP=shimvalues
+$$ # Thu Nov 21 07:43:42 2024
+$$ #$$PROBEIDENTIFIER=Z108618_0487
+$$ #$$PROBENAME=PA BBO 400S1 BBF-H-D-05 Z PLUS
+$$ #$$SHIMID=313232
+$$ #
+$$ # Active Shim Gradients
+$$ #
+$$ Z           		6858            
+$$ Z2          		-411            
+$$ Z3          		284             
+$$ Z4          		-7781           
+$$ Z5          		3911            
+$$ Z6          		7634            
+$$ X           		11858           
+$$ XZ          		-12138          
+$$ XZ2         		7388            
+$$ XZ3         		2840            
+$$ Y           		-5698           
+$$ YZ          		3130            
+$$ YZ2         		-4958           
+$$ YZ3         		456             
+$$ XY          		-5210           
+$$ XYZ         		-4407           
+$$ (X2-Y2)     		-2390           
+$$ (X2-Y2)Z    		-3398           
+$$ X3          		5095            
+$$ Y3          		-3269           
+$$ #
+$$ # Lock Parameter
+$$ #
+$$ FIELD		5774.652
+$$ LOCKPHASE		264.210 
+$$ LOCKPOWER		-30.000 
+$$ LOCKGAIN		130.091 
+$$ LOCKDC		-75.000 
+$$ LOCKSHIFT		7.240   
+$$ LOOPGAIN		-12.000 
+$$ LOOPTIME		0.400   
+$$ LOOPFILTER		100.000 
+$$ #
+$$ IEEE64_VERSION_CODE 1
+$$ #
+$$ # Shim currents 
+$$ #
+$$ SHIM_SETTING [1 ]  3326.31254199   
+$$ SHIM_SETTING [2 ]  -203.58214027   
+$$ SHIM_SETTING [3 ]  149.48955045    
+$$ SHIM_SETTING [4 ]  -4092.68669794  
+$$ SHIM_SETTING [5 ]  2057.02112608   
+$$ SHIM_SETTING [6 ]  6237.06399990   
+$$ SHIM_SETTING [7 ]  -6384.51299989  
+$$ SHIM_SETTING [8 ]  3886.21899993   
+$$ SHIM_SETTING [9 ]  -1257.06399998  
+$$ SHIM_SETTING [10]  -2740.63099995  
+$$ SHIM_SETTING [11]  -2996.90199995  
+$$ SHIM_SETTING [12]  1646.37199997   
+$$ SHIM_SETTING [13]  -2607.72099996  
+$$ SHIM_SETTING [14]  239.85800000    
+$$ SHIM_SETTING [15]  4015.29399993   
+$$ SHIM_SETTING [16]  -1787.46099997  
+$$ SHIM_SETTING [17]  1493.87899997   
+$$ SHIM_SETTING [18]  -2318.06199996  
+$$ SHIM_SETTING [19]  2679.98399995   
+$$ SHIM_SETTING [20]  -1719.27999997  
+##$RELAX= 
+##$BRUKER FILE EXP=uxnmr.par
+$$ ##TITLE= Parameter file, TopSpin 3.7.0
+$$ ##JCAMPDX= 5.0
+$$ ##DATATYPE= Parameter Values
+$$ ##NPOINTS= 128	$$ modification sequence number
+$$ ##ORIGIN= Bruker BioSpin GmbH
+$$ ##OWNER= nmrsu
+$$ $$ 2024-08-07 13:09:16.847 +0200  nmrsu@nmrf492l
+$$ $$ /opt/topspin3.7.0/conf/instr/spect/uxnmr.par
+$$ $$ process /opt/topspin3.7.0/prog/mod/cfserverav3
+$$ ##$ACB= 0
+$$ ##$ACBTAT= (0..23)
+$$ 0 66 66 50 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTBA= (0..23)
+$$ 0 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTBLK= (0..23)
+$$ 0 1 1 35 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTCTL= (0..23)
+$$ 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTDI= (0..23)
+$$ 0 102 102 -1779670252 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTDM= (0..23)
+$$ 0 10 10 10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTFHI= (0..23)
+$$ 0 400 400 62 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTFL= (0..23)
+$$ 0 73 74 8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTFLO= (0..23)
+$$ 0 9 9 60 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTINP= (0..23)
+$$ 0 1 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTOUT= (0..23)
+$$ 0 1 2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTPO= (0..23)
+$$ 0 150000 60000 5000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTPW= (0..23)
+$$ 0 10 10 1000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTSB= (0..23)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTSDT= (0..23)
+$$ 0 -1 -1 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ACBTY= <no>
+$$ ##$AMPDFLT= no
+$$ ##$AQSBDCH= (0..95)
+$$ 0 0 0 0 0 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255
+$$ ##$AQSBDHW= (0..95)
+$$ 4 1 8 8 0 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255
+$$ ##$AQSBDID= (0..95)
+$$ 82 88 83 83 65 80 66 66 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255
+$$ ##$AQSBDNO= (0..95)
+$$ 1 1 1 2 1 1 1 1 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255
+$$ ##$AQSBDSL= (0..95)
+$$ 2 3 4 5 9 21 255 1 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255
+$$ ##$AQSBDTY= (0..95)
+$$ 114 2 17 17 5 207 209 7 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255
+$$ ##$AQSBUAD= (0..95)
+$$ 16 52 36 37 54 33 32 32 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255
+$$ ##$AQSECL= (0..95)
+$$ 5 5 2 2 9 1 3 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255
+$$ ##$AQSECLS= (0..95)
+$$ 1 3 7 7 0 0 2 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255
+$$ 255 255
+$$ ##$AQSETH1= <no>
+$$ ##$AQSETH2= <no>
+$$ ##$AQSSPLT= no
+$$ ##$ATT19F= (0..1)
+$$ 0 0
+$$ ##$ATT1H= (0..1)
+$$ 0 0
+$$ ##$ATT3H= (0..1)
+$$ 0 0
+$$ ##$ATTX= (0..1)
+$$ 0 0
+$$ ##$ATTY= (0..1)
+$$ 0 0
+$$ ##$ATTZ= (0..1)
+$$ 0 0
+$$ ##$BACSAIR= yes
+$$ ##$BACSCAP= 60
+$$ ##$BACSDEL= 5
+$$ ##$BACSFCM= no
+$$ ##$BACSOPT= <>
+$$ ##$BACSTY= <tty01>
+$$ ##$BARPTY= <no>
+$$ ##$BFREQ= 400.08
+$$ ##$BGAETH= (0..9)
+$$ <no> <no> <no> <no> <no> <no> <no> <no> <no> <no>
+$$ ##$BIRDS= yes
+$$ ##$BMPC= 0
+$$ ##$BMPCTY= <no>
+$$ ##$BPSUTY= <no>
+$$ ##$BSMS= 2
+$$ ##$BSMS19FLock= no
+$$ ##$BSMSETH= <149.236.99.20>
+$$ ##$BSMSTY= <no>
+$$ ##$BgaChFac2= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$BgaChMap= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$BgaChMaxv= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$BgaChRouting= (0..63)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$BgaChShimMap= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$BgaChShimMaxv= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$Bla01Eth= <no>
+$$ ##$Bla01Nam= <BLA2BB 150/60 20-400>
+$$ ##$Bla01PN= <W1345049>
+$$ ##$Bla01SN= <2860>
+$$ ##$Bla02Eth= <149.236.99.20>
+$$ ##$Bla02Nam= <BSMS/2 LOCK TRANSCEIVER 400>
+$$ ##$Bla02PN= <Z109888>
+$$ ##$Bla02SN= <00673>
+$$ ##$Bla03Eth= <no>
+$$ ##$Bla03Nam= <>
+$$ ##$Bla03PN= <>
+$$ ##$Bla03SN= <>
+$$ ##$Bla04Eth= <no>
+$$ ##$Bla04Nam= <>
+$$ ##$Bla04PN= <>
+$$ ##$Bla04SN= <>
+$$ ##$Bla05Eth= <no>
+$$ ##$Bla05Nam= <>
+$$ ##$Bla05PN= <>
+$$ ##$Bla05SN= <>
+$$ ##$Bla06Eth= <no>
+$$ ##$Bla06Nam= <>
+$$ ##$Bla06PN= <>
+$$ ##$Bla06SN= <>
+$$ ##$Bla07Eth= <no>
+$$ ##$Bla07Nam= <>
+$$ ##$Bla07PN= <>
+$$ ##$Bla07SN= <>
+$$ ##$Bla08Eth= <no>
+$$ ##$Bla08Nam= <>
+$$ ##$Bla08PN= <>
+$$ ##$Bla08SN= <>
+$$ ##$BlaEth= (0..9)
+$$ <no> <149.236.99.20> <no> <no> <no> <no> <no> <no> <> <>
+$$ ##$BlaNam= (0..9)
+$$ <BLA2BB 150/60 20-400> <BSMS/2 LOCK TRANSCEIVER 400> <> <> <> <> <> <>
+$$ <> <>
+$$ ##$BlaPN= (0..9)
+$$ <W1345049> <Z109888> <> <> <> <> <> <> <> <>
+$$ ##$BlaSN= (0..9)
+$$ <2860> <00673> <> <> <> <> <> <> <> <>
+$$ ##$BsmsAuxEth= <no>
+$$ ##$CFASMOD= (0..7)
+$$ 1 1 1 1 1 1 1 1
+$$ ##$CFASMUL= (0..7)
+$$ 1 1 1 1 1 1 1 1
+$$ ##$CNFTXDR= (0..7)
+$$ 6 6 0 0 0 0 0 0
+$$ ##$COMDIG2= 0
+$$ ##$CPDBTY= <no>
+$$ ##$CRCOTY= <no>
+$$ ##$CSW1= (0..31)
+$$ 1 1 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$CSW2= (0..31)
+$$ 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$CSWNUM= (0..7)
+$$ 2 1 0 0 0 0 0 0
+$$ ##$ConsolePnSn= <>
+$$ ##$CryoCoolUnitEth= <no>
+$$ ##$CryoProAccPnSn= <>
+$$ ##$Ctb1Eth= <no>
+$$ ##$CubeEth= (0..7)
+$$ <no> <no> <no> <no> <no> <no> <no> <no>
+$$ ##$CustRegisterNo= <>
+$$ ##$DATSTAT= no
+$$ ##$DIGI140= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGIB12= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGIB16= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGIFA= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGIFOURIER= 0
+$$ ##$DIGIHA= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGIHAF= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGIHRD= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGIIA= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGIO16= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGISA= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGISAF= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGISL= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGITYI= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGITYP= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$DIGITZ= 0
+$$ ##$DPPFAC= 1
+$$ ##$DRMSETH= <no>
+$$ ##$DRU= yes
+$$ ##$DRUETH= (0..33)
+$$ <no> <149.236.99.89> <no> <no> <no> <no> <no> <no> <no> <no> <no> <no>
+$$ <no> <no> <no> <no> <no> <no> <no> <no> <no> <no> <no> <no> <no> <no> <no>
+$$ <no> <no> <no> <no> <no> <no> <>
+$$ ##$Description= <Avance III 400>
+$$ ##$DppType= 0
+$$ ##$FCUMEM= (0..7)
+$$ 16777208 16777208 0 0 0 0 0 0
+$$ ##$FCUPAL= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$FGSVTY= <no>
+$$ ##$FQMIX= 0
+$$ ##$FUNCMOD= <>
+$$ ##$FourPeriBdEth= <no>
+$$ ##$FourShimBdEth= <no>
+$$ ##$FourierPicsCon= no
+$$ ##$GCUTYPE= 10
+$$ ##$GCUTYPE2= 0
+$$ ##$GPREDEL= 0
+$$ ##$GPSCUTY= <no>
+$$ ##$GRADRES= 5
+$$ ##$GTUTY= <no>
+$$ ##$GcConn= (0..1)
+$$ 1 0
+$$ ##$GradAmpGain= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$GradAmpMaxCurX= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$GradAmpMaxCurY= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$GradAmpMaxCurZ= (0..7)
+$$ 9.99999904632568 0 0 0 0 0 0 0
+$$ ##$GradAmpName= (0..7)
+$$ <GAB in BSMS> <> <> <> <> <> <> <>
+$$ ##$GradAmpPN= (0..7)
+$$ <> <> <> <> <> <> <> <>
+$$ ##$GradAmpSN= (0..7)
+$$ <> <> <> <> <> <> <> <>
+$$ ##$GradAmpType= (0..7)
+$$ 2 0 0 0 0 0 0 0
+$$ ##$GradPowClkCtrl= 0
+$$ ##$GradPowClkTime= 0
+$$ ##$GradPowImax= 0
+$$ ##$GradPowType= 0
+$$ ##$GradPowVmax= 0
+$$ ##$HDIETH= (0..5)
+$$ <> <no> <no> <no> <no> <>
+$$ ##$HFAC= 3
+$$ ##$HPCU= 0
+$$ ##$HPCUTY= <no>
+$$ ##$HPTXLP= (0..3)
+$$ -1 -1 -1 -1
+$$ ##$HPTXPI= (0..3)
+$$ 0 0 0 0
+$$ ##$HPTXPO= (0..3)
+$$ 0 0 0 0
+$$ ##$HPTXTY= (0..3)
+$$ 0 0 0 0
+$$ ##$HpprCoverType= 1
+$$ ##$IF451= 0
+$$ ##$IFREQ= 1
+$$ ##$INJPTY= <no>
+$$ ##$INTFPR= 0
+$$ ##$IPSOETH= <149.236.99.11>
+$$ ##$IPSOTYPE= 2
+$$ ##$LDUETH= <no>
+$$ ##$LOCKCONF= <DLM>
+$$ ##$LOCKTY= <no>
+$$ ##$LOCSWID= 0
+$$ ##$LOCSWIF= 0
+$$ ##$LVDSSPLITETH= (0..5)
+$$ <> <no> <no> <no> <no> <>
+$$ ##$Location= <EPFL>
+$$ ##$LtMasEth= <no>
+$$ ##$LtMasType= 0
+$$ ##$M2FAC= 0
+$$ ##$MAS= 0
+$$ ##$MASETIME= 10
+$$ ##$MASITIME= 10
+$$ ##$MASTY= <no>
+$$ ##$MAS_CT= 5
+$$ ##$MAS_SG= 0
+$$ ##$MAS_TO= 0
+$$ ##$MEMPRM= 0
+$$ ##$MHFAC= 0
+$$ ##$MXFAC= 0
+$$ ##$MagnCoilPnSn= <>
+$$ ##$MagnDewarPnSn= <>
+$$ ##$MasEth= <no>
+$$ ##$NAMPD= (0..17)
+$$ <> <1H/2H 1H> <1H/2H 2H> <XBB19F 2HS> <> <> <> <> <> <> <> <> <> <> <>
+$$ <> <> <>
+$$ ##$NFCU= 2
+$$ ##$NFRED= 0
+$$ ##$NMRCH= 2
+$$ ##$NMRMEM= 16384
+$$ ##$NPSGU= 0
+$$ ##$NRCU= 1
+$$ ##$NROUT= 1
+$$ ##$NSGU= 2
+$$ ##$OrderNo= <10054375>
+$$ ##$PAMPF1= (0..15)
+$$ 75 24 96 64 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PAMPF2= (0..15)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PAMPF3= (0..15)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PAMPF4= (0..15)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PAMPF5= (0..15)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PAMPF6= (0..15)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PAMPF7= (0..15)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PAMPF8= (0..15)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PH4= 0
+$$ ##$PHF4TY= <no>
+$$ ##$POWCHK= yes
+$$ ##$PRAMD1= (0..7)
+$$ 2 0 0 536870912 0 0 0 0
+$$ ##$PRAMD10= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD11= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD12= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD13= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD14= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD15= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD16= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD17= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD18= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD19= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD2= (0..7)
+$$ 0 1048576 0 536870912 0 1048576 0 536870912
+$$ ##$PRAMD20= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD21= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD3= (0..7)
+$$ 2147483644 2131230719 2147483647 603979775 0 0 0 0
+$$ ##$PRAMD4= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD5= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD6= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD7= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD8= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMD9= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PRAMLED= (0..1)
+$$ 15 15
+$$ ##$PRAMP= (0..9)
+$$ <> <tty10> <no> <no> <no> <no> <no> <no> <no> <>
+$$ ##$PRAMPTP= 1
+$$ ##$PREEMPTYPE= 0
+$$ ##$PREPTY= <no>
+$$ ##$PREREC= (0..15)
+$$ 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PRESHLD= 0
+$$ ##$PTS160= -1
+$$ ##$PTSA2X= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PTSF2X= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$PTSFMX= (0..19)
+$$ 429.9 429.9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PULCHK= no
+$$ ##$PerMagATempSens= no
+$$ ##$PerMagEth= <no>
+$$ ##$PerMagFluxSens= no
+$$ ##$PerMagMTempSens= no
+$$ ##$PramDutyCycPerc= (0..15)
+$$ 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PramPeakPowerW= (0..15)
+$$ 150 300 500 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PramPowerDetect= (0..15)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PramPowerSwitch= (0..15)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PramPulWidthMs= (0..15)
+$$ 0.02 0.1 0.1 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PreampMod01PN= <Z003959>
+$$ ##$PreampMod01SN= <00925>
+$$ ##$PreampMod02PN= <Z003959>
+$$ ##$PreampMod02SN= <00925>
+$$ ##$PreampMod03PN= <Z003504>
+$$ ##$PreampMod03SN= <00914>
+$$ ##$PreampMod04PN= <>
+$$ ##$PreampMod04SN= <>
+$$ ##$PreampMod05PN= <>
+$$ ##$PreampMod05SN= <>
+$$ ##$PreampMod06PN= <>
+$$ ##$PreampMod06SN= <>
+$$ ##$PreampMod07PN= <>
+$$ ##$PreampMod07SN= <>
+$$ ##$PreampMod08PN= <>
+$$ ##$PreampMod08SN= <>
+$$ ##$PreampMod09PN= <>
+$$ ##$PreampMod09SN= <>
+$$ ##$PreampMod10PN= <>
+$$ ##$PreampMod10SN= <>
+$$ ##$PreampMod11PN= <>
+$$ ##$PreampMod11SN= <>
+$$ ##$PreampMod12PN= <>
+$$ ##$PreampMod12SN= <>
+$$ ##$PreampMod13PN= <>
+$$ ##$PreampMod13SN= <>
+$$ ##$PreampMod14PN= <>
+$$ ##$PreampMod14SN= <>
+$$ ##$PreampMod15PN= <>
+$$ ##$PreampMod15SN= <>
+$$ ##$PreampMod16PN= <>
+$$ ##$PreampMod16SN= <>
+$$ ##$PreampModBisDat= (0..15)
+$$ 20081016 20081016 20081002 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$PreampModPN= (0..17)
+$$ <Z003959> <Z003959> <Z003504> <> <> <> <> <> <> <> <> <> <> <> <> <> <>
+$$ <>
+$$ ##$PreampModSN= (0..17)
+$$ <00614> <00614> <00603> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <>
+$$ ##$ProdigyEth= <no>
+$$ ##$RCUCDS= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$RCUCFS= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$RCUCSS= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$RCUI2C1= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$RCUI2C2= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$RCUI2C3= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$RCUI2C4= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$RCUI2C5= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$RCUI2C6= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$RCUI2C7= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$RCUI2C8= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$RDCU= 0
+$$ ##$RFSINPUT= (0..1)
+$$ 0 0
+$$ ##$RFSVTY= <no>
+$$ ##$RGTYPE= (0..31)
+$$ 9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$RG_max= (0..31)
+$$ 203 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1
+$$ ##$RG_min= (0..31)
+$$ 0.25 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ ##$RG_tab1= (0..255)
+$$ 0.25 0.28 0.32 0.35 0.4 0.44 0.5 0.56 0.64 0.7 0.8 0.89 1 1.12 1.28 1.4
+$$ 1.6 1.78 2 2.25 2.56 2.8 3.2 3.56 4 4.5 5 5.6 6.35 7.12 8 9 10 11.3 12.7
+$$ 14.2 16 18 20.2 22.6 25.4 28.5 32 36 40.3 45.2 50.8 57 64 71.8 80.6 90.5
+$$ 101 114 128 144 161 181 203 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ ##$RG_tab2= (0..255)
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ ##$RG_tab3= (0..255)
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ ##$RG_tab4= (0..255)
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ ##$RG_tab5= (0..255)
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ ##$RG_tab6= (0..255)
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ ##$RG_tab7= (0..255)
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ ##$RG_tab8= (0..255)
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ ##$RG_tabA= (0..255)
+$$ 0.25 0.28 0.32 0.35 0.4 0.44 0.5 0.56 0.64 0.7 0.8 0.89 1 1.12 1.28 1.4
+$$ 1.6 1.78 2 2.25 2.56 2.8 3.2 3.56 4 4.5 5 5.6 6.35 7.12 8 9 10 11.3 12.7
+$$ 14.2 16 18 20.2 22.6 25.4 28.5 32 36 40.3 45.2 50.8 57 64 71.8 80.6 90.5
+$$ 101 114 128 144 161 181 203 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+$$ ##$ROBOTTY= <no>
+$$ ##$ROUT14= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$ROUTER= 3
+$$ ##$RX22TY= <no>
+$$ ##$RXFMAX= (0..7)
+$$ 432.5 -1 -1 -1 -1 -1 -1 -1
+$$ ##$RXFMIN= (0..7)
+$$ 5 -1 -1 -1 -1 -1 -1 -1
+$$ ##$RXINTLV= (0..7)
+$$ 1 0 0 0 0 0 0 0
+$$ ##$RXMSTY= <no>
+$$ ##$RockSwitchEth= <no>
+$$ ##$SCMTY= <no>
+$$ ##$SGUC1= (0..15)
+$$ 17 18 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$SGUC2= (0..15)
+$$ 33 256 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$SLCBCONF= <SHNV>
+$$ ##$SPECTR= 10
+$$ ##$SY2FLAG= 0
+$$ ##$SYNCTRIG= 11
+$$ ##$SamChgEth= (0..3)
+$$ <149.236.99.130> <no> <no> <no>
+$$ ##$SamChgProtocol= (0..3)
+$$ <SOAP> <> <> <>
+$$ ##$ServiceNo= <>
+$$ ##$Sgu1PowerLevels= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$Sgu2PowerLevels= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$Sgu3PowerLevels= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$Sgu4PowerLevels= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$Sgu5PowerLevels= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$Sgu6PowerLevels= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$Sgu7PowerLevels= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$Sgu8PowerLevels= (0..7)
+$$ 0 0 0 0 0 0 0 0
+$$ ##$SguType= 2
+$$ ##$ShimMaxVal= 32760
+$$ ##$ShimPow1Ch2Sh= (0..38)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0
+$$ ##$ShimPow1Imax= (0..38)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0
+$$ ##$ShimPow1NChan= 0
+$$ ##$ShimPow1TotIMax= 0
+$$ ##$ShimPow1Vmax= (0..38)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0
+$$ ##$ShimPow2Ch2Sh= (0..38)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0
+$$ ##$ShimPow2Imax= (0..38)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0
+$$ ##$ShimPow2NChan= 0
+$$ ##$ShimPow2TotIMax= 0
+$$ ##$ShimPow2Vmax= (0..38)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0
+$$ ##$ShimPow3Ch2Sh= (0..38)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0
+$$ ##$ShimPow3Imax= (0..38)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0
+$$ ##$ShimPow3NChan= 0
+$$ ##$ShimPow3TotIMax= 0
+$$ ##$ShimPow3Vmax= (0..38)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0
+$$ ##$ShimPow4Ch2Sh= (0..38)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0
+$$ ##$ShimPow4Imax= (0..38)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0
+$$ ##$ShimPow4NChan= 0
+$$ ##$ShimPow4TotIMax= 0
+$$ ##$ShimPow4Vmax= (0..38)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0
+$$ ##$ShimPowMaxUA= (0..63)
+$$ 130000 130000 130000 130000 130000 130000 130000 130000 130000 130000 130000
+$$ 130000 130000 130000 130000 130000 130000 130000 130000 130000 0 0 0 0
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0 0
+$$ ##$ShimPowMaxUC= (0..63)
+$$ 130000 130000 130000 130000 130000 130000 130000 130000 130000 130000 130000
+$$ 130000 130000 130000 130000 130000 130000 130000 130000 130000 0 0 0 0
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0 0
+$$ ##$ShimPowMaxUG= (0..63)
+$$ 1000000 1000000 1000000 1000000 1000000 1000000 1000000 1000000 1000000
+$$ 1000000 1000000 1000000 1000000 1000000 1000000 1000000 1000000 1000000
+$$ 1000000 1000000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ShimPowNum= 0
+$$ ##$ShimPowRcbType= 3
+$$ ##$ShimPowRes= (0..63)
+$$ 1e-20 1e-20 1e-20 1e-20 1e-20 1e-20 1e-20 1e-20 1e-20 1e-20 1e-20 1e-20
+$$ 1e-20 1e-20 1e-20 1e-20 1e-20 1e-20 1e-20 1e-20 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ShimPowRng0= (0..63)
+$$ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ShimPowRng1= (0..63)
+$$ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ShimPowRng2= (0..63)
+$$ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ShimPowRng3= (0..63)
+$$ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ShimPowType1= 0
+$$ ##$ShimPowType2= 0
+$$ ##$ShimPowType3= 0
+$$ ##$ShimPowType4= 0
+$$ ##$ShimSysAngle= <>
+$$ ##$ShimSysFunc= (0..63)
+$$ 1 2 3 4 5 7 9 11 15 16 8 10 12 14 6 17 13 18 19 20 0 0 0 0 0 0 0 0 0 0
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$ShimSysMatId= <no>
+$$ ##$ShimSysMatrix= 1
+$$ ##$ShimSysOffset= <>
+$$ ##$ShimSysType= 1
+$$ ##$ShimUnit= 0
+$$ ##$TFXNUM= 0
+$$ ##$TOSITY= <no>
+$$ ##$TRIPLO2= 0
+$$ ##$VTU= 2
+$$ ##$VTUETH= <149.236.99.20>
+$$ ##$VTUTY= <no>
+$$ ##$WBREFAM= (0..15)
+$$ 274.4 105.5 100 100 100 100 100 100 100 100 100 100 100 100 100 100
+$$ ##$WBREFLM= (0..15)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$WBREFPH= (0..15)
+$$ 78.03 -75.43 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$WBSGU= (0..15)
+$$ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+$$ ##$XFAC= 2
+$$ ##END=
+##$RELAX= 
+##$BRUKER FILE PROC=intrng
+$$ P 0
+$$ 10.928671   10.587758
+$$ 8.021400   7.673171
+$$ 7.652687   7.368836
+$$ 7.367373   7.152291
+$$ 7.150828   6.558253
+$$ 4.297693   3.766570
+$$ 1.867407   1.494304
+##$RELAX= 
+##$BRUKER FILE PROC=parm.txt
+$$ 
+$$ Current Data Parameters
+$$ NAME     2f955d352529_reference_119-36-8              
+$$ EXPNO                16              
+$$ PROCNO                1              
+$$ 
+$$ F2 - Acquisition Parameters
+$$ Date_          20241121              
+$$ Time               7.43 h            
+$$ INSTRUM           spect              
+$$ PROBHD   Z108618_0487 (              
+$$ PULPROG     ledbpgp2s1d              
+$$ TD                16384              
+$$ SOLVENT           CDCl3              
+$$ NS                   16              
+$$ DS                    4              
+$$ SWH            4795.396 Hz           
+$$ FIDRES         0.585376 Hz           
+$$ AQ            1.7083051 sec          
+$$ RG                61.54              
+$$ DW              104.267 usec         
+$$ DE                11.35 usec         
+$$ TE                298.0 K            
+$$ D1           3.00000000 sec          
+$$ D16          0.00020000 sec          
+$$ D20          0.10000000 sec          
+$$ D21          0.00500000 sec          
+$$ TD0                   1              
+$$ ZGOPTNS                              
+$$ SFO1        400.0820004 MHz          
+$$ NUC1                 1H              
+$$ P1                14.00 usec         
+$$ P2                28.00 usec         
+$$ PLW1        11.99499989 W            
+$$ GPNAM[6]     SMSQ10.100              
+$$ GPZ6               2.00 %            
+$$ GPNAM[7]     SMSQ10.100              
+$$ GPZ7             -17.13 %            
+$$ GPNAM[8]     SMSQ10.100              
+$$ GPZ8             -13.17 %            
+$$ P19              600.00 usec         
+$$ P30             2500.00 usec         
+$$ 
+$$ F2 - Processing parameters
+$$ SI                 8192              
+$$ SF          400.0800000 MHz          
+$$ WDW                  EM              
+$$ SSB                   0              
+$$ LB                 1.00 Hz           
+$$ GB                    0              
+$$ PC                 1.00              
+##$RELAX= 
+##$BRUKER FILE PROC=peaklist.xml
+$$ <?xml version="1.0" encoding="UTF-8"?>
+$$ <PeakList>
+$$   <PeakList1D>
+$$     <PeakList1DHeader creator="nmrsu" date="2024-11-21T07:43:44.862+01:00" expNo="16" name="2f955d352529_reference_119-36-8" owner="" procNo="1" source="/opt/data/lrisse/nmr">
+$$       <PeakPickDetails>F1=10.993050ppm, F2=-0.993044ppm, MI=0.00cm, MAXI=10000.00cm, PC=1.000
+$$       </PeakPickDetails>
+$$     </PeakList1DHeader>
+$$     <Peak1D F1="10.780732" intensity="2.638044e+00" type="0"/>
+$$     <Peak1D F1="7.846368" intensity="1.057390e+00" type="0"/>
+$$     <Peak1D F1="7.014591" intensity="1.265020e+00" type="0"/>
+$$     <Peak1D F1="6.901185" intensity="1.319923e+00" type="0"/>
+$$     <Peak1D F1="3.970802" intensity="1.350000e+01" type="0"/>
+$$   </PeakList1D>
+$$ </PeakList>
+##$RELAX= 
+##$BRUKER FILE PROC=peakrng
+$$ P    #regions in PPM
+$$ # 2024-11-21 07:43:44 +0100  nmrsu@nmrf492l
+$$ # low field   high field   mi   maxi
+$$   10.993049621582  -0.993044208245379  0.000  10000.000  # for region 1
+##$RELAX= 
+$$ Bruker specific parameters
+$$ --------------------------
+##$DATPATH= </opt/data/lrisse/nmr>
+##$EXPNO= 16
+##$NAME= <2f955d352529_reference_119-36-8>
+##$PROCNO= 1
+##$ACQT0= -8.9126559714795
+##$AMP= (0..31)
+100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100
+100 100 100 100 100 100 100 100 100 100 100 100 100 100
+##$AMPCOIL= (0..19)
+-1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$ANAVPT= -1
+##$AQSEQ= 0
+##$AQ_mod= 3
+##$AUNM= <au_zgonly>
+##$AUTOPOS= <11 >
+##$BF1= 400.08
+##$BF2= 400.08
+##$BF3= 400.08
+##$BF4= 400.08
+##$BF5= 400.08
+##$BF6= 400.08
+##$BF7= 400.08
+##$BF8= 400.08
+##$BWFAC= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$BYTORDA= 0
+##$CAGPARS= (0..11)
+0 0 0 0 0 0 0 0 0 0 0 0
+##$CHEMSTR= <none>
+##$CNST= (0..63)
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 98 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+##$CPDPRG= (0..8)
+<> <> <> <> <> <> <> <> <>
+##$D= (0..63)
+0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0002 0 0 0 0.1 0.005 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$DATE= 1732171423
+##$DATE_START= 1732171318
+##$DE= 11.34553
+##$DECBNUC= <off>
+##$DECIM= 4170.66666666667
+##$DECNUC= <off>
+##$DECSTAT= 4
+##$DIGMOD= 3
+##$DIGTYP= 12
+##$DQDMODE= 0
+##$DR= 23
+##$DS= 4
+##$DSPFIRM= 4
+##$DSPFVS= 21
+##$DTYPA= 0
+##$EXP= <refe_1d_1H_dosy-hmw-98>
+##$FCUCHAN= (0..9)
+0 2 0 0 0 0 0 0 0 0
+##$FL1= 0
+##$FL2= 0
+##$FL3= 0
+##$FL4= 0
+##$FN_INDIRECT= (0..7)
+0 0 0 0 0 0 0 0
+##$FOV= 0
+##$FQ1LIST= <>
+##$FQ2LIST= <>
+##$FQ3LIST= <>
+##$FQ4LIST= <>
+##$FQ5LIST= <>
+##$FQ6LIST= <>
+##$FQ7LIST= <>
+##$FQ8LIST= <>
+##$FRQLO3= 1246124.59999997
+##$FRQLO3N= 0
+##$FS= (0..7)
+83 83 83 83 83 83 83 83
+##$FTLPGN= 0
+##$FW= 4032000
+##$FnILOOP= 0
+##$FnMODE= 0
+##$FnTYPE= 0
+##$GPNAM= (0..31)
+<> <> <> <> <> <> <SMSQ10.100> <SMSQ10.100> <SMSQ10.100> <> <> <> <> <>
+<> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <> <>
+##$GPX= (0..31)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$GPY= (0..31)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$GPZ= (0..31)
+0 0 0 0 0 0 2 -17.13 -13.17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0
+##$GRDPROG= <grad_out>
+##$GRPDLY= 76
+##$HDDUTY= 20
+##$HDRATE= 1
+##$HGAIN= (0..3)
+0 0 0 0
+##$HL1= 0
+##$HL2= 0
+##$HL3= 0
+##$HL4= 0
+##$HOLDER= 11
+##$HPMOD= (0..7)
+0 0 0 0 0 0 0 0
+##$HPPRGN= 0
+##$IN= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$INF= (0..7)
+0 0 0 0 0 0 0 0
+##$INP= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$INSTRUM= <spect>
+##$INTEGFAC= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$L= (0..31)
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+##$LFILTER= 100
+##$LGAIN= -12
+##$LINPSTP= 0
+##$LOCKED= yes
+##$LOCKFLD= 5774
+##$LOCKGN= 130.091339111328
+##$LOCKPOW= -30
+##$LOCKPPM= 7.23999977111816
+##$LOCNUC= <2H>
+##$LOCPHAS= 264.2102
+##$LOCSHFT= yes
+##$LOCSW= 0
+##$LTIME= 0.400000005960464
+##$MASR= 0
+##$MASRLST= <masrlst>
+##$MULEXPNO= (0..15)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$NBL= 1
+##$NC= -7
+##$NLOGCH= 1
+##$NOVFLW= 0
+##$NS= 16
+##$NUC1= <1H>
+##$NUC2= <off>
+##$NUC3= <off>
+##$NUC4= <off>
+##$NUC5= <off>
+##$NUC6= <off>
+##$NUC7= <off>
+##$NUC8= <off>
+##$NUCLEUS= <off>
+##$NUSLIST= <automatic>
+##$NusAMOUNT= 50
+##$NusFPNZ= no
+##$NusJSP= 0
+##$NusSEED= 54321
+##$NusSPTYPE= 0
+##$NusT2= 1
+##$NusTD= 0
+##$O1= 2000.4
+##$O2= 2000.4
+##$O3= 2000.4
+##$O4= 2000.4
+##$O5= 2000.4
+##$O6= 2000.4
+##$O7= 2000.4
+##$O8= 2000.4
+##$OVERFLW= 0
+##$P= (0..63)
+14 14 28 0 0 19.8 30 60 20000 0 0 80000 80000 1000 0 0 1000 2500 100000
+600 0 0 0 0 0 270 100000 14 1000 1000 2500 0 20000 0 0 0 0 0 0 0 2000 0
+0 0 300 0 80000 46600 10000 0 80000 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$PACOIL= (0..15)
+2 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$PAPS= 0
+##$PARMODE= 0
+##$PCPD= (0..9)
+0 90 0 0 0 0 0 0 0 0
+##$PEXSEL= (0..9)
+1 1 1 1 1 1 1 1 1 1
+##$PHCOR= (0..31)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$PHLIST= <>
+##$PHP= 1
+##$PH_ref= 0
+##$PL= (0..63)
+120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120
+120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120
+120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120
+120 120 120 120 120 120 120 120 120 120
+##$PLSTEP= 0.1
+##$PLSTRT= -6
+##$PLW= (0..63)
+0 11.995 0 0 0 0 0 0 0 9.4041e-05 2.6122 0.13911 0 0 0 0 0 0 11.995 0.29025
+0 0 0 0 0 0 0 0.129 0 2.6122 0 0 3.7616e-06 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$PLWMAX= (0..7)
+34.9878 0 0 0 0 0 0 0
+##$PQPHASE= 0
+##$PQSCALE= 1
+##$PR= 1
+##$PRECHAN= (0..15)
+-1 2 0 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+##$PRGAIN= 0
+##$PROBHD= <Z108618_0487 (PA BBO 400S1 BBF-H-D-05 Z PLUS)>
+##$PROBINPUTS= (0..15)
+<19F-109Ag> <1H> <2H> <> <> <> <> <> <> <> <> <> <> <> <> <>
+##$PULPROG= <ledbpgp2s1d>
+##$PW= 0
+##$PYNM= <>
+##$ProjAngle= 0
+##$QNP= 0
+##$RD= 0
+##$RECCHAN= (0..15)
+0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$RECPH= 0
+##$RECPRE= (0..15)
+-1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+##$RECPRFX= (0..15)
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$RECSEL= (0..15)
+0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$RG= 61.54
+##$RO= 0
+##$RSEL= (0..15)
+0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$S= (0..7)
+83 83 83 83 83 83 83 83
+##$SELREC= (0..9)
+0 0 0 0 0 0 0 0 0 0
+##$SFO1= 400.0820004
+##$SFO2= 400.0820004
+##$SFO3= 400.0820004
+##$SFO4= 400.0820004
+##$SFO5= 400.0820004
+##$SFO6= 400.0820004
+##$SFO7= 400.0820004
+##$SFO8= 400.0820004
+##$SOLVENT= <CDCl3>
+##$SOLVOLD= <off>
+##$SP= (0..63)
+120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120
+120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120
+120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120 120
+120 120 120 120 120 120 120 120 120 120
+##$SPECTR= 0
+##$SPINCNT= 0
+##$SPNAM= (0..63)
+<> <Gaus1_270.1000> <Gaus1_180r.1000> <> <> <Sinc1.1000> <Squa100.1000>
+<> <Squa100.1000> <> <Sinc1.1000> <Sinc1.1000> <> <> <> <> <> <> <> <Sinc1.1000>
+<Sinc1.1000> <Sinc1.1000> <Sinc1.1000> <> <> <> <> <> <> <Crp60,20,20.10>
+<Bip720,50,20.1> <> <> <> <Rsnob.1000> <Gaus1_180r.1000> <Gaus1_180r.1000>
+<> <> <> <Gaus1_180r.1000> <Squa100.1000> <> <> <> <> <> <> <> <> <> <>
+<> <> <> <> <> <> <> <> <> <> <> <>
+##$SPOAL= (0..63)
+0.5 1 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+1 1 1 1 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+0.5 0.5 0.5 0.5 0.5 0.5 0.5
+##$SPOFFS= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$SPPEX= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$SPW= (0..63)
+0 1.9517e-05 8.6743e-06 0 0 0.0067791 9.4041e-05 0 2.351e-07 0 0.0067791
+0.0067791 0 0 0 0 0 0 0 1.384652e-05 2.152396e-05 1.005016e-05 5.41997e-05
+0 0 0 0 0 0 0.089802 1.6718 0 0 0 9.4832e-05 8.6743e-06 0.00055515 0 0
+0 8.6743e-06 2.351e-07 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$SUBNAM= (0..9)
+<> <> <> <> <> <> <> <> <> <>
+##$SW= 11.9860338996579
+##$SWIBOX= (0..19)
+0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$SW_h= 4795.39641943734
+##$SWfinal= 0
+##$SigLockShift= 0
+##$TD= 16384
+##$TD0= 1
+##$TD_INDIRECT= (0..7)
+0 16 0 0 0 0 0 0
+##$TDav= 1
+##$TE= 297.9998
+##$TE1= 298.0326
+##$TE2= 0
+##$TE3= 0
+##$TE4= 0
+##$TEG= 300
+##$TE_MAGNET= 0
+##$TE_PIDX= 1
+##$TE_RAW= 298.0326
+##$TE_STAB= (0..9)
+1 1 0 0 0 0 0 0 0 0
+##$TL= (0..7)
+120 120 120 120 120 120 120 120
+##$TOTROT= (0..63)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$TUBE_TYPE= <>
+##$USERA1= <>
+##$USERA10= <user>
+##$USERA2= <>
+##$USERA3= <>
+##$USERA4= <>
+##$USERA5= <>
+##$USERA6= <userUSERA5 DEF user acq. parameter 5$80002 255>
+##$UUID= <b496053e-a7d3-11ef-95fb-001018b14baf>
+##$V9= 5
+##$VALIDCODE= -1
+##$VALIST= <>
+##$VCLIST= <>
+##$VDLIST= <>
+##$VPLIST= <>
+##$VTLIST= <>
+##$WBST= 1024
+##$WBSW= 4
+##$XGAIN= (0..3)
+0 0 0 0
+##$XL= 0
+##$YL= 0
+##$YMAX_a= 90427
+##$YMIN_a= -96339
+##$ZGOPTNS= <>
+##$ZL1= 120
+##$ZL2= 120
+##$ZL3= 120
+##$ZL4= 120
+##$scaledByNS= no
+##$scaledByRG= no
+##$ABSF1= 100
+##$ABSF2= -100
+##$ABSG= 0
+##$ABSL= 3
+##$ALPHA= 0
+##$AQORDER= 0
+##$ASSFAC= 0
+##$ASSFACI= 0
+##$ASSFACX= 0
+##$ASSWID= 0
+##$AUNMP= <proc_1d>
+##$AXLEFT= 0
+##$AXNAME= <>
+##$AXNUC= <off>
+##$AXRIGHT= 0
+##$AXTYPE= 0
+##$AXUNIT= <>
+##$AZFE= 0.1
+##$AZFW= 0.1
+##$BCFW= 1
+##$BC_mod= 2
+##$BYTORDP= 0
+##$COROFFS= 0
+##$CY= 13.5
+##$DATMOD= 1
+##$DC= 2
+##$DFILT= <>
+##$DTYPP= 0
+##$ERETIC= no
+##$F1P= 5.4
+##$F2P= 2.9
+##$FCOR= 0.5
+##$FTSIZE= 0
+##$FT_mod= 0
+##$GAMMA= 1
+##$GB= 0
+##$INTBC= 1
+##$INTSCL= 1
+##$ISEN= 128
+##$LB= 1
+##$LEV0= 0
+##$LPBIN= 0
+##$MAXI= 10000
+##$MC2= 0
+##$MEAN= 0
+##$ME_mod= 0
+##$MI= 0
+##$MddCEXP= no
+##$MddCT_SP= no
+##$MddF180= no
+##$MddLAMBDA= 0
+##$MddMEMORY= 0
+##$MddMERGE= 23
+##$MddNCOMP= 0
+##$MddNITER= 0
+##$MddNOISE= 0.8
+##$MddPHASE= 0
+##$MddSEED= 0
+##$MddSRSIZE= 0
+##$Mdd_CsALG= 0
+##$Mdd_CsLAMBDA= 1
+##$Mdd_CsNITER= 0
+##$Mdd_CsNORM= 0
+##$Mdd_CsVE= yes
+##$Mdd_CsZF= 0
+##$Mdd_LrLAMBDA= 0
+##$Mdd_LrNITER= 0
+##$Mdd_LrRANK= 0
+##$Mdd_LrZF= 0
+##$Mdd_mod= 1
+##$NCOEF= 0
+##$NC_proc= 0
+##$NLEV= 10
+##$NOISF1= 0
+##$NOISF2= 0
+##$NSP= 1
+##$NTH_PI= 0
+##$NZP= 0
+##$OFFSET= 10.99305
+##$PC= 1
+##$PHC0= 67.12
+##$PHC1= 0
+##$PH_mod= 1
+##$PKNL= yes
+##$PPARMOD= 0
+##$PPDIAG= 0
+##$PPIPTYP= 0
+##$PPMPNUM= 2147483647
+##$PPRESOL= 1
+##$PSCAL= 0
+##$PSIGN= 0
+##$PYNMP= <>
+##$RDF1= 0
+##$RDF2= 0
+##$RDFWHM= 0
+##$RDINT= 0
+##$RDPOS= 0
+##$REVERSE= no
+##$SF= 400.08
+##$SI= 8192
+##$SIGF1= 0
+##$SIGF2= 0
+##$SINO= 0
+##$SIOLD= 8192
+##$SPECTYP= <DOSY>
+##$SREF_mod= 1
+##$SREGLST= <1H.CDCl3>
+##$SSB= 0
+##$STSI= 0
+##$STSR= 0
+##$SW_p= 4795.39641943734
+##$SYMM= 0
+##$S_DEV= 0
+##$TDeff= 0
+##$TDoff= 0
+##$TI= <
+refe_1d_1H_dosy-hmw-98 CDCl3 /opt/ lrisse 11
+>
+##$TILT= no
+##$TM1= 0
+##$TM2= 0
+##$TOPLEV= 0
+##$USERP1= <>
+##$USERP10= <user>
+##$USERP2= <>
+##$USERP3= <>
+##$USERP4= <>
+##$USERP5= <>
+##$USERP6= <userUSERP5 DEF user processing parameter 5$80004 255>
+##$WDW= 1
+##$XDIM= 0
+##$YMAX_p= 0
+##$YMIN_p= 0
+##$CURPLOT= <>
+##$CURPRIN= <$>
+##$DFORMAT= <normdp>
+##$LAYOUT= <+/2D_inv.xwp>
+##$LFORMAT= <normlp>
+##$PFORMAT= <normpl>
+$$ End of Bruker specific parameters
+$$ ---------------------------------
+##NTUPLES= NMR FID
+##VAR_NAME=  TIME,          FID/REAL,        FID/IMAG
+##SYMBOL=    X,             R,               I
+##VAR_TYPE=  INDEPENDENT,   DEPENDENT,       DEPENDENT
+##VAR_FORM=  AFFN,          ASDF,            ASDF
+##VAR_DIM=   8192,          8192,            8192
+##UNITS=     SECONDS,       ARBITRARY UNITS, ARBITRARY UNITS
+##FACTOR=    0.000208533333333333, 1,        1
+##FIRST=     0,             0,               0
+##LAST=      1.70809653333333, -972,         1254
+##MIN=       0,             -96339,          -96339
+##MAX=       1.70809653333333, 90427,        90427
+$$ Real data points
+##PAGE= N=1
+##DATA TABLE= (X++(R..R)), XYDATA
+0@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@AaAaAa@@@@@AbCdFgA0a2A5a8B2b7C2c7D4
+57e1E9f8G8h9A01a15A30a47A67a89B15b46B86c40D19e56H44a703A4423o644q31
+78F948M2577K7423A7752b8924m1405J6542j2923a8882A1222N2536k7134J550A7530
+92C6082C135a1057m1557j0849q750b5975C5858M0317k0806A0234J938J4793m306
+105B2659d7507k0273M476a3642q247A8985K3255M8187C9370A4025b8533b252l1903
+118c4155n504l0425b7977e067D3021Q681J4664k9717H259a3832o683k1339k9869
+131g1723K2255d508D0216A9796J4524J1711K9460A0678b9380m1871c2848j3478
+143d6326J9293k937D0145J1535R811A9280J1302I150g948m8251m651K886b8707
+157A1887M1507J0278B9695j0893l552R972b8255k8026k2707b8247R409B2139O568
+170B8707N3106l0931B3761c3767c446r976j1139n5294K6346a5108D5363J3015
+182E8378P301k5014H705a7143q506L749k2075m653J571G466K2135L5211j3223
+195E1589J3170E558b7803m3088b2196j676L157l6931a47D3077M4916l6171j9495
+208C2327g098j4771k9404J606J2047J7807g329F417L8645J3845L178A9526D616
+222d2691q121j9380a8005O120A3975a235E3133N050O585f19j4733k9528R259k4218
+236e9839K2243a2699C1832N707L019M425k819A5514c2286j3154j0155J8468r57
+249c8084G237J3343L4352j6944K0357B0864F177e3308J0742j0117b0781j4300
+261c5081B764K3232M6181j9293j7664C774f057l1447k0928O066K4045a134G039
+275C9015R616J5975B6877A1801c7004j769k8234c3070L805A7009p731L5123k092
+288D2309K4931B1234d012m3050N421j3806J7485a8294A9420J4615N129O488m165
+301D1487j2890a8468k2574k4411K5824L171C516N878M2595j3916J5266A9911K481
+314B2392c1028r560k7655L3833L466H982J3586L3406q987n768A6353f22k6094
+327b6716k4720n324R038g398A2092L0697l495J9813B8586p754b6441k62l6169
+340f2872K0317k547G334N896L7566r664J5526B2326H848c2629q685j4041J4819
+353d0536J4498A805K8916J5725P738j7899r845a3216j4115l0742J7854o674f554
+367A248M6523q179K0325B4557l969b7405k564k9676J8472K489B489J4932K7818
+380D5239J748J473k0875G82b4351k5480j10J690a4400a589C7269J091K1005k8897
+394C0468O80a6385r505l9787K4306k310a012C772M1066l377J4963k7774j1910
+407A6740b2017j6959j7690Q569K0348i12B5691R377J8580j1497p426h947r296
+420a8243l4291Q523j2619a0118H45M2383j0981K3713k6142L84a6507r829l1193
+433e7529J3437L05h216A5745K9562q00o205o522A5479i189m0729k851L8a8516
+448h458C4136J177K2004B8507N637e678n732m7414R682m832f291B879L6256J506
+462D0641J6386k8372A3358a0225j0802k6211j5226J8404h310C1775N745J3055
+474E0575j5594J427b116o378l5118P458k6076b9690a4044D7238l464J1779B3539
+488B7877a0023q071k5506O376j3577J8811D84M7018J4106j8666j8888E684C68
+502c3768q916j2958b3336J360A6139J2137M4392k7443j3734a8268O139l0345Q060
+515c4414j7261a9780N475B4034J7079K6755k2508A4226a9184p826m730j6071K204
+528d5607J8238B0971J0109J6495j0276J5964A0431a2979m2600K3191j3391K1492
+540b4287n094B4478J2623K5835k8501k089c634j2676k9197N395j145J1676a2244
+554B5806L4275o781k0853D752J476b7074j3583j9691b1856J393G403J164N5243
+567F3810l846r099a6684p584j6462b0152k2888J3379M829A3654J9027K9928k724
+580E9885k8875a5394k5072O229k472M484M07E984R087K5220l052L0030C2435c077
+595g2659J9200J6178C054b1620a406A0034M6343q404N13A5243a0739m5862n370
+608f1971J9886i830F136N113J7684N452J1974j6704k962b1448k8726l3979c4102
+622c174C3834C838K3322P965K8253A5980c686l3582N271k6717J5032a9260C1151
+636D2795k580r920k861q929a0047j8920k4582N578L219E406K2238K6334B5747
+650D0311j5474k006d0702p119n625a4238j3421d645A2439N0054q836j6585C104
+664c150k3114k2524o691K3275A845J0087J6747M648J9279k2508p050a8839j4681
+677c3520l9619L0095b1330B7949A0194J5490q58L5834l0095G180c6244K799j8778
+690e2223M282J6087B2946K7872r852A8447k241J5710A2397a6835m4169L635M870
+703e2499H50K4405L4840k9537j051G545J9976h744j4646l7776K1197q13e928A7422
+718F8145o676B9672a3551L800f2j6365l2027j3826b8292D350L9485L795J1900
+731E9530B3750G434c0224J3657k0521Q707j9918a1440h79D1815L518K1456B7688
+745d417m0499J5697L796j556j3949a7795B4331K4877l27j8162k610a17k3004l6021
+759e9142J9289O606a383n900B9446K717K3757B7355o35a6782j1864l1062K4348
+772c5360O459a990B512L4259J3959j900A6389d935o099j3348j8521j6519b7148
+786B507L5828o648J8024j8310m087a9214m40k2320J4470k0791a8344e536D1489
+800D3437J3170B7892I995b7912l516q94N743p803P905I427L2304J6373k0817q688
+814B8599a927j4193l6440J5493L038c158j2815A3904R708M0963k1645j2470a9722
+828b9070k3905J8816O356a984N36A7429J7834J8258j1186A0503a5282k3590l532
+841d2404p793b0273b882B9155r938J9405p426J5131C076a5666l9355J5990o107
+854d5138a1263b416C4959l266J0370j4410q26a605k3178k1605K27J2733a6139
+868A3849J7230J7441j6631j387E447A674c8094k101j2907a6055L642B2420J410
+881B3830L0513j9230n001h844n299k5265K576n736a8527a052B3495J4074P361
+894D4930n064A4239f412k6300j01j3497J8502O650A9304L609K3831j5343R867
+907D1268D684f290l9216R030r768a7267O294B3841O350J5290j2570n626C355a9603
+922d1524o419J4776J4374G743J1009K4926p427L955I115B931c4708R19j8670b3071
+937a8672A9684J418K7095j3998J504A751i191k6758j507n708J8380e288A8611
+951C5368M597P08A9322D510b6592m264j7362J9335K276A1063O310K9791j4846
+964C2318Q350G788B298c5452L02j4007b3342R211A7630P877J5988m926n489I453
+979a5809j8651j2018J1283R584C661R133K6553n223J0521A4923o986c0582L76
+992c0206k0982K4458K089A3307N587K6041j2048L564A0402h38k9764r080m761
+1005d4443J5996h202A1936K0534L981M346j9295q021a7853p441k5290J6817K454
+1018c1313H309M939K8836j2169J1633A3103m099b5779m190k0676J8080J2452A3669
+1032B5397J1986k449m544j4205g963j7266j8206O476J384d498I535L2101q627
+1045C3009Q280A4435K57b1007k337k5515J7485j394D052J2495K9985j0740k468
+1058C3324I886C140a8354j3882j1468N913a6317D685K6703N857P006B0528p207
+1071A3321a4004l50k8101P449o119b151G354L3485q091J1538A5358p362b2292
+1085b2130j7574O274J819b465B1089J9142J150j0394j3825g553j1890j6542O753
+1098b9232r021a6057e514C6552J321J1074A6877l208a9131P92k3460J4739o780
+1111c3840h082B149L6480N675j58A4425b301j6574q219o897j424J5131g722B0011
+1126C0692K0495j8557j1339a7440j894k0490J4306j0362g844K578B7561R36K2570
+1139E1067k0411j4002b4593o056o587J2647n41a1180F774K1342J3338l875p690
+1152B9889H08a7084k5573J0321j026i411p36B1964L377K2924k1409o61a0078q442
+1166a8520k8680J5069J808c872c21B4143R343J0497j6370H332a2458j5714p491
+1179c5663m817J9621f886A9569J407J9992r008J744d522j0537k7786J3772p962
+1192c7035h871J937B2711k0K1820j1482o507a1723j6588j2679J1538O289J0610
+1205a2553B508J7936J7184k984m03A0453d998l5543K480k126h201J162A7960l921
+1219A4039K5751j0523O485B465a0982l5451N468M202c438F157J4483J175J0795
+1232C2610j207j0283B936b2574j5523j2868K2770g625B6480l834Q691j2940J4437
+1245C2834A0534C682c5383p4j3496a9146g129B9342o94Q567j7116R71B602h623
+1260b9635p697n04J2943C190K3017J8448j3202p078B982J700b0069m768k1968
+1273d6805K0962N152A5874M989K5317j6440j498b265l739k3370P87r911J7706
+1286b0792h549A5629J3023R427l187j6485I99b1775n435j2590J2637N259A0577
+1300A6103K0489j1359J1235A0477C304c1844J724j2922b0097N247A6681O484J5578
+1313C8743j1714l832E784e577j9239j2264m13R897a252A7494K2855q851k605E650
+1328H029a5449l232k6263J4223K371A0292Q892K5799j4637j004C70c513j8238
+1341b1751J39j3817N784R977G325K2382J1488j958A8062A255b0864J097j1199
+1354c0966Q675p679e307C665L4619k644P770A0247e26l1065O766q583a5905m848
+1368b0753F9J0494K6198J452m151A0533a1004j7112p571P556N900c647B986K1868
+1382B4854J917J3928j9685o637b0083m438k0146J9658K322G772P61K1944m645
+1395B5832J0420A6435F297b1448q575q928J0989a3929E208J6903P442N277j1913
+1408B2917p006i506p683k0208R329l847d396C040L0712m594J0076A4009m797a9388
+1423a9680j6415J0788j16a310A1541K1213K629l515A4928d303j4429j2869K582
+1436b9019M17i318b338B2994K482J5745j8776m478a5423m593k0924J6773j331
+1449b5498A63K346K3788j86J1596j6168A0559a7151j2237p548Q710J2949h03A6043
+1464B2761J1434p809l027c777r371k4366P624m088e507A06K7287m117J3831A8227
+1479A6899a0108n945k1272O497K572d095A0766J7516L041l257q632C554i155j9120
+1493b8275j698n015a4663e845B2830J000J4322j7438J84h568l687k3053R682n501
+1507c1127g536a068B4667K632R846j5087A0721a1251j1239q686R54J0174i274
+1521A1047R825J5888r023k546a880o899k3885O585q214a0863L843B1381LJ6229
+1535C7613j4982j635f284q494j9092M335J734i401D879J6140Q122L46l763H439
+1550d542k2287k120o885a5580O313A6992O97J7926j2312K621a734o235k5469O153
+1564b7285m876i859c620A9050M605J0291q972r453c307j5587r715l864R700R432
+1578a3341I407Q439J5673q511K222D056a400k6717K237j1440a4970N055A8172
+1592A8608J5801j1629K44H15h585k0495j748R8a4639A248J5408J1199L32j429
+1606B6758A0919B275b0848l750j2913J7221M980A3122K720J8366j1702N003B874
+1620b530k4940K464q638a6742P805A4962Q490Q957o774r227A344a3773r095r005
+1634c1873O672N292D097J0261J9228q796K418E485j626b1565r68j4813a8659L929
+1648a4730A1932M453J7662r049j145C585e018j7725n456k816J0293d459A1301
+1662B6382J438K263A3112D839a7267j668j4981J1381L07F301N868K1081r165N418
+1676B9503F127C97b2867J105r101J0514M958F703J4347J1894m529j0948E284a0061
+1691a8572j1333O161N90b676F351K4801m083L842H084k904a8506J85j5827J4022
+1705b0126J341E146N088J9822j541J14G561e376j4596m500k520M218h667C611
+1720B1133M257Q539j5058r260a7055j402j2417J1939n231a404D673K4985m859
+1733B4799O995A2501D944b0103k722o839J0710L086d20A3944J4263K499q869r791
+1747A2046e974j0589j4945P210K042b441c67B1736J409J2035A4868n306a5168
+1761a6924j6832J1750L066C604L344J5225K217O297j4199H16a7319q284j051K566
+1775b4088i780G39J7351J082J0903q448k970a0328p000j5103J2586m919d683A371
+1790B6137l425O125A4209k181i854j0667j2599Q773Q653a465A0938J1207O656
+1803B8801p096n748A26h238k1274K198m3d176a182A8292K61J5363j6133m569a0592
+1819a1493j7628M041n55b083G958J3214m38N742o005F572a1208j2787n48j487
+1833b6030J2024d807A6397K143J0069r582J979c209p931j9638R918m488h590d101
+1848B2342J807M270A2868o5a434j2057j8036J681J1267c597H790Q167J0207m366
+1862B2798l653A747c318k0078j692p243a0297c722A6940r77J5618j1943l537g685
+1877h068j4100n21p833a1598D597J7392o4Q86l140r440d582j6248j117k799Q370
+1892a6376K966A0042Q708J3602j3638L33a002m395k0243O255o234a1909J374A4949
+1907B3275R065j5645n847h83p680j6019n038Q505g322E057M682J4493K083l05
+1921B6010C661d457j6773K040j0587a3894M136A2333K20J6248o491r3b096o697
+1935h793j3282K447o900J0533b375A6895N022o29m42o248B926a8456m399k930
+1949b5785J1336j005C959Q758J8542j0491l72A730E75b0218j41q125a2811K771
+1963a0040I469P715J3129r350p653I97e923j2503r645M189J1346C428L983J2767
+1977B0178L132O294I041a537j8721M648j0784R850M88G805L694J4899n215L656
+1991B4839D907e325j6054J860l856O130h009I169J1281J671k46o699o544a2405
+2006b0942p691J3688R0I02M407K1442n134J771E108q95a5180m129j0796J4406
+2020a5699N936G097M407J2299j161m234E748d900r480j0639M71O353E14O153J1861
+2035A8528m13R945A3349E404a6600K348j1114P938k185B899O844J5524n667L128
+2049B2728I256I07a6943l489k508M906O589A939J6086N070O66j0360l264f674
+2064a4011j4246R385Q29g18A986J9980j564N628H755k858a2245l107j2620Q978
+2078a8994O253C447N035J0970L982j546I908d027q512q686K36n54e518B216J6221
+2093A8437j729Q914j1333l032a1013k624j2203R113k949a756D938J7051k402L390
+2107B2977j1021D758a1674p198l795L435O788b572A3141P209N043j0568l215c407
+2122g740j7478M060r45b694G98J7044j356R404j2124l851h816n229j1126O289
+2136a8882L468b420E749J1177N575o65p941h30q132j0029M90m201i985b684A6380
+2152A6418P831j0845L42d988m348j5323O028j188c565I16J5423K250N289r299
+2166A4579F124g677p703n078k38O455f507I695P055P937q576j662g19l471j7460
+2181b1650J875m242f588a770A5512j587R670p548j645e133p844j0205N253K034
+2195a5895g263A580J2081R289j120o351A557d334j1622j373o728J1977N500A2057
+2210A3912J0099r389Q43h35m073j7077K831j991e915a158A1433L802Q071n158
+2224A8148q984d823q693k940l654L704N660G038O743Q925p122J879C421a430j8182
+2239a9612J391n338i180L247A1149J123J0370n815o23D95i177j2510K744L223
+2253a5720O581b606H515J3135R21n192C345c62j1586l024j0362J1182N117I376
+2268A0019J1295n374K569A973b921j4831M69m937a0222c419I468L247P107J00
+2282A9922o673a19j2473k351l681K733J389B370Q608J0511p310L500G237l593
+2296C644a7078j271m667i476N80E272M954J2034m986j541D061d136j3016l366
+2310b0518K684P114b990D148J2900M141o19E775A991h846k305j4231P591N976
+2324a1815G819J7R716k425N830F080i16j4060J38o514O546P172G402N753L396
+2339A6551P35k170F730h476o152m494N131k188b754F349J5292o567J582G304L76
+2354G680a1144m872p546a1408P97A304N295J4706j859m375C913f33q975q575k545
+2369b0728O076c272B406J0527M718N384A0024C483h333R86j3163K283R72C194
+2384G128R671l374P899A0181B127a3333L11m498J582L253A743J1336L728q07k258
+2399A3742k552c569r170p344P267j724f022a524A7793K83J652F365J174f091m862
+2414a0953j1622Q901K429a364B178J4736L586k659E452c29n302q181n844R58d917
+2430A428Q524J387J0899o752o913i086J009q269J949n466c217D114J2025l932
+2444A2207O555n816n740i742m339k454K565N85d425H955P228R41m875L84A851
+2460h098j3142O634J571e158j545A0854N810O362H683k524c833j991j3602K963
+2474a6463K428a765A266J0026N782K625r056D12d655o202n033m423h701e92I309
+2490G807J0412j152k197e298l956p240N645o896h192a188A4206j593L634l562
+2504A2685j137c287j0296n199M883K992M332C637Q597N825n202L13D706a620j7059
+2519a8679J240J260c689k077E923N240J1538j0604m271b058K51j3133l691J75
+2533a8456c782C403N904K612M517k219E145b255p596k910p061P036e429I346q34
+2548H512O942k179L568F93e852j0138N781n810N004M467A1138L662K052o160j9
+2563A0673A806h175q422N70N334K602f37G348J1355l307k218C351I45a2984k099
+2578a5083l700f569O41C742L041J3366m573l791a002j523q866m131l598h782A442
+2594H187J777K904L395o414A145a0289j255n909M577L197E734K587O310m140N320
+2609A5811E750A44a4215J976l708N964J284E481P236M580n895k456D419c176r231
+2624a2407m710L934L055b001C635J2901l69j332C073p59g812k348r107P864L047
+2639h356C584J366J1192o00n93A910c014p007j845m396M206c860D688N445K425
+2654A2558L735m979D117h886j854m701M622q79C84M432R827m092M574p251l726
+2669D148a1346j917k898P358J228A006O371P540p98l222E410a331p352p418J508
+2684a4593K757b217B248J0376K85K681E827q26d767k643j1675M824L695B974K133
+2699E107P499l65K938F826C73h643k615k936J017N587G80R637K553K328n697l229
+2715F372d406k637p423K724k286b652B227J1295k198L465p226k078f703l805n000
+2730a5508N398J375b254C407R279L215l091E991a850l352o627p90j694e602c80
+2746A1215L17L283p400M8c102l137j0244L349J140d43B448P813R93M232n768B743
+2763g059l919j031M55K741c863F714N703M256o830k903b270j371r456R48k460
+2778a4609d080c11A0170j08N298n794k530d464m277m964L071J221d165A289Q163
+2793I452N399q94n038d77l689n728p0m772O532c604I014J143L911n808J402d9
+2810d593j0754K862J367b446J153F666M015N357m570D061d695m992j207n40K883
+2825h551K070C011O015P464m752k765h55j267q734n13l789e435a744G248m07P149
+2841A3990j588j924b336o607l960K797J017L150g23F169O616K28j450C424a669
+2857a0478rk938O048K391E636J591N194m037L172C936a883j3253J026L128a838
+2873a006C024M160O817r43o415g44o374l019l796L727L873C600K615O397k519
+2888A0093P65B693I66h480k485o028h464b475G751j041L606m67J630B591e325
+2904a1567O89O24J672b161E985P015k150j017D636j779f736l034m939O160J471
+2919g078C028K720P140l563Q14D121A434i611l246m55e255b281A579M396O959
+2934A2934Q14o412E00d451k182n941M17K841B061L157N618k465L186E198B389
+2950g195j282o204M104M033E315K184K421j918K385m618a104p975k364P73R38
+2965i732d559C184R303j252j771C759P67b533m366p796M578J584A35L092R625
+2980A2852j480j143B238q52d749l344n059L482M490F39M844N866K690n559A311
+2996d563P53m765j980k185b466C311P399j998L810o104B922g087J95l558J695
+3011h755q85a088E054O187j451q4l329C78g051m241K288J190K426b454G899L483
+3027A1382J684E876j370b327l165p649L810J358a341e61H162L218K090E127G64
+3043d466j739n170N97M125b04D049L229N060j207n086c303j793l541O05l747d485
+3060a09H599j136L774l055j558d235l432l084L449j197c820A724P597P66r18j884
+3076G285C470c576p423K01K473c626M14C830M357N366n469k147a424j784q241
+3091a1449J191O80a600d41E533K913M932n537B689c190j870m086k154K687b015
+3107D119J726L333Q37j96E53d058n402K250l195M439b738F736K32L382k625Q62
+3123H587c13n609n387L134O72L593f90E611L916J07j995l087B66h499k534K22
+3139a0811c661P86B135K400P243k567j508D91a045p812j352j703c724a29E309
+3155E965M271j533k953d84l636l569l384Q08d656C790K675J735j106J848C617
+3171c49p597L62l051L655J602D882K597L237m250O62A888a972o524l14L27K656
+3187e827K767C492O162J035k461C486F42d905k415l343M533J267F22K289P469
+3202A0380m31n36H34a393n354n26l307M660b597C123J793M058J088k019A451d513
+3219g468k171J414J940H81L176L897j205K508l401B266g115j439k263M836Q89
+3234e092B378K442M378k205P27l650D27f833k859K45L184b629A903N112K272k03
+3250I084D006j619b377k325n905J999J341E95K275O041o60O81B738H32d826j168
+3266e994m049K385K491A531L188L603Q47j230C244b693l365k290J076m07b523
+3282A353O314j54J805l993j403d343k877l391M338J005A96J736N552N30P21m124
+3298D611A097d829l760o55K241c201bE037K353K037m130j295i22k320o396L49
+3314i289O71f14B701M884j557K002l212j258b602k965m333J469K322a46D065L318
+3330G383J125j657k565d24k869l822l51j724d378c20G515L31J131D391l67a675
+3347c656n424J588L19a759A041N672J644O82l834I95c463k408j118p28J792b658
+3364D145L290K681m207k025a096q89m977p22j337c257a88F270L44K337k986j716
+3380D249b126k954l093J158J008K991E74M941L836j002k864a96k409l385J29k493
+3396h354L275K197D461J812L404l080j288a331k216m662J640k30b810a059C910
+3412F928K897k475B566b789l394l55l44J518R93A842L618L856k845l49G48a157
+3429g423j67r51b887a373C616R38L693j142j067C3d301l511N20J700K216b30B914
+3447G746P29j458A247a097l932o39k985L030K187B995J337L793j500K52G90b314
+3464g410O78j37K891J797B353L228K798k84l371e19m813j011m54K034J94A02L018
+3481C120M717j247P37C146E23f791j489m84b613J182B056K69M099J031J72B495
+3498b653m883j021K110L077B62J710L155J152J510l575A990c685k089m223L305
+3513f692K927C564N18J844j708K283k349A145e102k194j450K839b218C051K839
+3528E890N55m37k015j372a566k589l846O86J142b41C344N014k209k89B043J16
+3544B159c220k244l608L335K127I17J853M334N68j099A952a810k582j941j00N30
+3560e903b250H02M414J196J934D169B017c136p78l690J254N04G56J953L247j047
+3576D909K064k495B058c976k631j102J778K571F89M261J245K6j790o82d2k963
+3592c005m977O83O16a201A602N142p39L27B615j69a300j874m731Q06J703c76B561
+3610F648O96j052B545i73j336j761j661j756L095g44E475J147J489l741B099b692
+3627b576l034M93j760b810C67N784M83P05k954A568c168k328m69J032Q45J813
+3643b275A834L553K558j979j764e41k139m111J058J16a861M77C462J612L203l056
+3659E221j874a799k015l164Q36J166a294I52L000K218P03j579H84b063k924m30
+3675e417j671L026a689C683Q75K353j831j58e03k020l554P15j031c037f22D406
+3692E530J224j812j477f93l687j804L63J620J583A078K655L483j239q12I08a136
+3709e696n6p24b645Q82B299J755L739j811j795c60k213l055k92k2b851B28L012
+3726C240J925J280m22B350f61l851m35j763K240J646B266J388K695j450M87A381
+3743a295m530K51n95K781a642B570K107K008j362j380F91c129k498r52J938J504
+3759c137A56K108L694j83K49A845c3m477p24j552L000J159A863J023L277n80o90
+3776D893A212a356l360j312l67K415e98B450K269O22M00k367A427c232j565k272
+3792g069K145J293A299J763L041j325N03B178D97d108j222j033J906K020A490
+3808D260J876n12j779A420a564k419j861P73P04h05A315M191L17N59B170F65c315
+3826c970k355K141K47B72J940L552M77m65B130h48l302j056m17J105a790E90L275
+3843C865J043J514k025B143b617j749k358K076O26B96J075L204nJ490k598A609
+3860c230k181j284K397K088F04J890K057P48n97j820b89k625l456P24N54g80A060
+3878D582J3J367k950o93a518j590l234J251K74d7B267K749n7K84k247G06b159
+3896d465j286J52K663a84C649J094J263k056q23g32j876l229J030q5a318D34M046
+3913D480K27J348k297j732a836k261j523Q42J364g61A855K142J715j017j257a2
+3930a818l290q0n73b125b58C775K07J598k185n15e28j789l445M54K58a473A132
+3948D111N45J33j300A666a149k702j217o36J789a317B746J493J678k068k76a67
+3965a167l592q8j097b643e54C595J030J334k094j390g35j945j823m59N73J849
+3981b540E81L070K211j057r86E03h18l004n60j608K611J384B662J656J896k045
+3997D169q24b03j336k931j49l70K286c69B811J988Q43j260A699g13k510q31j086
+4014e140J442R41I07K008L244j270q03B00a137k944J27r34K029O53A667J989K673
+4031F329j228j615d24k373j566L17K46P50f26A866K927M70j9A879c84l680k45
+4048d309r65K385Q93A166J023K737k14j7A400a074l616n68J94b313e56A556J725
+4065C281J260L49j700A227b607j728j360J702J090H73J035K720m29N28A842A93
+4082c209o99j635J879J279A135J867K319n79j049I93a327j896j443J37P35a053
+4099A184L084N94N30B482H05b808q21j753K010K51a9A510K927J79R02B278d06
+4117d176q39K60J698i60C15J816J671J301p13k118a728k267j816J648J450E33
+4134A032K109L64J441j916j054b170k110k009K096J909A196J207J481l92Q8r26
+4150B654A003a854k916j041R39a223A537K748n20K29j586k22f42j391l319M18
+4166d934N09f29A904L088m79j39A674C49a707j401j326J47R85g82B397K304O42
+4183E343j895A702a409r80j571L25n45a980d30C370R25J194k253A443b037r60
+4199b997j769Q56P26g78A183K186R86J61j153G57a969k374n31N81a633A27K324
+4216B451N23J497j238j6a82j918l185L91O56h00I85K352M66K88j321j194f61j945
+4234b606j996l61J454a385B280J665P54j571o08g6q02k418m07j255K160i20C312
+4252D305R53k325A401a367n86j451m04k21J598A72K829K015l21j343F46a408k147
+4269c555J04n42J458P84A308J272K367n68r90@a922k485P91K0a642g41A710J482
+4287C192J549n73j543c91k645j323j34J531J396I12J479J839k65k11A157e55l190
+4304c745m27r58b298J107B190O91J565r76o68C49a408k235p87L2K155B56K067
+4321B323J584L41n02A590H2b801n04j278J312R95I90J393K366q78j48F37f53k698
+4339c351j15p80J509J353A280K115J410q70j497C09a944j406j009Q70Q14c4A684
+4357D070j31J52A296G8b651r61r96J770J024A009J129K196k24o09A154i40k174
+4374c114q51j5J287f79A306J818P20L17j802G23b331q93j318J469K42B86J177
+4391A463K584k12J75A397B14c023m17n53J050J126F76J808J433L09j195A327a264
+4409b663j528L21Q47e71A059K287L72P51B082r29a944j070j837J321J092C99J294
+4426A693J905R0Q4A786ck401j601k73Q18a372D68K563O86M12j173A387a348j367
+4444b715j334O64L51f43H16K670K75L87B050F36b211p56r39M38J252a25A797J836
+4462C633N82j024j330f54j525j808M36L93a102B94K442M40R94j336j025a570j332
+4479b902j471J056N68c33A196J604P17K49j038F62a810j796m29L65a768g7B136
+4497B702J119o97q43f01j328k110L78M3i38D09K658L24L65j354j153g59j570j702
+4515d031J23J042f98A676J397P96r73n83C91a067k217k91m18a607c42B253O74
+4532B927J099j224p83e97j203j799J04J63a326D26K278Q93K08r41I16i35j884
+4549b819p64l18J590J146A592J093J383p54o83A28a373k013q2k59J851c90B288
+4567C115P46j232r45a97j297j782l75L33a428G92J596J057k34l05H10e05k403
+4584b908m45m25J672R94A622P99J648r45o27b23j158j834L3k75J364e49A848J621
+4602C469M64p31A474b63j957q91o30J047J123I68R11K075l99m30C32e85k371l7
+4620b993r66J637J113A487J589R30q99j154D38a240j508j211N83J348I3J793J444
+4637C330k8J8A318A47b421n32p82J319N59C53J519K280m74j045D13i99j550l22
+4655b871m34R14J177H67J948R99j36j821A04a969o83r80J020P71a97I83K310K32
+4673C525L87A571c84k526r4p43J553Q07F98R65J552P9j03A509i44k055j155P67
+4691c387J213A2J065J341J43R31j112A157a770j105j209J273R99C38J226J559
+4707C123k10k09A301B03a550j287j008O43a243I99J663N05K69j483q37g72j094
+4724a866j545qK33f01H59K157L61K03A746D11a924m75o78K56N45d23A415J746
+4742C161O01q76j417e72j558j339L38Q37h81b42A935Q63J238r94j477a328j342
+4759b670j191J166Q26a69F61J764N74M54j059E23a444j682o18L62a463F53J355
+4776B008N19K66l48l57B58a259k169m10N19i02A041J780k42L85j167o00f49j222
+4794a871j417j50O24f94A447J911J01q82j219e8r80j391l53n50J319g60A863J444
+4812C307Q73j626A251i76o69j032M4j08a335d07B156J361L80j375C87a578q96
+4829b474l29M7R36h32H07J258J255j50o54B14a490k123N89K31a196d7A478L74
+4847A852J207k46o01a10j857j603J22P02h00H00J410O42k30m37r38b66j900j162
+4865c328m38J575h14A691P56R65j058o74f6o24j645n49m97J444b85B169R77J47
+4883C293q14I81e65q78p96q62N18P70D87J603J264k83n29C05h61j550k51j42J179
+4902a625N97H28J341J258m03p49B74a532j411J02P94O01b04A105J541L93L2j501
+4920A570A16b209o60k91J170R42G69Q73J354j32l35H74b83k068p31l15J555c60
+4939A421Q48O45l35p74F81a055j411q55N51J017C07J323J412n28O9A108F2a712
+4958b637o05J036N66G12J255J207m40p25F67g95j094q53J56O42g22E81J806N21
+4976B908J44j502C53a353q52r01R56K40A77J002J512J90o8A201b06j784n46n00
+4994c036O28a083E70J172R06L81p21A091a082j127p64L65M16d26H29J341M48L62
+5012B980r91H31a517q43p03P35N55A86J172J193L33n31r67e2j575j076k17M20
+5030b500h41C02J664O58J19r13q04h98q83j073J11O98a79H47J433M66J9j222D06
+5050a139j141m08Q4J089F9J373J064K95l97q35b31j273j428K44M05g59C38J425
+5068A763Q03N96j378n85i67r09q81R7N61d21G60J568N48k63r65C96a213j209l72
+5087b794Q4J225f9A374R80O56q36q49e80r24r74j89K51i14C15J467O16N79r36
+5106B041A008f40j217j079L97P48a59A024Q80P17j99n51C53a021j666K3J45J122
+5124a397b2A306Q90Q57r28o68b37j329q22m24N96a046D41J482N83L23q65H34d59
+5144a841r17RJ017e36A207Q37O33k12n55A74h62j307m64K61Q99b03A435P63P14
+5163B912p61p33b73j219j084j70O30i00E30J044O54L15n90E70f25j603k18k52
+5181b698J019h14A054R24R44o06o02A36a119j133o70L45J185f1A574N56R25p96
+5199B259j123b8j369j005m50Q02Q80G37P67J123j24l03F45c99j675k46j86P07
+5217a799g11I83R53Q59n16q10A98a241r33m54L12J021e8A006J218L29k48A149
+5236c4j661m60n53Q06Q01D97J008R08J72p08F78d77j437m00n00J129d13A101R54
+5255B055K08J13p37E70a012r75q59N39Q43cA247J096K38m23H90G6a465r84k56
+5274b705O00Q77B22J389J027j27o92F14g18j009n95n2K91f40I30J148N04k23p52
+5293A607H4a161q66m00M07M67I2R37J119M12k97j119a16j322r87j10O89R20B28
+5313A110J161L56p01q33h18r96q77K68O85b27F55J265K53K56o41E63a156j029
+5331b185p08O45R32A05J350Q18j76l46n83e2j191q69o75L76h87D01J567M48k76
+5350B140q43o22e89o48j199k1M13h78F89J481J53j40q87C10i43r80m16K94M64
+5369a581c06I69J081M00m4j162e15j133n57L01J01h19B47J064R17M41p52F39i91
+5389a912l98L08M90d17E09J150O53j05m75D10g38j548l55M86g67A31J153O78L20
+5408B282l21o08G5a276j106r4K51g90H22O87O36J85p82p21b47j077j214j37Q10
+5427a865f39I90J143K09l67o10F3h50r40m63L9P19e61A236J119K73n82H41d65
+5447a185o46k3k75R59A0J484R28K75o52E92e21j354k87q6Q53d55E33Q69J149j40
+5467B411p06A20a059j117j42L03i67b28A050P12M78j16n64a32j243q22k68O45
+5485a820h38C73J022O16n0j42q69a51j541m50k86Q43e65A043Q30M16k75p47D21
+5505e03j149q47J01J092C2J505Q83n8m44r41a32r15j109k88N43P23C60J136Q07
+5524B303r5m71F02f51r99m49n9O54f72C70J067Q91q1o85A07a158o10m30M74N12
+5544a212a63I25J018M78j98r74c7j331q05k98O81f82D73P43J004j45k65q19b38
+5564a670n34j97Q91c8F81J149K33j23o39C06f75r36p85M55Q07A31R74P75K92k20
+5584A952p92fj278n18l75J88i65B95J131Q91j37n71D47e72q65n44j6K14f83F29
+5605A790N72l44q37C18a099n70m74o7J039C9Q78J037L45k23r93a8j162q33r6M00
+5625a709g15B44R21Q95N09r08p18d12j254m78n2R00d88F22Q55K60O20q33D15i79
+5646b036j9N6P69G8Q84Q62L76k82q49a75j113n52j53o8i43C43J221N25R8n94F50
+5668c84j084p85L15L90e04G12Q31N43j47q07C40h82r41m6R2O38b05A063O47N23
+5688B233k22q95h3j106q08p0K39g73B35J219N88J28o87G14e58p83o24k5L16g77
+5709E71R47Q42m17n03B17g11q05n98Q0Q30c40I79Q71L12n15p61a30j054q03o6
+5729b053L87h16D37Q78N98K12n46G31d91j089m81j62Q09e97F26Q25P46j36o26
+5748A435C10g42r61n09K63N79a80H32Q77M16k71r01a40j247m96k56M48N29E07
+5768A511M60k2k23G73e03j009m76r0O32e29G42Q55M05L9o94B70h02q85n44L90
+5788a841N44b3I38O66N03k32p56a77r36o86k39L19g98B74J237L40J53k84G24c56
+5809a227p34PN62f35E44R38N42L5p91C70g45q75m17J70N25a55I10Q53K28k82o57
+5830A052E7i86j011o3K22h92B8J343P49l2l93G60c68j173m01J36L23e50E98R84
+5850A582O51j46q38B43g92q80l70K01O68a72I41Q76L33m28p35ej146o83k78L70
+5870a742P81B63Q77P02J20l42F23a22j238o17P8N76f22F63R70K41N6n67F21f37
+5891a711j36o7Q68a33H32Q05J67r6o36a08j324k79l05L12P46B38R88P47J78p11
+5911A440G11e31o98q73J03N32f65F82R57N11k12q43A69h01q68l44K39M76a10G35
+5932A807M15m52o68B2a009o10k25K01g69C0J091O52L54n73o70b95j188m72l1O42
+5952a344e04E26P43L97M36o54B82f93j040k52J23Q27b22H77J131p2k80o59A05
+5972a160n23l11N0h75B4J028P95K5m38F98c40r04m70m17M04f44E62R90M40N1n51
+5993A492C72h42n04q11L25P76b31I18N71N74j87r34h2j084l35m54L95N51B1J223
+6013A244P57J62m33H44d56r82k50j27K55f44C11J215L18J21o42D33g71p73m78
+6032b022J34P43a8G73Q22L83l04m38A92i58q42j79J83f90A7J269M81J43k71p79
+6052H60e70r50l39k72M81e56E70R99L01l24l86D14g44r25m61K27O14b35G46J068
+6072A814J11m12n60Ai76q11k14M42O28A96J172N06M14q39E98d96p74o54k1N50
+6092a395e15B64J051M90J42n10D15i42o14l14J34N18a52H65N40N27Po43a41q83
+6112a024r30j0L45f63HJ122P02Ro48k88b52j063p47K09M42e38E88R56K94l3l43
+6133A462D85e50r51n56J11P89f4A049L97P47l64r07@g44j042j15P2g21A90J124
+6153A314N42J82o19o97d04p54q05%M85g29D90R85O59n9p74C48f48j022k41L49
+6173a562N07a71A030N97O09p48n62a67p95r18l29N06Q08A59J051O97k23o5F52
+6193b09j135p49j05J017d17F06Q46N47n1m89C19e91j078l11J03P84b49A084M22
+6212A506M04n2p98a21r01p11k52M78g35C50Q67N80m1j19F88d36r49n23q2O54O00
+6233g36F06Q67O40k95n17A48f31j091l92J46Q11b89A165M06L70j95p43a31j161
+6252a292m88l75M50h40A94R54Q73k80j89E75d10r53m97k17O70f38F29Q62N45l53
+6272A683k71D28i44p12m45L07P68c41G15J024P6k4q91fj258n08j39L78M34F3R46
+6293A009R82r5j36F51c16r83o33l5L39b49E84Q82N20k0p32E00h05n83q71L43O42
+6314a274a47H28R26J60q6p63A17a121n64k20K79g98B65R60N92Kj83G25b82j212
+6334a494o57L21L78d81E06J001L58j8p22A88h20o47n92K28O45e2A062Q25N7j22
+6354A822o73Fh80r20j25L84g40B92Q02O91L79p10n55f13r13m22N8M84c81E49R85
+6375A534J10K45q70B89i04n85m75L80L45a77H53R00L43l58q47I7a044p75k76M47
+6395a648f92B68J025N86J63o27o43c16r24p33K37K80e73E97Q65K75K52n82D22
+6415f54r07l20p3R03bH97N45O04n40n95a98o18q98j66K36f71A32J227M46J28o66
+6436A267D80d07q72m74j32M41d32D89R90N47l15n79C05h82r15k63N5Q06g9I25
+6457A592K84k19o27a76p92q86j41M31e32A04J066Q14po42E02c78r29p10J45O23
+6477a249d62G92N72P17k52m20Ah31p22n32K45P97d29I28O87L59n14p02c58n79
+6497i37p98k45M36f75B66Q15Q65r9j66E83c64j151m54LQ00d33F86O65P16k51m89
+6518A327B70f61j011l49K95g61a94I41P78M55l12p85a97j176n09j28N87M85B26
+6538I19R85j34n1E11b74j254m12l1O65d56D86Q16P07j36p72A17f63q80l83J15
+6558a811P30aA008O27L13j47q65d2j100l66m16M59O87C33J005P60k59j04E93b55
+6579a371m90PO15e56G37P50O17m21l21C05f71p07r81N17P94a93G79R61L26k13
+6599A853G58A2a354k69n09P31N93C83P19P33K90o21E47e87p27n93J02M92a68F46
+6620A714l2J46m89E05i07o98o02M97P28F8R16O81j5J27H39i5j092m85m59O77f42
+6642B85Q67Q38k2q20n71f85n97p07K1M36a69F28Q38M15J37r60A89h87m19o86J0
+6663a982Q02A12J037R83j66k43H32b33q34n57k36M63f50A85J182L48L01m54E51
+6683f68q75n79M63M84c01D25J040M31l9p40D7a083o01l83K89P11a11I92N98L63
+6703A953k48p04c11p29j143K21O12e86D10R85M39K38r38l01c43j057q49K98N47
+6722a404b91I23Q44oLp63B92g37r39k74O8g45f2A125N05N31o80n62b90r86m74
+6743a750r2Q4f14B21J263M75Q6p65D04e31p27m77o1O26c08H01P10N40j13q35D5
+6765i87r18K8K47P48A16J080L61L87k70p02a15j211l30m04N74g02B97J028L10
+6784A635J38l93o68d56j101m56j43Q16a40H32M77P87m52k78gp25q46n02K18i00
+6805h4A252L20K04k45o45a94q28o06k08L45O98C46R64P68m99l34D13e07o89n07
+6825a703k56Q57b96H34O85O72k94o30C3h55q18j82K93O18iI68Q54L78m95p03c03
+6847a399j87n16a040L80E34M87R02N0m43D46e94r19o11k8J047a21G41Q76L14J8
+6867A949p79B44h76p90m86M80P64C26O46P51O5j19p97a36j018n33l04Q95M91F48
+6888A477N46k77l61A89e30r75l42n3O71c00G57R01M32k44q83H8a200m43l47M63
+6908a527N16B54P57R32M3j74H21c21r54l23l93O71N45C93Q97P48p8n36C88g31
+6929a716l82J24Q89f1E91J079J11op95E8a334m50l13N97P06C09N11Q09Oo6G09
+6951c27j067n11j27O15e53C69R41O17N2p07F17h81n98o26M36J87d3H48R34J64
+6971A946k20p58F3a059p16m47O20O36E50M80J098l10j91E96b47j199n34M0M07
+6990a533c89E80R95J62K59p42D14g42o30o99N17M14h8G88J021M5j36q25A58a213
+7011a776j53K27Q37B11J160M55R7l96F49a71r87p25K10N7c53F80Q21L72O7q03
+7031A137E33g38r34m39K58Q66F5R18Q29Qk15n64A80a009p51j13J70f46G6J308
+7051A384M29K40o05G03e43p96p85J81M94e27C26J227M38j70p24C06f75r09l07
+7070a891o0R44h8A060P75M84n81p52b67n46j197J10L41f62B40J125L22L08m08
+7089A587E63e45r34m15k2M83d24G87R25K22j72m73B97h75q24J6k94P17a59A125
+7110A668L48n38l98a49q63j070J67M14N31D3J378K99L09p47E19b83r34o29j85
+7129b031Q30e47F91P02P23k91o00d6o61q81j38k19g34b36A163L68N79l37p05b23
+7150i94q11M8K21f87A72J010O20J20l72D67e43j138l81L91M89b52G80N92P19l12
+7170A779m52a2o94j263J45k30i03bA123M56L44k36G75b48q26n26n70O71d76G17
+7191A179P52l5l88D44c58r71k51n05Q55e31A100M39N90l53o83A14h27p08p1J58
+7211a448J55b9A091P91J02l13F87b23j154m07J41M57J05C47P36J145k25k87C43
+7231d74j245l07K20P79c57E16Q17N91N4p53A93a031q60l60Q24N58B56O72N93J23
+7251A644K47q73b5j235o70k10M90f70G93L77N95k54l5E77d25j093m52J06L81e63
+7272G69J075K4l17F08B97h92m28q98O39M78A90P14J212l14l29E24b28p62p12k39
+7292a941N30O64D46R73M29L44r26B78i10m83l74K91L89a63E03Q71P52n8p83B42
+7313a335m50j86O52f46A50Q44P78Ko5m35a18j481p44L87Q52c33C95R52K84K11
+7333A842q70l23b92j002j219L73Q01B70O08Q37k43rm46C19f25j044n10K78i17
+7353A42R94P80l5o60E69d38l29q70j50J54P64C88J477J97k8j000m93i34l38n18
+7373a790J95J75d43G08R09M80m19p52b22r81n23J46L27O02b40A203O05M58o52
+7392A614G48b67r24q57K60L30a26E93N91M01L84m67E29g89o89m27k22J047i8I22
+7413A250O07m24n26a22q81p56j37Q9Q34H2J643jJ21o52l93b31r82o64j67O29d22
+7435D08J125P01l75r07A8f51o92l05q2N90e50I49R79N17j016o95c28o36m87l47
+7455a798K20P52g6I28O66O76o41H02f63j151R6J0O14d41E66O98P29j3l86A77a001
+7477a589k53J73P51A10Q92K63N88l05m49f3r41j070P9N67f94A08R68N69K31k46
+7497A630E25b43j300k50j65O17d61G63M58P66l18l57C1e27j334Q2%Q05d6A046
+7518A341M94n2p48i7j324l08p4N20K79B15Q59Q69j8l09D65b80j183l89nP07N31
+7539f19F32Q03K00Rl08B18f51j116j58J19g66F8Q20M57N23J14r73A32a171o29
+7559a800k22O40N77G30L48Q33j40m75E09b91j195m30j05R39c92H64O09K24n7m34
+7579A206D07f36j008k65L86K10A89P68R05j49o9E36cj108m33n44O12g07C90R21
+7599A311M59mn39D94c30r29o21m3P89c40G18R10J04L9p87A68g08o40l63j2N58
+7620a165B17O42J058m36n6E28A37i56p24j78M29d67C43R50N90J71p90C11g87n18
+7640a305n82J27L02c73D41J302M64j89H66F8a009k66n84M64L4f6A112O28R8k77
+7660A561o68d51p07o65Q1L94f08B52J092N24l2o06n58f04o45n58K88K60a69C64
+7681A714K8k2H44A44g21j020k26M30P28a0H81Q32K39l72E25e26o07o06l3K57c90
+7703C02J051K20K21m41C97g33o83l81K10K53d32F74R40K38l14m15C3i62p52j88
+7723a902N59O63D7J080O60K4m30F61b17r50q89L71M48b80B42J248K67J69n63B59
+7744e87r18j42k16O56i7G94K65Q79l65m21b95o44m42j40j16g51E3J322K43K02
+7764A820m12m89c78p76q31N60O8e36C50Q48O41p8n74C19d68j402p0N68N43b37
+7785F90O45P76l80p51i7p64r69J2J22c53A84Q52K81P04o55E60e95m32o13l24N04
+7806a460d04I19M06L29J3l89B96h16p19J26m89P26c85A036N46K28n14k96a26p49
+7826h75q41Q4J85N53H7J026P90n1m54E25c30r26l09j70P71L36B5J000J142k49
+7846A918p27a45n47n36l03k25Q03a95F00N12Q90l01n15c27j019m45K71J18f18
+7866E65M34L89N5M12r07c35j456m8J44P09d51A089L24J9k06j17l89d74j315o07
+7886b396P69e76B1R15N10K25l85D26C0g66p64o90O07g97C26P54Q63n3o76A54d17
+7908h92n05p05O01d96A067K22K38N8m27D7h27o75J30L4J43a67F33Q35K69n8p18
+7929I61a19j284l32M4O71R3B89O43R56n58m1l37a08j555l69J18g63i5D91M52M44
+7950A387N49p83C69f51o47r03M21h54E38M45O20k98J3D34A99f14o04q54K07e37
+7971I71M35K72l65l43m33d49n80o01J54k33g94E88J541q5n84D73c3p07l91k86
+7991a417J75j72c07H65J300k15o34C15b60o77o34j40P43c75J64F83J275N52j204
+8010A306H7a153j92j25j23M86b02E09Q08J99K78q09B71i26o07l35L56P35C90P29
+8030A119L1K41K34m74h4j392l97L99O2N85B30J153N42j02G95C40e56m02q11J0
+8050a759N01a49D70J228m5p9F32If12o81m02K19P17b2H26L55R97l93E01i48j14
+8071a062k02pJ5f15B23R71N32K06o14C37g39p72l39O37L47f5D95N61O06K27m23
+8092A466H0a186q25N47M47M89a93I14M94O73o99n74c12o21q75o4M53i0E90L87
+8112I77K56L45k36m52c23j090n32K56g06D4N95O47M69k47n18a57o61q67N2p6P40
+8133i69A65J227k6K21o39k51b29r99o09k1Q68b26E49O95K73Jj35B07g46r03L3
+8154a616kg46c65G98M62M40k07E40a33l81j055j27O8e45C56J102k8o7K0o67c05
+8176a102n59P9N20d00E82M25N17qn65A89e56p41j92l95R12
+8191i72
+$$ Imaginary data points
+##PAGE= N=2
+##DATA TABLE= (X++(I..I)), XYDATA
+0@@@@@@@@@@AaAbCcDeGhA0a2A4a7B0b4B8c2C7d3E0e7F6g5H5i7A09a23A39a56A75
+41a95B18b43B70b99C31c66D04d45D90e39E92f50G12g80H54i35A024a121A228a347
+62A478a626A792a981B199b455B759c131C599d214E073f384H712a4305F4261R805
+77G4066a5957n8636J9923J9442J0372k008b992B1121J0935J3382Q824K104D56
+91d4527l7547L0337R818G847Q827L0089A0831K4978O346K8270a1509m9704l5126
+104i6339c2489J4360E080h92D8627Q395r097H937J12B497c3172m2426K19a7437
+119A7623K5788q295K0292k6206J06h578j082n4390N405P25H300M99K4901n358
+133B8342M8080k3231A5040e3007J0809R801J251k3647b5161C0913K7278q408j7385
+146C2398J0452A3848a9791n3209J6990P485a507K47C7403j1957K6216j8743K1161
+159E4080B285c4414n8005L8570b5102A1136a182C0208J9827M824B2204I604j848
+172G756b3196m4071k3728c4239A8124M0251k9151O602j2920K1272D054a127n0002
+185e1129l352k5984b0513A3447M7451k3238J1489j9981o653a9490k666r645j1827
+198d3628k3351K0390B2818N1951K414B4299A1234A501P986d0817n861j6062b5132
+212b7212C0062J7420L3269C4220j0308a7732J646l5158J1388n114a9239N208B4086
+226E6879J8718l0401c398j8822n624j819l1657J8708a8941C2129p301K7552q219
+239D4161J2894b853j6935l8284K3400j7789b2695M633C3618O244J9749k0054n780
+252C3777e885k6117j7268O211L607K687I19L8862L0878k9060q613E798K043d1559
+267d6726j9677b2883J406B2323L950M4409k2000r672a3092k104k8435J329j1193
+280e3495b4963g866A9676K3927K0338o626A5683a2748k5381N657j9615J6541J812
+293c3734A5439P295L5177j5706J5991I272a0462m8847K1477r254b1879m157A8607
+307C3782K4826j2737o685E747b5562k4061m106J5696J1007A873J3849L5989m676
+320D7035O153A4016n288c8825m730k6416b7095O370B0688l307L8950j0881M937
+333E0387F708h208l7426k821n949K3584h544A9764K0815P137M973k2960I512c3266
+348c7115k0623K1300k182A0583Q429L8064j7227J4184A2037D641d1262L160k1424
+361e9526K7213P632A5872J3713K5140o939j0810A1684a3897k1879j9327J0545
+373d4558P694a543A0977L8044n747J3518B0410o531c6259P61k5402K8944l883
+386c5839A0298Q262L6750j1283P553A5875c364l6828o092m626J5657a5661F879
+400C5737J2743J0814k8312A5321b5743n581k9480K2929p96D725Q87M3654n502
+413D3764J7170A8285H426c5587p89k1856K1616Q631H900J4902K0699L254j905
+426D5850k0297a2334k2777j7654J2199k296g572E985L7617r353K1804k5488k905
+439B7660b9586p906k6753c0846j124C162L436L9610p66P516B3486G659b8860k1687
+453e0547n846J8710a1834F09K6023J2640J9943k4579p965a3947r161m1304J6083
+466d8329K698I270J872K7739j2489L0960k2498j1649b8770p375k2881J2815J1778
+479c4433H513K1878Q234j986Q42j000E969a9660l5417N630m007a3306D460M5879
+493E0339j4794P647A6792K0236a786k0420m8465K4808O709a205E596M0652L030
+506D9278j828A6506F503h636j9550k3205p942K8389c320C4865N999J7866k7992
+519C0738q755a4216e394l7394m006j9537a0141I371L5908j5388K4422j8348j0839
+532B5126b5225p728j1852P779o548b0086A7989L1131L557j9458l555G731h511
+546d8683M962r111b1736Q424D0622O45J2292A7526J3184A532i000n1592J0186
+559e0406N944f203a860C1593J9048R892B4350e019n301j664j8777l3455J4741
+572d9475a8536C4893Q201J7481k9498o536a4988d697k6427J981l6066L1416a2105
+586D4207k111J6545k1028j2331b6405j2090M779a5746j8537j2791a5394D0043
+599G7544k2816k4806g509o169k9883J1478q527a4384j4736F514J6725M9734k2215
+612E0758j1216a2367j1527l5790J8810J2726A365a3493b748B7879M4111p300A5803
+626b3570j4964O780j6234J2997J5509B5970m405J5816o936K6931A7914f430n1145
+639e7575J2748q631a6404g085C1008p407J6755k669R130F784c0479k3873J4072
+652d0280J2393j294a1330B3206M2221j6442j9099D05R706b6756j3731k4091b2604
+666a7019A5494j639M2918q304j567b975j3264l0828P207j031a3471N026C410J7101
+680B0511L5073J3035C1610a3481k9355J2345j1671Q498L567A8472J094J4476j2575
+693B1467L7076k1978A0900f1307J236O528f125K129A8677n560J9406J110J6148
+706D9781j9285i955m6462r355K6729a7548F205J1725K8482j3210l109I640K0030
+719B9670d895l0573n3056L7871a4575D0858j4983J2248j3368J4593A0610m398
+731F212b2834j3062k6822J5805a4122B6122J8286M58l767A7096B961a8652O470
+744a2182k6159p732j3426a374C1197L2483B8843N543A4393K794c3084m847j1056
+757d8987b2011o460b008A7560L6672l191j4134I047a2237j8670j3865Q113N400
+770c1259i237a177C8853O909P588A3366j359a6333m262m4219J9112J6045B2354
+784A7124J7852n407K0389B2800C125b9739m945j3530M144J9852A2303K8959m03
+797D0859j291j7060l882a2050m253k7059L990j5433a0581A5440M4833k2831p05
+810C6737I173Q651a7752r026k3326J8827j659i606A1659M0737P259k1291E028
+824a4829k722j3488j132r615b0279R195C2797J2097K0086B4491I188b8382R910
+837a8472k4428J2123q487a831C606L0008K922K1195k4657C759c5890m413L657
+850c6646O564Q306g559B1252J1684J5783j2928l936i435j5704k9797K1025l056
+863c6967d913J642C5459m021J7193k4135Q10a3673j5504k6656J8776J0538b476
+877H511K3329J3368l287j6882g70j1667k3372l062r712a7608e198C0934j291K2479
+891E2122k3993k869a4471m12k9248R388j0136i818C147L2542o89J1244j6341A4714
+906a6656j7643n806K271J2905J1445A7737J2654J9364j6101r13c721j0743l3771
+919d8235J3954p291a0461M94B7751K724K2609k3212o100a1304j0536k3679O390
+932c9129N391a0147F910J9522J5077j54p431E785h509k7653L70j1921b0383P195
+946a3188B4257R31K4292j9002K588e655o188l1449Q892r163a5511c830B8047N857
+960C3904J0477j1991j3275e718k2360j1091m173J6799J0340A2890Q461K5303j0563
+973C6091K423H07h145l3891R561j2241a5939J363B2170M456K3969j6865n117e138
+988a8373k1781J952K516J7277B390J9415J7577j229M4A3039f34l3955l93j2382
+1002d7364b0618K036A6375J996K8774j4027M847B045f445l3965L969p272a6992
+1016f903A8566Q703J4104l121j3046B718b3613j2436j0109J7008R773A0540L906
+1029A4446K4752o920J2089A1339C11c8863N748j3814b0543L544A8872L470K0190
+1042D2532j0986J914H070a0073k7572n518M690J6490H31J6346J9128l332M030
+1055C7003A7031n004b4248r276k1296b6850O969A6032n14K6547j2710Q428I441
+1069C927b9914o687j3521K3966h357A8273Q042Q434J177r476A1139a4873j1117
+1082b5990j9173Q581M453F625J0392K4195j4291J1212A3397j858b5755j512k1831
+1095d9098J8841M142A3817J1672J8585j5128k085A1316E40b3440j6392k281R083
+1108c3030g963A1681K8275l128O6A0762R03a3450m219l1657J3431K390H014P127
+1122A5141K9112j0945M200F828A881b0837k370j9020O525J2344F371K1005J2817
+1135D0193K181j6613I028a6700j206j4812M532j2849a2181D265L9855p898O587
+1148D2809A2577k394b3334J246j8113J4754n436c885A1885L0525j598n555A3057
+1162c754j7971j2997J002K622a2994c586B6718Q557J3925B1084q255a7626J231
+1175a6395k6478J1950l150F05M416K9047k145J3384A9375E296b3825k452r266
+1188c5543M673N955d833A9172J4987R959j2608j2668a3240n733j5149J0828j4150
+1201c7444a6295g109C4628L55J2314A9199l932a8743l371j8116J6258k621h729
+1215h80B9100J3776J965k1333b163j9670j4044N517K425a0876n34A3234R642K8403
+1229E1279j6220q837a6357o130k2904J8241j345I81a079A9988M68K4572q949j4921
+1243B1158a9372j6797o305J2746J3882b549A3310O251J3727k443L072E280a0998
+1257d4396P900l104f867a069B8961p131J3634j5993Q793A222a2992l3993O566
+1270d0419P772c083H680J7008M910J953p297I678c493k2825p425r653b1303i691
+1285B1731J266J9176j6124P88e622k496k7009O178j1059a2752d108B4482J567
+1298B6049J4025j0790r338h274j7138j0130K875R588R589H211J1937J7483q133
+1311B9498K552F518c212l3356L033q232a2251N016B2678l753J7155j3199O963
+1324B9844D956g538l2114j604M098i000G827J3670N469J587o50j3225E526b0042
+1339c0597j7303J9711J2743B1489K209J5439j8969N402A967R87b5824j772j8324
+1352d5920K0738a1243B5360P520O396j6179r120a665j0318j0166j0453L69M433
+1365b7800A150J9484K4326j1510m463a18j741k3272M898j7831J6896o04A1070
+1379A8956K5636j2523m012a511r306j9456J629j647J1935g527H925J8194Q488
+1392C5607K697A7652B598b5032j337j1239J6514N3F899L723K5543q470Q684H733
+1407A351b8884J202j1854J8581P171A3161Q626J2820n003p015H028i366j3642
+1420b3008j3739N048N643E28J1664K3527p439M712I171k190b0906O7j9182J5979
+1434b4042K23G739P716K3210q278k31E877e054j8916l177m095O727a2072D445
+1449B5863P842N298A8968G029a9934j112j4475J3853m336a16C901K9930l522Q965
+1463C9274A2083C972b4819m94j0992J4515M845C872J1091J5498K577m725j3215
+1476A5098g200j4358j4778O930K964a934D701K2812l952J3161A7552k906a7736
+1490b1619j9320J6233J267D754N424K0931l600M104A4243B778a8228j0443m662
+1503c3333N571a2471A812K1156N220P872j6726n138a1784l149k0805J0093m857
+1516c0502c442C028K8407m233R144A4072n090a6608l479j4420P507M925a325A3394
+1531B7854N401n386j0010c699j1115j6937M092k931h487b380B3983j08J4787j8887
+1545A9775k807a3225m025j9543J2494j660b918C571K2758K179N351j4679E179
+1559a4736j1971l003J292J3346e192A7030O432J3400j3347m063g891m440k1408
+1572c3739Q753o128f449a650B4956j184J2225j6526m839a1004q465j4755O435
+1585b7789O376e310H485J2919R769k666m902B410i746k1482L787m454a0488M228
+1599f260A9157M3J7401j4138P6f420o458k2032Q343j913f218A532J9272L820P320
+1614C1944q140A0800g432j6067n402k622J3914Q619A4382M866J4795j1542J023
+1627B3524d55n219k5676N241p520a0053d466B1740m53J1138j2153j606b414j1959
+1641a4373j7591J307O911i042F279J1084J1858k138j061F014b754k2865r6r862
+1655c5577a4868M949A6471J27J7599j1926J909a131n686k2252J815m798a3047
+1669a416A8747N260M925m627j0050b3j8304o776p828J0862O294A0893O806J5787
+1683C3486j3027L707C744A208b5446Q11j0989a5587O228A6847L638J2040j1505
+1696B1020l206A911g903j6856o311L571J2502B446J0870J5422j469k65F125I18
+1711a9449Q3j5337J4463L060A1685L886J8134j0315K031A305d659j8063J235r241
+1725c0728R827i785A3481J1726M145l738j0689D029a4756n720r655Q344O1B043
+1740A1511K2287r095J707E225j830b1082m67j1501J6457K087F696Q655J8217o275
+1754B7293o991B454g437j1827p639P88O632b472F471J7603K521O379A1882B017
+1769b0120L669j3158J0474j641D723N107J9749m716N171G547b979j9852J701m788
+1783b5918N926O379E009J5872O609k51r089o916a0345j0216j2345J3108O56i93
+1798B722K4060k613O936A0718l360a7424l703j2439J5559M006C287N104J7659
+1811B6050K843l297H337e110r924j0364j697L257c441D890J4919o5J2335j3879
+1825A8200p864a6988j13j1812J0489m556f6F725J9814m448O322A3307D092a8008
+1840b2615l206N494N423h19A7315P460J840r322j404c045j2016j9544J1170L667
+1854a9768B94a571A8981K225J2601A5321n082a2545m202j5732J0042N791A799
+1868F861J3143N953R13j2282g37j0031j2219l316k284h241C666J6741n144J0940
+1882B6203p181j67h944n918j4683J0320n525e042C716K2239m234K658j1239l709
+1896I431h059j0830q505K855P965d683A4176Q948M826j2710o60A206d870k4267
+1910b9137K957Q01c239l00A5673L162J5719j6921p545a0648j28j3902J353n01
+1924b3826e686F041J2660N904J386p422A823h372j1216j067q097J3723d566A7973
+1939A5874J0125p383L109c373q427j7040J0836m633i298d242A9663L674K987j2270
+1953A4054l620a983j2980j1356j01J0272g292H318Q029J1559q741j754A633a249
+1968b3291n22n308g241K833A2731R66J7716r582p523h049j500r938j926m757a2565
+1984C093J4227N730J92k158F725c677j5257O64p933R308M238A2440L765J1166
+1998B7371j0298M720B101e985k0425O941k871a0661J854A1813R406P128j0096
+2011A8251p065F31a1068j1312m869J0124P554D516M335J6116k269J80C138a022
+2026a9437j17r468a1756M211A0727KJ5872m508j850a132p850j0330m96m263P848
+2041a6223a430A3133Q302j023J520j0389B974a6582j921p806R777Q27F506O001
+2055A2507J4365r306L506E492A148b0681p02m309a2134L755F925Q693J0710m574
+2069B1754q204C387h158r201q685O730N370A670L985J6333o30L844F332A314a6155
+2085a4825j2194J0694L239G971K706J2547l681J849E547d966j2966j795k037M761
+2099a7003e736F539J2751J232K388j0424n590a2243l637j0138R618r38A641N660
+2113G301J7605o431L336G498k580a4643n170p299J1964O355D181O958J0019K165
+2127B3323n070G710g221p079q816M233O68b727B947J7076n56O169I264m033a2406
+2143a2061j3301P235J568C500N658J1700k672K447A0072A024a3820p050l80M188
+2157a7062g567F07J4579L745N812j1110m537h622k487j2930O321k353a353D352
+2172B1037l853N189A0458l325a0396n985r278P571O929I11P787Q282N909l032
+2186A9857p929d292p581r684M540k589g118b157A8624L99N792I831r49g012k595
+2201i607j4915N257J315d91E781J2226o4K379p312C942i056r556k152J940h569
+2217b807A1049M237J0137r328m947f642o75j2747K951n558e280A549J6691k707
+2231A5533N799q249k617f654q301p955N020M374d284E766R201O931k880l929a81
+2247g873j2416M341l938i419K681A3787M157P709A1275q63c026k281j6823J174
+2261b0956J210b697B979R752L363N580n636E494e714r788k822k240R110N607H520
+2277A1621J1328n666j469c048l503j1587L821q100a0097b991A5740p63M628n545
+2291A4060n34a807j1089q356M012L907M967A240J0433J0818l535l160B593b114
+2306a7243K31m332i156Q50H086M860J2733j0695k914a073j461j5241k759j023
+2320b1557e915A516P706L465P309J07I390b994j1067j008n384O082M905G232K501
+2335I733R376l656M452C300c955j4745M971o202Q396L689A1159L227M846o251
+2349A2981R11D279g625j2259M9O479M053a898F859J3928k234k595C901o67a1571
+2365a6041q479a1088L275F431J182J4036m282j486F50a687j1267m463o077J1371
+2379a2123c76H862K529M554M130p266A558a1922p77n900L001J110C784N562R309
+2394A8655o133O436G853A851a6542J666l251P166j203D030R350Q157p786k657
+2408A1094m908a324j2467p031M760N029b302B659J4404J357j88D646m95f996l785
+2423a0781j3767R396N598E152r03J2460Q52K110C625b726p878j336p958K862f545
+2439F809O111Q22M055l319p227i275l213m652M298m065b560E641J3729o350M097
+2454A7117p880k587a2305k541l457Q191j948b215G937J3215l072p501D749A365
+2469f749j1867o97N398b042G58J1261L336N918H218l408f211o69j3278L849K495
+2484a3814B452J160R446K031O297I209a624r449J038l870l114M326E60J2330J261
+2499A4151K042k918j794d802o337o912P205m021f093a362A6054o58L017I111q75
+2514H236g030o269o221Q766Q55d557A150J4893M357n814F366A095c214j2261l714
+2529a9189K275b180D06P709P44J1519o268m477f247q55j0069K137q34a165B964
+2545A1021j62P911n325D708h398l077j841k103K066d381A0569L375J112n103L053
+2560A3006A901e792j3054N712j460f189J454A1733L285M227H385n21b074n599
+2574g673j0561L409K844d444E0J0189Q212j074p438D62a861q931m364m428g095
+2590a875G565j080J1468k315k226c958l207p723L064m008f165f95A0025M90N092
+2605A5607j620m595c337q831j580L2K437L246D889O192N148o064K625D783e46
+2621a6064Q86j246f010Q84G552L957O882q124j522I75b807j2006k853K781e232
+2637A141O095O877J757k310C197f66q180k373p543P220M960F728R87Q482k925
+2652A3272J092A56d059q739K394m847N426d878G704M036L270j772l282H69i219
+2668a2986m72L724K95c21E927J0923l584j20C632A609a1460j486m276g583J463
+2683f120D385K828Q992l533j025C060b017j0447l945J263f763F24L417N921L246
+2698A3208L593G838A442i264m56o699M830J880C932L048P621l577K947D358G71
+2714a0345j573m539N873N063E336M620L125n92k310E022e070n553m257M073M19
+2729a0388a749C319J1497j645N98C843n94f764k219q365N596L274C845K756O400
+2744A3001j532J296F119F4i281n124J97M556b387A545P335L576L794p539C685
+2760g009p89o564L211j577e31D965J0149m061J391E246j287f365m416n931M735
+2775a1977N568B299N122L833K202k292m716c035m479n498K018j559d006B67J2285
+2790A2552K3K062E241j088d455j592r008K286J560H32M813O221j381J509l578
+2805H416B397g161o145P46K262M792b425G234M728M818p775m236d844M8p254J174
+2821a0876l177c676A882J1507j443J103E467j329c327m377p220J651N084f01E119
+2837I098M997j227m742b954l322m589K229m642N780b949A0556J575L117G313j474
+2852E839c638j892o952J850r00c446A491Q134J890J575l207C551e409p135J420
+2867a1124K260L940j016B128O738R330o584n098c733l8p197O34k781c906a011
+2883G927J203M768l843l283b489n504n525O98M689a665C366J859N469K030K78
+2898A3002A511e441o576L225l031M685K472G782J319L818n076J204A009d262r461
+2913a3723J881J331c852b75F474L976J470k035m445d10q784k694P8e428L71A297
+2930E508J0034l514l274a505K98p223j709m604f137h02F621l46N302k77k112a42
+2947f518m787p19K337M821B243K646M034J046L440E695a335j0293J715j669M653
+2962f929Q31D710L040M310m841K295D511e16j1682j629K477d571a147D279M750
+2977I029J945j111m589k347d306n291n691O152L884B935J403P467j585k77A167
+2993H69e247k894p709N928b930F976J22K078J87R9B994c802l991k510q44J458
+3009i689g41E533N501k595J771m630k552g768p26l186M237j342G46N507P617m517
+3025I353j730C071A218g046m063r80N020c388A162O707M462l81D720A631b794
+3041e031p685J760K793A284J513O619N02K279C731F05e829J52n957J090L222B850
+3058F625K662q5L94m299b782m516j734O54j591d564A377Q874j046J233m720r73
+3074D745d839k663m062N104j099b383A671J0096l19j851B937A393d121m719k890
+3089a1730L146d067c94E111M547L245n322C311b739p42o869o6j5e82A797N648
+3105G445rM974n344B653f099L28l427J33J57a270D688M069K74J73k108A2e750
+3123i565K219j336L139K764G112K399K076n527l91b186l690n626M467k3b872J321
+3139a551G201L769J062E321A463b813l821l833O59d638h76C189K363N801j367
+3154I986l111a657k067n860M08j197b215E53N556j006N300j447k110c055l948
+3169g003k663J357K29c103B762M687O24k86j2C379a575p521Nn88M729J719E323
+3187G601L410n118j44F03a433q211J71J65c304i76E887L232J787m414B216i99
+3204d184l540l051K991c367B595K387N117p20j144d62k420m750J067l559M410
+3219e714K821D839J123M090j411j058i81m817l456J853P59J957g86D359M193L22
+3235H874j07C909b88p654r07n87d520N60B274K444N849l025n41A597b97p563j597
+3252i457q32c991g24D108J506L073o45k799I37c862l249l291K251L073B060K071
+3268D131M412p82J116B515a30o181p7l600L014K195C660K348L464k132k03A920
+3285b700m947o24Q18J865b188B202N675J449l8C999G83e494j037k745L481L59
+3301e436D18K576O280j391L16B785C89f231k077k045M881a513B492J502K720K081
+3317H795j004C495c306l656k816K737J581B24J793M994j41K282D340j885d763
+3333f427l832L249K074B220K335K911j197P70k686C81e401l583k8K507a801A352
+3350F187J172J387m366j679b771j536n075J644M38G3L453N127k170O24C429q25
+3366B604b929l754l608K596L780A464K890K213J645j354k329a273l142l891J393
+3381f913p16b694D98O796L54R78C447q19b216j230n416Q05O65a95C730L713k57
+3398G186k84k594I46c054l555j021k6L668i72E316K180K328m773j999b617l04
+3414b921l927L38k329c080A406O504o24M06l605j135b088l297l027J347K315a684
+3431B056L623L126j041k519i56k466l889J461j511L600J535E101K005K642m864
+3446D884j566a459r49m946n81M20a832A850L595J338N45j526A907b320l405p51
+3462f476j110K311K099C422K493L394l121j950a614o78l938Q10k536L247a342
+3478E662J544J106l006j855a534l215k562J014J809R84c86C503N741j50k545e18
+3495c392l227J667j598K895k55B009K609N174k175k093a020k522l830N02O19b263
+3512G8K421J688K956J616m115a102n611n51k4L601P64A874J126L946j085J433
+3528G294B147g57o547k62k99c341a095C664J116J511q55K7B104b715m901j138
+3544h754L054K846F03K223L884L09m05A733a0m243o62l623K847J987B655J625
+3560D280L531j558p51A059a086m056j219j241K946i49B599K370J285J388k465
+3575E177A434e257o37j077K470Q1B54K126M389p86R80C405I10e903j096n61c780
+3593b091A799J549K776p8m36k627i09m614l151J843K853F30J317L477m6J345C176
+3611B126b518j833m798K162K699B630J531K118j402N96B658G40c097k814k119
+3626h030Q73b661B200L890l77J26j837j395a783j805l338J092n81a581A783N478
+3642G261n68n47B334q25b827j760k427J720R27f78B965L853O12k110B281a241
+3659b756l297M0l2a796A7M592J165K176C974A874b695n77l488R74R0a92B036L617
+3677E653N1R15k384A093c178k567m79K68K508e64D100J162J361k042p92h32k621
+3694c453l505J585m62b167c57E119Q93J060C513j313a875j886k883R09J361a431
+3711A452L812J998j200k580g6j974k988p47q09b960i60C751Q58K695k654j234
+3727C416a539j449l151N95l22a893G40L861Q84P89j420B115b003l003q02p5J830
+3744d053a989B445J927K631j963o98A41b147l957P84m93b646J202C526J641K239
+3760G406k622j990i87j669k857n70J107K447E73K948K695J33j267A101a179l567
+3776d746k75j460K937a717B625R28L078j374j10f8k448l194J28o7b645d10C063
+3794D520J339l84k016a40l913j817k82K184J458A390J982L003j474nA358c61m497
+3811d858m78j208L034J626B639J627K288j892j406C76a415l200j503oK436B08
+3828C077K703j65m90A717Ic370p54k364J734J055A362J712L596j227k88A015a420
+3846d584j71n40J507J751A520K827J906k1k404C98c533j253r87J984K93c25A367
+3864E580J7O89A890Id289o50j353K996R58A299J410K665k7n02B023a245l011j968
+3882f224P24J748f41A595K464O31J297k479j753b923j478k234K229O36G24J369
+3898B093K920l64O95B560E03c564j460q80J626b101I75K640J519N62j601k022
+3914B073a754j728k132R52M14h49H56M195j09R26B688A016b769j226k066J621
+3930d440J222D72J683K399N34J23k191g8l250k184K29J118a373B94L189N99J634
+3947E716j782j227a634j922k883J630N00g8A272L203o6P36k084j316b247k003
+3963d250j838J136K072i4B870J501R41j197r44b27j940l217K61k06a902D81L992
+3980D473j56R25k240m36i82j918k719Q2J315e01A892K442M11j95j398I68a447
+3998d567r92N2b516c90C445N52J477k024n65e15j395l167J03m67a706H00L696
+4015D496K03L12k069j247h69j830j860q79J269a561B133K218J457j598j405i7
+4032h25l035k74j681K521a398C372J284J476k725j150g59j336k186j40j54J978
+4048b597C0L267K017J48j534I07a505k559p1m00J599Q36A260J755L018r60j283
+4065C790c63j718k559N79m53K176i27B382J322J828j030j730d07k458j714n49
+4081e128R69b062G77K019K191p18n4A398b42l644m12j493K336J590B198J425J584
+4098E207j216o95C51a226k796o64l16J705e77B237K502P19j002A782f72k218k79
+4115c169j499J077K15D09K018L361m02j067A85a517k416M01n70J345P76G79K293
+4132C072K282J69k121B21c087j272j28J291R04G6O31K962P92J141k767D27d103
+4150d792o75b435J002A297K95K055O32O55k399d16l898j202L27K321c68A587J768
+4167C355K28P08j324j016a704j924k126J422J238H03J382K467q92J23A494p00
+4183G94b260j277k118J516J924A167K442J238p04j502A144i19j585j700k10O66
+4199c748a162H61L193N26N15B211H05b534q32j342J430L17b07A127K849P45N02
+4216E223B431b09k991j110q1J229a509H2K294J299J189j120j231a427j627k432
+4232e486J376Q39b95A195K331j76J056j862o54a524j802k314J183J707E21K112
+4248B633J213J01p18n39E68a444k854n85J88a466F61L309k54P93B199o28h37j204
+4266b041k239J32K96h94A023L152K93jB026G8a738j388o96m42J352a314B140J870
+4284D010J366j866j304i86r90k098O08n38a790b68C119P15J313j924j502a456
+4301c055j495O34R42i07I70J859J370No58F89a484k491k09j47a483f49B109Q96
+4319C005J615j354l04d39j634k466N30J01a158D54K598O65K01p97A380h31k025
+4336b856r83p12J377a474A638J558J460j177o38A37h20k777k45p75b081e76B359
+4354C509J114j104j143a62j680j970l81N90J678B29K074K007j36n08H98e84k724
+4371c308k77q06J832J062A273J189K058q43m09B70a279k376q6l72J711f20B168
+4389C644M73n40j689a85k080j237q67J097J039I41J334J855j67n89I85d34k792
+4406c226l67r29J830a290A549J441J130l92r51E00a336k013o35M19J221c03A577
+4424C564M43m9A788A65b680n77j191J547Q43I54J048K200p93J87I18g00k209q93
+4442c802m99J408a063A250J828N81J31j519H44a488j250j484Q52O41b3A630K252
+4459C882m37R6A555B86b236o19j252J213O21H03J448J822j04p16H51a039j670
+4476b709r91J44O05a074F25K461P76P50k156G01b285o72j080J120M28b04A095
+4494C716L07j62A735a27k580p59m38R53J325C10J956J163N72j024j147i65j625
+4511b590j428N73O49a17G41J958L49P91j415A188a613j458j283J146R69A44J240
+4528A384J755N10k99j338b29j816j513j74L91a449B30K565M99O39j390o82i57
+4546b258j888O33N15e63G33K329N00K42j357H94a470j496j011M94J303a52A949
+4564C107R47j149p49Ba488k167N4J68a087D01J899M48J123j214r50h55j435j386
+4582c676K73O05f93A039J939N65k95q89D80a156j499j072l8J657d22B111P31J047
+4600C889j281m03b62j218k128J97j20a017A52K407Q87M93j425j256e28j734j419
+4617c681N0P73a021A452J100J067m80m48E24a015k182l74j74a457d39B023M37
+4634B460J399j012o59c70j391j578R6o0a561E03K179R30q6j117H89a49j736j001
+4652b886j109J217a182A732J194R99j339j82A67i33j729m45o23J472g47B077J113
+4669C190Q79r83A172d36j422o97o04J10R25B74J730J854j73n30H78g03j953n56
+4687c212J66J221M10F76J524J815m56p72A28a766j666J35O63P82e04A020J750
+4704B770Q59m83j442G3b070j012r52J573a120A282K95J207O1M9A226a26k452p57
+4722c335n73J581e64A309J047Q41j94r31G13i71j544j339L09P21D2J726J764l01
+4740C231m09j362A37b103l33j042P98N86D17J363K049j23r98D60a136j324k14
+4757b674q9L69J013A83K398J079K9A804C18a900o52q18J077N58a24E06J751Q61
+4775C118P24j793D1b793k96k92J339i30E55Q95J062O22j68j279e95j843j600O90
+4793c348J005h3A241J457l12N32o57q75i58j553j705J141Q00B86J578J325l73
+4810B816n39r65D50a149j676p28R1a700B62K257R15q0j509H16g61p56j623O1Q8
+4829b991f49I22J720N89M20A786C3a917l65m36K34M20e95A073J513J237m31A569
+4848f43j314j231M07L78i86a69A721Q10J046r54j180i27j632j189R44J089c89
+4866H17J449L06O75j051F30h42k012o53M4a414B45J682L81N85n10l16C12a230
+4885c173l51N01a191D86K106J06L02r13q41d05j345j082o7K23a165A110J660M81
+4903C251n53j090A38i65j300m28k71J002R60A532J168J045j328j010e23j018j283
+4920b824K81K1a230G6J521J293K35m47H99f48j710o49p9J374f77A071O71J350
+4938C092q2n17C09a187j825m7O0a241f4A528N91P81j35r72A00a737j263q5L47
+4957b738a256E74J378R11k82m72I39b67j724o64o26J476g89A279R51R96p22p88
+4975A716B56g62j522p04K09R30c53A447J178M82o04j067b36j475n54p85M97R62
+4993a591E29J202J302o2l71G29e33j664m24j70Q30i74H62J396R65k60q73D48a342
+5013b318n64J61P56c70A196J633q9j31j174H9a787m66r39Q69R86G25Q76J199l80
+5032B420n7I39c91j571o16o28J009d26H16J309L82M55q94E89a252p80r68N15P53
+5051a732bA324J335Q8q5A260g5j885j53p21O42R03B78J281J304n1o57I76h10r23
+5071a733p63k78N86f69G08J607N10j66A314D00a113r30r66N36P58aA251J005L97
+5090B653J57A119Ha515r53l33M88R83B65J452O59M02r92H61f77j121j029L65L05
+5109b157g14D73J534O24M05A506C81a349r40k78K58O44b8A096J239P43p27r46
+5127A405f7j308j168j60K35i02B35J490O65L55r55o09e66r24j275J79N38e16E52
+5147A856N77L90r13E46i05j542l34L52R21b8A371Q85O12n13r64a10j101j303J8
+5166b496M9h89A04J525P49M43r35p46e11j057j107M22M94e43H95J041O85j68p03
+5185A750A81a013j048p58J90J134i0A322P27N31k77p94i9j077j468k1M81i26A54
+5205A654Q76K25o86G90h37p18j098k51J031f55H47J221P07k86p63A51h17j075
+5223a892n54m0R36d02A603N90N28n33q22c52r21j058J4L68P82A65J539Q87j82
+5242B409l89I04d47j256o78l58J000e34A040Q89P05k56n85E05i51j366l39L60
+5260b296a020a58A174P46Q09n01q69a56j419n20n20M08Q82C10J273P66M7n35H36
+5280c71j108j012k88R76g13I96R89P78n46o86A75e25j200m90k73R88b76A215J009
+5299B224J73l99r60a29j124o03o47O52N92B04J290R70J74m68F84e81j471j56o9
+5318b277P20O56C84J361J102j05j108C03a080r25l96M93N48C9Q63J188M81l07
+5336B264j069A88a442r59l09P73i22D58P14R47J11p3A064c19j506o90o1P28d19
+5356I33R92J03O4n90E25e90j274j094O97P93a25A120J171l3k42r99A9a195m89
+5375a684o38J79P68A34J308J393l53p57E31g09p56n27q4K47h33F10J172P34j06
+5394B410q28B93a208n69m44J51O19c09G77J012O81J56A282A54a407r02l28R51
+5412a686e78C25J016M72O21p23n44b94j436r22K28P19b12G20P24O41r3m16o63
+5431I13h79q06q84R5J081A06J233P51J30m15q02B8g41j314n75L75a081D45J284
+5450A729N57J16j044o19d84p69r83j5L19g37F69J029R37k04r36C46a152n97k67
+5469b016j2N82d29F90J400M76m71p77b47j067p84J23J23Q74a41A130Q76P11o96
+5488B021A007g92r64n46J06O26d88F84P19J017m31l44D81e58j472n61L63J087
+5506a141i5A249N50l4J87n29B34a066r17n58N14g03C27J199P52j61o12G46c70
+5526a428o57k99O32g44G04R04Q62l43q44A3h34q08l03k84O76d25A343P70K03m14
+5546A902p10d8r26p98j30o1N92A62J043R01N4k41q69e41j145n04J19N03g54C20
+5567A517O80r3o88B54h30r78o16M21Q29e4A075M92N32p2p04A67a306p43k14M38
+5587a825R06C49J006O46jk33H69d45r77n61l61O27d46E86J293L51j80p76B15f00
+5608a652o48J66P85a61H74Q57M35k33p46F8i03j119l22M70Q65E8R65Q82K65l31
+5628A839q86d62j021m51l64P09g73C92J039Q75p9p00B58g91p98o92K15O93c44
+5648A132N81N04k63q02A52a250q09k70M90P76H2J211P48N6l61p73b68j080q10
+5667b158J40L01e42G08P64M52J29k86D00h02q96n50L06N04F0P31Q38O87k89I05
+5688D9a004p58m04L06Q16A39J220O15J01o17o21d21r47m95k70N43e33E13J036
+5707A549M34J00o00D17d99j169m23L5P74h4H73P28N12j83o30F6a370m01n53P51
+5727a573O01F4J177P15J38l95F76d30p33q56QK95h06C94R50P95J09q28F67g30
+5748a616n78K36N51b84I62Q43K60l05o39B0a109o09m99M04Q83A27J066R72j42
+5767B023n09o16c81q64o86j90P90b47E06J041M91r3m94F07g16q64m37L27L31i0
+5788H55P44O00l49p96A83a248n81k35K90Q25A27J135P73J13n70F57b39q14q33
+5807a886j95N86d91D36J068N23l2o30F07d77j084m56J48O58a95I50Q80R8J0p56
+5827A182A76i99p50j84J55h20B47Q74Q53n2l41o98e09q90m40j60O05e64E19R03
+5847A422N67q4o94C86f28r21n42K68N56b68I90P94K66k73q03I3i55p42k53l0R32
+5868a048B33Q45O69N24q15n35b73j176o79l1N99c34C73R60M81K10m16B91f69j112
+5888a781m39K36P22c47F87J057M37l01I07G3i00j154J21J70Q50A15J084P25J23
+5907B047p12n81a98r58p32j93N13f94H67O77K26L42q82E19f31q55n96JP91c66
+5928F74R73L21k42n32A08g41r31j68p5h64@A006P85K85o64F91a54j236l57r5L36
+5949a506f11C74J019O49p7n51C84g97p54m78J06O29d42G42Q74N93o17m85A81i42
+5970a897l44M60Q02e2A132N87K20m18n66b86j071o91q6O72d91C55R74N85J53n93
+5990A474D32e01j035j92k09M62b06G95P24M90j92p39A22h07o87l74J08O40A08
+6010A191P22J21l95F42i8j324n35j50P00O00B79J149P49l64m78B65e63p55p35
+6029b053K02O47b66E77J008N86k62q45a10j004n29l19K66g33B92P75N61L24j56
+6048A796G77c87p48q10j73P08f19E92P04Q38k20n81C60f55r53m62J70P54b63A060
+6069A709J53k09o92A34a038p35m54M67Q64B08Q58Q10j46N2F40a63j108n09l19
+6088b099P85e77C25J147M29K6o69D19g19p25m35J14L00a38H33N78O21p3q40a44
+6109a077o41o0K5P48A83P93P34K06k23F36c31q84q25K50N00L54C89J250K62n2
+6129A849l34E66f40r86p95N92M92h2G05P87N23K3q29C7i87q51l64M79h31A33J063
+6150A196M85M17m28o66d77p07r42K69L28f36D76Q26N97N0n88D10f67p13o61K20
+6170a821L21a85H71J032Q6o11m65B80i35j093n3M38g29d8A081Q58m4l98n54c51
+6191a411n85L05L58c68B54J233M00K32p59D32f92p96n98R4O31a27G41P01N57k77
+6211A722o90bq18r87l5J00f69i0A051P71q6j40G96d47p39p47N1N06e86D47J098
+6232A545M19l27m26D25d35j180m60J58Q63c47H00N67O57m21l68e4r30q81l91M12
+6252a844e69A26R47Q14K36o14p25c38q34o24r7L32f36D66R95O68k71m10C81e34
+6273a592j97k95R82a91I21O09M70l32o00I4g09j055l80M15N32B14J024N27L1j87
+6293A609n09b44j009o38oM39e03C48P40R20p9m67C36f70q84l01p0Q73B7P44Q14
+6314A585Q22n36q52a16j028l62n37M75N89B66R14P55Ok03G49a27j101m65k15O39
+6334a269O10D51R15N16N7n50B54f30q65m74K07O13a69H73P90P1j86o59i3r80m99
+6355a572m94K97O80A92P20O25M77k61G01c10j000m26j59O30e32F60P70N09J9o48
+6375A310D26e50r25o96O13K62A9R28R13r3lo92B25g80r38m18N46O94B53Q69O94
+6396A816n3o3q16d24p23r51J33M99d97D08J137L96p4m80D80i33n68m50J81N12
+6416a258c66F86J181N8j35p82A32i89n75m43N21N77C25Q75R03k09n61n00b29q42
+6436a071p49k2M49c25E94J088J2J72o61D01f29p37n71K23M97a61I40Q07J75r5
+6456A827o03A9i83p37m3L90e21e5A171M84N99p69F69b34r64o17p0L95d14B44J377
+6477A621J50P6p15D09f61p97l93J19N69b24I42P52L11m51n62a36m91j160l07K08
+6497a886g32B10R77N27K90o45o31c88r72o29J91K78e38E64P46L66L02m61E60e97
+6518a732k42J03O08a20H51R43N20p30n60B3h70q58k71L11P82d3A118O20J81m23
+6538A496F58c09r15o57m9N20e08E99Q01M23J67p34A78g03j054j86R1Q76c77H45
+6559A280N70j19m58b03q04p08l68L57g48H6J007P48M1k95F01e07p34o34m9N62
+6579a362f64E72P53Q04l89m44C16g29j050k19L3P04d13I90N36M61n90n50a26p29
+6599h55p78m84L57Q65A93R79R92k41m75C18c27j149l62j00O52e48F30Q86N07J25
+6619B148r10b9q28q36k08L20N42a34H43P71N84l95H67a03j045o27k78O89e79H0
+6640A097R21j60k60C93b95j004p25K5P57c96F66O93M08k41j41D07f32r61m54K43
+6660a804N40a57H74Q84J64j18H59a20j162l73n65P31N09B19J066P50q7n94B84
+6680d16j023l38j23M16f24E51J111L84k19o95B88h57o52l61J98M93a00H26J109
+6699A935l2J84G64a4j219l82l14M58O67B51Q80P30ql10G12e10q60m96J6N82c6
+6721E11Q62L29K22o32C84i24o16m86K56O67A54M86J195J7l17n57A14a131p82j64
+6741b077L73g49C34J215N52k40n81C99c59p19p14l1J92b86E81J098K41q2r18B20
+6762h33l61j058L84P16a40G88J128m6j71p42b89q63o32q5K44Q07C37J116K47M30
+6782B130p54n73i02n31n16K48M90a42E37J027L20j22m92C49a006o37m50L40P21
+6801a032A86P47O14L14j69n81a11q22j021N3J93e67E82Q25J66K91n56o33d61o21
+6821a082j063K35L13d32G63O83J52Ll96A20f42j053j73k4M60a41A161N94L12n37
+6841A530o68e12n29o08l08J85f02B86J023P53o7n02D36d53r87m39R2M55e23G11
+6862A529N79k72l97A97g64j132J68k92i78dA313J60N29m25p58b03r06r02K11L32
+6882a468f42E05P11P41j77k89E57c72j035m90q1Q98d74H63N87P06n02n20b7o75
+6902g02j049k73J17g62H2R05Q19K29k33q95b88r16n94k99O00P25D83P98R85o06
+6922A660j81D56e65q86m25K59N86b54I25M03P48k84o99D9i48o49j68L2O72a9G59
+6944A904J33k43F34b11j166k03k39M57e42E55O86O60k20k40C15d58j303o4k10
+6963b035Q07b70G10R59K49O7q95A80a149n45m01N27M92C10O71Q06J38k02F21a55
+6984a300o26q6M07f40F10P29O47j08n13D56e65r40m20J47O26c07H90P22O6L65
+7004B043r22A43a207n19n50O24O29D34L62Q85Q6j37E82a12j126n14l66Q72e72
+7024F09R04L56K6n96C74g22o49o46J8P17G4P05R56j7K30r12C8i79o74n82O59M01
+7046a175A65J126O64Jl75F01c04p48q58j38N33e04D46J137K14M2n77n93h56n75
+7066a431p72M47L27b19G86R08K32r9I07A57a016p58k58M53N96C91P55M76L92n64
+7086A450n76d16q11n81j16O06e07B61J157L14K76o26D30i55q13k47L13M30c15
+7106G39R99J02k60n35B85a177n75k61K37f91A93J053M91K31n23o16d68o72p57
+7125a897r2M54b82D75J065K17J11p03D80g11o85p13M13L19a77H32N89N61n87n38
+7145H57a93q53p31j40p5f39B77J332J40L02n21E10g61m26p40K57J19d61E72P87
+7165A359O74o3p71C23a116o02k92K53g92c20H75P87N92o67n41a18j163o68k5J99
+7185a775e04g7A096O76K48l82p55e35r27m53k63Q72d38I10M20O06l93j76C56g32
+7206a581l85l1R23a98A328M36J50m69n10a1j113p93qJ55P79B63J189O84j65q47
+7226A124C64c25q03m27k50M96f19H57Q69M86l36o65a03o21j005K58j95P91a96
+7246H07J125K32l30r03c89q42m92j77M21f91C30N86O75K68j6F73h19j079J24Q0
+7266a694O65M56G55O99K12j87j71A25c63j431l52M96g99A78J060K84K99l97l24
+7285A100B50a088n76m68M83e04E32Q15O68j75l76C8c32r41m24n92Q30f16A002
+7305A727O54n88q47b55o23o01l3l2M11A33O44J074K17k12G65c66j207m3n0N46
+7325a120J87C39P74Q96rl78C14e14j271k81L40g88a54E95N42O05L44q48B77a020
+7346a683m68N68P72D99L96L86L20J06q35g4r36o85m97N42f60H43O20J80p9k02
+7366A362o77c49j077o17j7O36b90H36J149o2n91n39C18a015n03m47L93M01A5Q18
+7386H33J191l6o53B33c03o45p19k86M64c84B66J060M50M06q40B03i71n33m02M28
+7406a478L46b63E73Q19M52M26j063e1j024n83k92M61M70A61J008N18k09J14n41
+7425A051b38j223p90M28M48b62C03J159J73K65r43k88c63j021p01J69N20b07A048
+7445A894p4l05o20I1f85o85p60K29i30C75P48O73L28q60D40e09o93l91k32J21
+7465a704f62C56J274L28P8I94B01g13n93n60K63K84b79I89P36L32l53n09A43a126
+7486a794J72J4Q02b98A017P38M17p34o72d88o43r67L08L51f48D82J001L37R5p33
+7506A182A34f56q42n44J36R21g2H66O11O58m29n17c02o41r63K19k0P25d1A274
+7527A667L67o96D80c03p61o19j52M92e07D41Q07N36Qn32G6f93j015j60K72g50
+7548c68I17M27P81n19n50a83p60o82k12K70f60A50R21N87K09k86E63e25r28j77
+7568a630k77Q95M62E60M56R51j64n03A94g29r81O1q4P16b3A111O32K72k98H51
+7589A1a206o97p6N60N22C81P57M47K32k52D84c73j067n45q1R12d96D72R08N19
+7609A899j09k64C1e95j094k20J25P19h7I19O07K61l75l70I6a063n55m74O98O85
+7629g09C80N69J094j79l10C29b63j214m41m04J116c98G97O35M07k00o27B24e78
+7649a521o68M27O58A26Q48O35o5O1p55G3a323k66k98M13O35D54Q45N37j92k97
+7669A347C63b49j135m18n2N54c91G25O95P58l98H45B53f03q87n56L64P01A68N63
+7689G31J102n8rF38b95r42l03m23M09f77E74N32R06m82j02D78f30n94k89k34K98
+7710a449b01G79Q11j78M35p30B46i97m57l87M27K77IP49J108j88j77G05c49q49
+7730a198p61J79M49O62B11Q02R59pr36B54e39p76o69K08O94f1E44R86j2M60G92
+7752A34g60n08n42N6N50A79P96Q08j08N8q61d46r15l14J4J66f05C63J144K92P8
+7773A877q15m02f95p28n07M63M04d03D16J503J76k29G98A46a035m73l25K09f25
+7793EP37Q34M25l14F94b08p33p18m25O15a93D68N75L50M70n29F17a035k91m38
+7813a764M1L21c13G67O99j5j92m2A10g19j264J02J79P18g2A310L13J19o02l56
+7833G84d5r04r36J84J19d11E10R14N47k66p65A24d00n70q61j11Q32a49G20O34
+7853A354P76l40G80e45l75o36K38l03g15b4A056M29M98n83o73f48p29l36N89q3
+7873a207M95B23J000N19j20r7E34g43j311K20N77e22J74E39O91N53j72l66A75
+7893f51j414%O12a69A84O58N70R4j80o26@h01j293k04Q50CJ008J09M62k0l19A41
+7916f34q26O0l81N48c22A176K90K86o29l45b51o20n02P5k75M84bA304N47J9n41
+7937A329F35d24j057l41M14f95r1B49P14J240k20p35b7p14q48j89K1f50BN78N77
+7958A157O42Q2p88f9j102p86l66R27c6H51J2K85J46N47o76a98j428j02m2P91c87
+7980I04R08k64n63k90l6b99j097o49j1f81C24R68O17l62l99n34B20g54q25k01
+8000a780M44O25A54R66J001j03I16a74m47j03m32o30L79f86F27R10K50j05n28
+8019A154A20g06o13m18L78L70A5P94N15L09O4q32b76j199j37J81M33j05I6J168
+8039A264P37m38m23D59a18j027p69Ri20bF92O35J84r1m37C48f43o50q48Q36N03
+8060h02C34L80R48K41m18C11c06k74n09o38q7h22E59R76P6k22k08C24e32o42k59
+8081a433j27L70c44D46Q42N03m7F44b33q65k72K24p2P8c33F49J309R0n60E25b65
+8103i93n48j78O96b51C0Q30O77N74p92F45i26n74l67P31K13b68B74J028N10L7
+8123A849G60a33q17m34n27L27P19A57R74J54Q3O9m26b70p86n74P0L95b42B10O75
+8144H85P79K28o98B28e91m61p72M29K96b69F52R48K78n93n43B1f72r70q9K19e17
+8166B35P40J18N05j18n46b41j010l95L15N8d60B64P90L80L37o80D31d60p29n70
+8186a759N6P82d0G45N09
+8191A254
+##END NTUPLES=NMR FID
+##END=
