@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/cheminfo/jcamp-data-test/compare/v2.5.0...v2.6.0) (2026-11-10)
+
+
+### Features
+
+* add a broad bruker carbon 1d example ([#40](https://github.com/cheminfo/jcamp-data-test/issues/40)) ([ef765f6](https://github.com/cheminfo/jcamp-data-test/commit/ef765f6b37ee199f54c17aa389b60a19c236ce4d))
+
 ## [2.5.0](https://github.com/cheminfo/jcamp-data-test/compare/v2.4.0...v2.5.0) (2025-12-09)
 
 
