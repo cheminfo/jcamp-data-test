@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0](https://github.com/cheminfo/jcamp-data-test/compare/v2.6.0...v2.7.0) (2026-11-27)
+
+
+### Features
+
+* Add high dynamic range carbon ([#42](https://github.com/cheminfo/jcamp-data-test/issues/42)) ([8760b42](https://github.com/cheminfo/jcamp-data-test/commit/8760b42fce820f3cda55f786a16235d64ab98fdf))
+
 ## [2.6.0](https://github.com/cheminfo/jcamp-data-test/compare/v2.5.0...v2.6.0) (2026-11-10)
 
 
